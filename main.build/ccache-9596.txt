@@ -1,0 +1,948 @@
+[2021-03-17T17:36:36.762408 11492] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:36.762408 11492] Config: (default) base_dir = 
+[2021-03-17T17:36:36.762408 11492] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:36.762408 11492] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:36.762408 11492] Config: (default) compiler = 
+[2021-03-17T17:36:36.762408 11492] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:36.762408 11492] Config: (default) compression = false
+[2021-03-17T17:36:36.762408 11492] Config: (default) compression_level = 6
+[2021-03-17T17:36:36.762408 11492] Config: (default) cpp_extension = 
+[2021-03-17T17:36:36.762408 11492] Config: (default) debug = false
+[2021-03-17T17:36:36.762408 11492] Config: (default) depend_mode = false
+[2021-03-17T17:36:36.762408 11492] Config: (default) direct_mode = true
+[2021-03-17T17:36:36.762408 11492] Config: (default) disable = false
+[2021-03-17T17:36:36.762408 11492] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:36.762408 11492] Config: (default) hard_link = false
+[2021-03-17T17:36:36.762408 11492] Config: (default) hash_dir = true
+[2021-03-17T17:36:36.762408 11492] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:36.762408 11492] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:36.762408 11492] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:36.762408 11492] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:36.762408 11492] Config: (default) max_files = 0
+[2021-03-17T17:36:36.762408 11492] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:36.762408 11492] Config: (default) path = 
+[2021-03-17T17:36:36.762408 11492] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:36.762408 11492] Config: (default) prefix_command = 
+[2021-03-17T17:36:36.762408 11492] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:36.762408 11492] Config: (default) read_only = false
+[2021-03-17T17:36:36.762408 11492] Config: (default) read_only_direct = false
+[2021-03-17T17:36:36.762408 11492] Config: (default) recache = false
+[2021-03-17T17:36:36.762408 11492] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:36.762408 11492] Config: (default) sloppiness = 
+[2021-03-17T17:36:36.762408 11492] Config: (default) stats = true
+[2021-03-17T17:36:36.762408 11492] Config: (default) temporary_dir = 
+[2021-03-17T17:36:36.762408 11492] Config: (default) umask = 
+[2021-03-17T17:36:36.762408 11492] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o __constants.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src __constants.c
+[2021-03-17T17:36:36.766912 11492] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:36.766912 11492] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:36.766912 11492] Source file: __constants.c
+[2021-03-17T17:36:36.766912 11492] Object file: __constants.o
+[2021-03-17T17:36:36.766912 11492] Trying direct lookup
+[2021-03-17T17:36:36.766912 11492] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/2/5d49b538a3fd95a17ac7bb8fd2f52e-4772.manifest
+[2021-03-17T17:36:36.802042 3348 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) base_dir = 
+[2021-03-17T17:36:36.802042 3348 ] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) compiler = 
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) compression = false
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) compression_level = 6
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) cpp_extension = 
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) debug = false
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) depend_mode = false
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) direct_mode = true
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) disable = false
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) hard_link = false
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) hash_dir = true
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:36.802042 3348 ] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) max_files = 0
+[2021-03-17T17:36:36.802042 3348 ] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) path = 
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) prefix_command = 
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) read_only = false
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) read_only_direct = false
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) recache = false
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) sloppiness = 
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) stats = true
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) temporary_dir = 
+[2021-03-17T17:36:36.802042 3348 ] Config: (default) umask = 
+[2021-03-17T17:36:36.802042 3348 ] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o __helpers.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src __helpers.c
+[2021-03-17T17:36:36.802042 3348 ] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:36.802042 3348 ] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:36.802042 3348 ] Source file: __helpers.c
+[2021-03-17T17:36:36.802042 3348 ] Object file: __helpers.o
+[2021-03-17T17:36:36.802042 3348 ] Trying direct lookup
+[2021-03-17T17:36:36.802042 3348 ] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/5/1/c2ff5d9f8ad76d7892203f8b90abee-89289.manifest
+[2021-03-17T17:36:36.812074 11492] Got object file hash from manifest
+[2021-03-17T17:36:36.817078 11492] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/5/2/42643160855510701a60d9bcb2f9cc-628649.o to __constants.o (uncompressed)
+[2021-03-17T17:36:36.817078 11492] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/5/2/42643160855510701a60d9bcb2f9cc-628649.o -> __constants.o
+[2021-03-17T17:36:36.817078 11492] Succeeded getting cached result
+[2021-03-17T17:36:36.817078 11492] Result: cache hit (direct)
+[2021-03-17T17:36:36.817078 11492] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/5/stats.lock
+[2021-03-17T17:36:36.822096 11492] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/5/stats.lock
+[2021-03-17T17:36:36.837133 11820] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:36.837133 11820] Config: (default) base_dir = 
+[2021-03-17T17:36:36.837133 11820] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:36.837133 11820] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:36.837133 11820] Config: (default) compiler = 
+[2021-03-17T17:36:36.837133 11820] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:36.837133 11820] Config: (default) compression = false
+[2021-03-17T17:36:36.837133 11820] Config: (default) compression_level = 6
+[2021-03-17T17:36:36.837133 11820] Config: (default) cpp_extension = 
+[2021-03-17T17:36:36.837133 11820] Config: (default) debug = false
+[2021-03-17T17:36:36.837133 11820] Config: (default) depend_mode = false
+[2021-03-17T17:36:36.837133 11820] Config: (default) direct_mode = true
+[2021-03-17T17:36:36.837133 11820] Config: (default) disable = false
+[2021-03-17T17:36:36.837133 11820] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:36.837133 11820] Config: (default) hard_link = false
+[2021-03-17T17:36:36.837133 11820] Config: (default) hash_dir = true
+[2021-03-17T17:36:36.837133 11820] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:36.837133 11820] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:36.837133 11820] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:36.837133 11820] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:36.837133 11820] Config: (default) max_files = 0
+[2021-03-17T17:36:36.837133 11820] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:36.837133 11820] Config: (default) path = 
+[2021-03-17T17:36:36.837133 11820] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:36.837133 11820] Config: (default) prefix_command = 
+[2021-03-17T17:36:36.837133 11820] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:36.837133 11820] Config: (default) read_only = false
+[2021-03-17T17:36:36.837133 11820] Config: (default) read_only_direct = false
+[2021-03-17T17:36:36.837133 11820] Config: (default) recache = false
+[2021-03-17T17:36:36.837133 11820] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:36.837133 11820] Config: (default) sloppiness = 
+[2021-03-17T17:36:36.837133 11820] Config: (default) stats = true
+[2021-03-17T17:36:36.837133 11820] Config: (default) temporary_dir = 
+[2021-03-17T17:36:36.837133 11820] Config: (default) umask = 
+[2021-03-17T17:36:36.837133 11820] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o __loader.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src __loader.c
+[2021-03-17T17:36:36.837133 11820] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:36.837133 11820] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:36.837133 11820] Source file: __loader.c
+[2021-03-17T17:36:36.837133 11820] Object file: __loader.o
+[2021-03-17T17:36:36.837133 11820] Trying direct lookup
+[2021-03-17T17:36:36.837133 11820] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/e/5/122910e46c1e0a6e36463575a4897a-4483.manifest
+[2021-03-17T17:36:36.859097 11916] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:36.859097 11916] Config: (default) base_dir = 
+[2021-03-17T17:36:36.859097 11916] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:36.859097 11916] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:36.859097 11916] Config: (default) compiler = 
+[2021-03-17T17:36:36.859097 11916] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:36.859097 11916] Config: (default) compression = false
+[2021-03-17T17:36:36.859097 11916] Config: (default) compression_level = 6
+[2021-03-17T17:36:36.859097 11916] Config: (default) cpp_extension = 
+[2021-03-17T17:36:36.859097 11916] Config: (default) debug = false
+[2021-03-17T17:36:36.859097 11916] Config: (default) depend_mode = false
+[2021-03-17T17:36:36.859097 11916] Config: (default) direct_mode = true
+[2021-03-17T17:36:36.859097 11916] Config: (default) disable = false
+[2021-03-17T17:36:36.859097 11916] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:36.859097 11916] Config: (default) hard_link = false
+[2021-03-17T17:36:36.859097 11916] Config: (default) hash_dir = true
+[2021-03-17T17:36:36.859097 11916] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:36.859097 11916] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:36.859097 11916] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:36.859097 11916] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:36.859097 11916] Config: (default) max_files = 0
+[2021-03-17T17:36:36.859097 11916] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:36.859097 11916] Config: (default) path = 
+[2021-03-17T17:36:36.859097 11916] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:36.859097 11916] Config: (default) prefix_command = 
+[2021-03-17T17:36:36.859097 11916] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:36.859097 11916] Config: (default) read_only = false
+[2021-03-17T17:36:36.859097 11916] Config: (default) read_only_direct = false
+[2021-03-17T17:36:36.859097 11916] Config: (default) recache = false
+[2021-03-17T17:36:36.859097 11916] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:36.859097 11916] Config: (default) sloppiness = 
+[2021-03-17T17:36:36.859097 11916] Config: (default) stats = true
+[2021-03-17T17:36:36.859097 11916] Config: (default) temporary_dir = 
+[2021-03-17T17:36:36.859097 11916] Config: (default) umask = 
+[2021-03-17T17:36:36.859097 11916] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.__main__.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.__main__.c
+[2021-03-17T17:36:36.859097 11916] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:36.859097 11916] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:36.859097 11916] Source file: module.__main__.c
+[2021-03-17T17:36:36.859097 11916] Object file: module.__main__.o
+[2021-03-17T17:36:36.859097 11916] Trying direct lookup
+[2021-03-17T17:36:36.860097 11916] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/c/faaa0aa7fdb922a7e3de074d95c98f-224475.manifest
+[2021-03-17T17:36:36.867092 3348 ] Got object file hash from manifest
+[2021-03-17T17:36:36.868092 3348 ] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/9/7/672e19557fc9764634c28b8e0c2421-683329.o to __helpers.o (uncompressed)
+[2021-03-17T17:36:36.870090 11820] Got object file hash from manifest
+[2021-03-17T17:36:36.871091 11820] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/f/685fb35c9c24201ed749764cb2d565-442971.o to __loader.o (uncompressed)
+[2021-03-17T17:36:36.872089 11820] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/f/685fb35c9c24201ed749764cb2d565-442971.o -> __loader.o
+[2021-03-17T17:36:36.872089 11820] Succeeded getting cached result
+[2021-03-17T17:36:36.872089 11820] Result: cache hit (direct)
+[2021-03-17T17:36:36.872089 11820] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-03-17T17:36:36.874089 3348 ] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/9/7/672e19557fc9764634c28b8e0c2421-683329.o -> __helpers.o
+[2021-03-17T17:36:36.874089 3348 ] Succeeded getting cached result
+[2021-03-17T17:36:36.874089 3348 ] Result: cache hit (direct)
+[2021-03-17T17:36:36.875088 3348 ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/9/stats.lock
+[2021-03-17T17:36:36.879086 11820] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-03-17T17:36:36.880681 3348 ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/9/stats.lock
+[2021-03-17T17:36:36.925454 11916] Got object file hash from manifest
+[2021-03-17T17:36:36.925454 11916] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/d/5893ae5f60669274a9a394d766768b-837596.o to module.__main__.o (uncompressed)
+[2021-03-17T17:36:36.945594 5616 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) base_dir = 
+[2021-03-17T17:36:36.945594 5616 ] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) compiler = 
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) compression = false
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) compression_level = 6
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) cpp_extension = 
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) debug = false
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) depend_mode = false
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) direct_mode = true
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) disable = false
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) hard_link = false
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) hash_dir = true
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:36.945594 5616 ] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) max_files = 0
+[2021-03-17T17:36:36.945594 5616 ] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) path = 
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) prefix_command = 
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) read_only = false
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) read_only_direct = false
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) recache = false
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) sloppiness = 
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) stats = true
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) temporary_dir = 
+[2021-03-17T17:36:36.945594 5616 ] Config: (default) umask = 
+[2021-03-17T17:36:36.945594 5616 ] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.beacon.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.beacon.c
+[2021-03-17T17:36:36.945594 5616 ] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:36.945594 5616 ] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:36.945594 5616 ] Source file: module.beacon.c
+[2021-03-17T17:36:36.945594 5616 ] Object file: module.beacon.o
+[2021-03-17T17:36:36.945594 5616 ] Trying direct lookup
+[2021-03-17T17:36:36.945594 5616 ] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/2/03d38c92d4c437a552f151ed607f35-47041.manifest
+[2021-03-17T17:36:36.952125 11916] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/d/5893ae5f60669274a9a394d766768b-837596.o -> module.__main__.o
+[2021-03-17T17:36:36.952125 11916] Succeeded getting cached result
+[2021-03-17T17:36:36.952125 11916] Result: cache hit (direct)
+[2021-03-17T17:36:36.952125 11916] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/stats.lock
+[2021-03-17T17:36:36.962188 11916] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/stats.lock
+[2021-03-17T17:36:36.965719 9280 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) base_dir = 
+[2021-03-17T17:36:36.965719 9280 ] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) compiler = 
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) compression = false
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) compression_level = 6
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) cpp_extension = 
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) debug = false
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) depend_mode = false
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) direct_mode = true
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) disable = false
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) hard_link = false
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) hash_dir = true
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:36.965719 9280 ] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) max_files = 0
+[2021-03-17T17:36:36.965719 9280 ] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) path = 
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) prefix_command = 
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) read_only = false
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) read_only_direct = false
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) recache = false
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) sloppiness = 
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) stats = true
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) temporary_dir = 
+[2021-03-17T17:36:36.965719 9280 ] Config: (default) umask = 
+[2021-03-17T17:36:36.972223 9280 ] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.serial.serialcli.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.serial.serialcli.c
+[2021-03-17T17:36:36.972254 9280 ] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:36.972254 9280 ] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:36.972254 9280 ] Source file: module.serial.serialcli.c
+[2021-03-17T17:36:36.972254 9280 ] Object file: module.serial.serialcli.o
+[2021-03-17T17:36:36.972254 9280 ] Trying direct lookup
+[2021-03-17T17:36:36.973782 9280 ] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/e/c/2e17e495a28abc981d88b1d4c94f7c-436807.manifest
+[2021-03-17T17:36:36.984964 4460 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) base_dir = 
+[2021-03-17T17:36:36.984964 4460 ] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) compiler = 
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) compression = false
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) compression_level = 6
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) cpp_extension = 
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) debug = false
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) depend_mode = false
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) direct_mode = true
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) disable = false
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) hard_link = false
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) hash_dir = true
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:36.984964 4460 ] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) max_files = 0
+[2021-03-17T17:36:36.984964 4460 ] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) path = 
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) prefix_command = 
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) read_only = false
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) read_only_direct = false
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) recache = false
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) sloppiness = 
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) stats = true
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) temporary_dir = 
+[2021-03-17T17:36:36.984964 4460 ] Config: (default) umask = 
+[2021-03-17T17:36:36.984964 4460 ] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.serial.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.serial.c
+[2021-03-17T17:36:36.984964 4460 ] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:36.984964 4460 ] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:36.985962 4460 ] Source file: module.serial.c
+[2021-03-17T17:36:36.985962 4460 ] Object file: module.serial.o
+[2021-03-17T17:36:36.985962 4460 ] Trying direct lookup
+[2021-03-17T17:36:36.985962 4460 ] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/9/67daf084ee245827985932b5db4e47-105701.manifest
+[2021-03-17T17:36:36.998954 5616 ] Got object file hash from manifest
+[2021-03-17T17:36:36.999954 5616 ] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/6/2e44093f0fd3a1e665bc8041e4030b-660012.o to module.beacon.o (uncompressed)
+[2021-03-17T17:36:37.005950 5616 ] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/6/2e44093f0fd3a1e665bc8041e4030b-660012.o -> module.beacon.o
+[2021-03-17T17:36:37.005950 5616 ] Succeeded getting cached result
+[2021-03-17T17:36:37.005950 5616 ] Result: cache hit (direct)
+[2021-03-17T17:36:37.005950 5616 ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/stats.lock
+[2021-03-17T17:36:37.012946 5616 ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/stats.lock
+[2021-03-17T17:36:37.023941 9280 ] Got object file hash from manifest
+[2021-03-17T17:36:37.023941 9280 ] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/2/8986a502762298b0a1325333a2902c-1036080.o to module.serial.serialcli.o (uncompressed)
+[2021-03-17T17:36:37.029937 9280 ] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/2/8986a502762298b0a1325333a2902c-1036080.o -> module.serial.serialcli.o
+[2021-03-17T17:36:37.030936 9280 ] Succeeded getting cached result
+[2021-03-17T17:36:37.030936 9280 ] Result: cache hit (direct)
+[2021-03-17T17:36:37.030936 9280 ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/stats.lock
+[2021-03-17T17:36:37.034019 4460 ] Got object file hash from manifest
+[2021-03-17T17:36:37.034019 4460 ] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/e/602e92cbbe512cfc14ead784eb34b7-722385.o to module.serial.o (uncompressed)
+[2021-03-17T17:36:37.036031 4460 ] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/e/602e92cbbe512cfc14ead784eb34b7-722385.o -> module.serial.o
+[2021-03-17T17:36:37.036031 9280 ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/stats.lock
+[2021-03-17T17:36:37.036031 4460 ] Succeeded getting cached result
+[2021-03-17T17:36:37.036031 4460 ] Result: cache hit (direct)
+[2021-03-17T17:36:37.042045 4460 ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/stats.lock
+[2021-03-17T17:36:37.046077 4460 ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/stats.lock
+[2021-03-17T17:36:37.121330 10764] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:37.121330 10764] Config: (default) base_dir = 
+[2021-03-17T17:36:37.121330 10764] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:37.121330 10764] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:37.121330 10764] Config: (default) compiler = 
+[2021-03-17T17:36:37.121330 10764] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:37.121330 10764] Config: (default) compression = false
+[2021-03-17T17:36:37.121330 10764] Config: (default) compression_level = 6
+[2021-03-17T17:36:37.121330 10764] Config: (default) cpp_extension = 
+[2021-03-17T17:36:37.121330 10764] Config: (default) debug = false
+[2021-03-17T17:36:37.121330 10764] Config: (default) depend_mode = false
+[2021-03-17T17:36:37.121330 10764] Config: (default) direct_mode = true
+[2021-03-17T17:36:37.121330 10764] Config: (default) disable = false
+[2021-03-17T17:36:37.121330 10764] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:37.121330 10764] Config: (default) hard_link = false
+[2021-03-17T17:36:37.121330 10764] Config: (default) hash_dir = true
+[2021-03-17T17:36:37.121330 10764] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:37.121330 10764] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:37.121330 10764] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:37.121330 10764] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:37.121330 10764] Config: (default) max_files = 0
+[2021-03-17T17:36:37.121330 10764] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:37.121330 10764] Config: (default) path = 
+[2021-03-17T17:36:37.121330 10764] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:37.121330 10764] Config: (default) prefix_command = 
+[2021-03-17T17:36:37.121330 10764] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:37.121330 10764] Config: (default) read_only = false
+[2021-03-17T17:36:37.121330 10764] Config: (default) read_only_direct = false
+[2021-03-17T17:36:37.121330 10764] Config: (default) recache = false
+[2021-03-17T17:36:37.121330 10764] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:37.121330 10764] Config: (default) sloppiness = 
+[2021-03-17T17:36:37.121330 10764] Config: (default) stats = true
+[2021-03-17T17:36:37.121330 10764] Config: (default) temporary_dir = 
+[2021-03-17T17:36:37.121330 10764] Config: (default) umask = 
+[2021-03-17T17:36:37.121330 10764] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.serial.serialjava.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.serial.serialjava.c
+[2021-03-17T17:36:37.121330 10764] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:37.121330 10764] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:37.121330 10764] Source file: module.serial.serialjava.c
+[2021-03-17T17:36:37.121330 10764] Object file: module.serial.serialjava.o
+[2021-03-17T17:36:37.122329 10764] Trying direct lookup
+[2021-03-17T17:36:37.123330 10764] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/e/f/7e802bf67a67df4a5351135d1100e4-437843.manifest
+[2021-03-17T17:36:37.152374 11268] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:37.152374 11268] Config: (default) base_dir = 
+[2021-03-17T17:36:37.152374 11268] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:37.152374 11268] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:37.152374 11268] Config: (default) compiler = 
+[2021-03-17T17:36:37.152374 11268] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:37.152374 11268] Config: (default) compression = false
+[2021-03-17T17:36:37.152374 11268] Config: (default) compression_level = 6
+[2021-03-17T17:36:37.152374 11268] Config: (default) cpp_extension = 
+[2021-03-17T17:36:37.152374 11268] Config: (default) debug = false
+[2021-03-17T17:36:37.152374 11268] Config: (default) depend_mode = false
+[2021-03-17T17:36:37.152374 11268] Config: (default) direct_mode = true
+[2021-03-17T17:36:37.152374 11268] Config: (default) disable = false
+[2021-03-17T17:36:37.152374 11268] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:37.152374 11268] Config: (default) hard_link = false
+[2021-03-17T17:36:37.152374 11268] Config: (default) hash_dir = true
+[2021-03-17T17:36:37.152374 11268] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:37.152374 11268] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:37.152374 11268] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:37.152374 11268] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:37.152374 11268] Config: (default) max_files = 0
+[2021-03-17T17:36:37.152374 11268] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:37.152374 11268] Config: (default) path = 
+[2021-03-17T17:36:37.152374 11268] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:37.152374 11268] Config: (default) prefix_command = 
+[2021-03-17T17:36:37.152374 11268] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:37.152374 11268] Config: (default) read_only = false
+[2021-03-17T17:36:37.152374 11268] Config: (default) read_only_direct = false
+[2021-03-17T17:36:37.152374 11268] Config: (default) recache = false
+[2021-03-17T17:36:37.152374 11268] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:37.152374 11268] Config: (default) sloppiness = 
+[2021-03-17T17:36:37.152374 11268] Config: (default) stats = true
+[2021-03-17T17:36:37.152374 11268] Config: (default) temporary_dir = 
+[2021-03-17T17:36:37.152374 11268] Config: (default) umask = 
+[2021-03-17T17:36:37.152374 11268] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.serial.serialposix.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.serial.serialposix.c
+[2021-03-17T17:36:37.152374 11268] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:37.152374 11268] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:37.152374 11268] Source file: module.serial.serialposix.c
+[2021-03-17T17:36:37.152374 11268] Object file: module.serial.serialposix.o
+[2021-03-17T17:36:37.152374 11268] Trying direct lookup
+[2021-03-17T17:36:37.157422 11268] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/a/3ac0b1f0ea465ec4083ced9738d966-1732145.manifest
+[2021-03-17T17:36:37.157422 11268] No such manifest file
+[2021-03-17T17:36:37.157422 11268] Did not find object file hash in manifest
+[2021-03-17T17:36:37.157422 11268] Running preprocessor
+[2021-03-17T17:36:37.206593 10468] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:37.206593 10468] Config: (default) base_dir = 
+[2021-03-17T17:36:37.206593 10468] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:37.206593 10468] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:37.206593 10468] Config: (default) compiler = 
+[2021-03-17T17:36:37.206593 10468] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:37.206593 10468] Config: (default) compression = false
+[2021-03-17T17:36:37.206593 10468] Config: (default) compression_level = 6
+[2021-03-17T17:36:37.206593 10468] Config: (default) cpp_extension = 
+[2021-03-17T17:36:37.206593 10468] Config: (default) debug = false
+[2021-03-17T17:36:37.206593 10468] Config: (default) depend_mode = false
+[2021-03-17T17:36:37.206593 10468] Config: (default) direct_mode = true
+[2021-03-17T17:36:37.206593 10468] Config: (default) disable = false
+[2021-03-17T17:36:37.206593 10468] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:37.206593 10468] Config: (default) hard_link = false
+[2021-03-17T17:36:37.206593 10468] Config: (default) hash_dir = true
+[2021-03-17T17:36:37.206593 10468] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:37.206593 10468] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:37.206593 10468] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:37.206593 10468] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:37.206593 10468] Config: (default) max_files = 0
+[2021-03-17T17:36:37.206593 10468] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:37.206593 10468] Config: (default) path = 
+[2021-03-17T17:36:37.206593 10468] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:37.206593 10468] Config: (default) prefix_command = 
+[2021-03-17T17:36:37.206593 10468] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:37.206593 10468] Config: (default) read_only = false
+[2021-03-17T17:36:37.206593 10468] Config: (default) read_only_direct = false
+[2021-03-17T17:36:37.206593 10468] Config: (default) recache = false
+[2021-03-17T17:36:37.206593 10468] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:37.206593 10468] Config: (default) sloppiness = 
+[2021-03-17T17:36:37.206593 10468] Config: (default) stats = true
+[2021-03-17T17:36:37.206593 10468] Config: (default) temporary_dir = 
+[2021-03-17T17:36:37.206593 10468] Config: (default) umask = 
+[2021-03-17T17:36:37.206593 10468] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.serial.serialwin32.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.serial.serialwin32.c
+[2021-03-17T17:36:37.206593 10468] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:37.207592 10468] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:37.207592 10468] Source file: module.serial.serialwin32.c
+[2021-03-17T17:36:37.207592 10468] Object file: module.serial.serialwin32.o
+[2021-03-17T17:36:37.207592 10468] Trying direct lookup
+[2021-03-17T17:36:37.210591 10468] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/1/6664788c58f2e6c5f3e677980e42b8-809302.manifest
+[2021-03-17T17:36:37.210591 10764] Got object file hash from manifest
+[2021-03-17T17:36:37.210591 10468] No such manifest file
+[2021-03-17T17:36:37.210591 10468] Did not find object file hash in manifest
+[2021-03-17T17:36:37.210591 10468] Running preprocessor
+[2021-03-17T17:36:37.212590 256  ] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:37.212590 256  ] Config: (default) base_dir = 
+[2021-03-17T17:36:37.212590 256  ] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:37.212590 256  ] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:37.212590 256  ] Config: (default) compiler = 
+[2021-03-17T17:36:37.212590 256  ] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:37.212590 256  ] Config: (default) compression = false
+[2021-03-17T17:36:37.212590 256  ] Config: (default) compression_level = 6
+[2021-03-17T17:36:37.212590 256  ] Config: (default) cpp_extension = 
+[2021-03-17T17:36:37.212590 256  ] Config: (default) debug = false
+[2021-03-17T17:36:37.212590 256  ] Config: (default) depend_mode = false
+[2021-03-17T17:36:37.212590 256  ] Config: (default) direct_mode = true
+[2021-03-17T17:36:37.212590 256  ] Config: (default) disable = false
+[2021-03-17T17:36:37.212590 256  ] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:37.212590 256  ] Config: (default) hard_link = false
+[2021-03-17T17:36:37.212590 256  ] Config: (default) hash_dir = true
+[2021-03-17T17:36:37.212590 256  ] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:37.212590 256  ] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:37.212590 256  ] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:37.212590 256  ] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:37.212590 256  ] Config: (default) max_files = 0
+[2021-03-17T17:36:37.212590 256  ] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:37.212590 256  ] Config: (default) path = 
+[2021-03-17T17:36:37.212590 256  ] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:37.212590 256  ] Config: (default) prefix_command = 
+[2021-03-17T17:36:37.212590 256  ] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:37.212590 256  ] Config: (default) read_only = false
+[2021-03-17T17:36:37.212590 256  ] Config: (default) read_only_direct = false
+[2021-03-17T17:36:37.212590 256  ] Config: (default) recache = false
+[2021-03-17T17:36:37.212590 256  ] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:37.212590 256  ] Config: (default) sloppiness = 
+[2021-03-17T17:36:37.212590 256  ] Config: (default) stats = true
+[2021-03-17T17:36:37.212590 256  ] Config: (default) temporary_dir = 
+[2021-03-17T17:36:37.212590 256  ] Config: (default) umask = 
+[2021-03-17T17:36:37.212590 256  ] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.serial.serialutil.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.serial.serialutil.c
+[2021-03-17T17:36:37.212590 256  ] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:37.212590 256  ] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:37.213591 256  ] Source file: module.serial.serialutil.c
+[2021-03-17T17:36:37.213591 256  ] Object file: module.serial.serialutil.o
+[2021-03-17T17:36:37.213591 256  ] Trying direct lookup
+[2021-03-17T17:36:37.217587 256  ] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/0/2a1fcad92d639a8d9d5d5220843adc-1111655.manifest
+[2021-03-17T17:36:37.217587 256  ] No such manifest file
+[2021-03-17T17:36:37.217587 256  ] Did not find object file hash in manifest
+[2021-03-17T17:36:37.217587 10764] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/3/82598671bd220651a050436803ed45-1035350.o to module.serial.serialjava.o (uncompressed)
+[2021-03-17T17:36:37.217587 256  ] Running preprocessor
+[2021-03-17T17:36:37.231580 10764] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/3/82598671bd220651a050436803ed45-1035350.o -> module.serial.serialjava.o
+[2021-03-17T17:36:37.234579 10764] Succeeded getting cached result
+[2021-03-17T17:36:37.234579 10764] Result: cache hit (direct)
+[2021-03-17T17:36:37.235576 10764] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/stats.lock
+[2021-03-17T17:36:37.243573 10764] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/stats.lock
+[2021-03-17T17:36:37.362279 5052 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) base_dir = 
+[2021-03-17T17:36:37.362279 5052 ] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) compiler = 
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) compression = false
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) compression_level = 6
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) cpp_extension = 
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) debug = false
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) depend_mode = false
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) direct_mode = true
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) disable = false
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) hard_link = false
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) hash_dir = true
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:37.362279 5052 ] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) max_files = 0
+[2021-03-17T17:36:37.362279 5052 ] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) path = 
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) prefix_command = 
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) read_only = false
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) read_only_direct = false
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) recache = false
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) sloppiness = 
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) stats = true
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) temporary_dir = 
+[2021-03-17T17:36:37.362279 5052 ] Config: (default) umask = 
+[2021-03-17T17:36:37.362279 5052 ] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.serial.win32.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.serial.win32.c
+[2021-03-17T17:36:37.362279 5052 ] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:37.362279 5052 ] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:37.362279 5052 ] Source file: module.serial.win32.c
+[2021-03-17T17:36:37.362279 5052 ] Object file: module.serial.win32.o
+[2021-03-17T17:36:37.362279 5052 ] Trying direct lookup
+[2021-03-17T17:36:37.362279 5052 ] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/9/c29f93b0b0f27ae97e6588d8851b99-490806.manifest
+[2021-03-17T17:36:37.362279 5052 ] No such manifest file
+[2021-03-17T17:36:37.362279 5052 ] Did not find object file hash in manifest
+[2021-03-17T17:36:37.366314 5052 ] Running preprocessor
+[2021-03-17T17:36:37.850704 11268] Got object file hash from preprocessor
+[2021-03-17T17:36:37.850704 11268] Object file C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/6/0e69ba9285ec0323bdc1c8ff0f01f4-2332885.o not in cache
+[2021-03-17T17:36:37.850704 11268] Running real compiler
+[2021-03-17T17:36:37.972275 10468] Got object file hash from preprocessor
+[2021-03-17T17:36:37.972275 10468] Object file C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/3/6255b4af5e207e35c2fa51f6c0ebf2-1414516.o not in cache
+[2021-03-17T17:36:37.972275 10468] Running real compiler
+[2021-03-17T17:36:38.019469 256  ] Got object file hash from preprocessor
+[2021-03-17T17:36:38.019469 256  ] Object file C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/b/a82635289172e4d801e0f053dd8dbc-1640987.o not in cache
+[2021-03-17T17:36:38.019469 256  ] Running real compiler
+[2021-03-17T17:36:38.172823 5052 ] Got object file hash from preprocessor
+[2021-03-17T17:36:38.172823 5052 ] Object file C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/d/b9c4254a99015db945916849f7bd3b-1126158.o not in cache
+[2021-03-17T17:36:38.172823 5052 ] Running real compiler
+[2021-03-17T17:36:44.610164 5052 ] Unlink C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/d/b9c4254a99015db945916849f7bd3b-1126158.o.tmp.stdout.DESKTOP-V96PKA3.5052.FzP5tM
+[2021-03-17T17:36:44.610164 5052 ] Unlink C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/d/b9c4254a99015db945916849f7bd3b-1126158.o.tmp.stderr.DESKTOP-V96PKA3.5052.1QBI6D
+[2021-03-17T17:36:44.612183 5052 ] Copying module.serial.win32.o to C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/d/b9c4254a99015db945916849f7bd3b-1126158.o via C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/d/b9c4254a99015db945916849f7bd3b-1126158.o.DESKTOP-V96PKA3.5052.SS92c3 (uncompressed)
+[2021-03-17T17:36:44.617188 5052 ] Stored in cache: module.serial.win32.o -> C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/d/b9c4254a99015db945916849f7bd3b-1126158.o (copied)
+[2021-03-17T17:36:44.657413 5052 ] Added object file hash to C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/9/c29f93b0b0f27ae97e6588d8851b99-490806.manifest
+[2021-03-17T17:36:44.657413 5052 ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/stats.lock
+[2021-03-17T17:36:44.662454 5052 ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/stats.lock
+[2021-03-17T17:36:44.662454 5052 ] Result: cache miss
+[2021-03-17T17:36:44.662454 5052 ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/stats.lock
+[2021-03-17T17:36:44.672504 5052 ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/stats.lock
+[2021-03-17T17:36:45.147717 10688] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:45.147717 10688] Config: (default) base_dir = 
+[2021-03-17T17:36:45.147717 10688] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:45.147717 10688] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:45.147717 10688] Config: (default) compiler = 
+[2021-03-17T17:36:45.147717 10688] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:45.147717 10688] Config: (default) compression = false
+[2021-03-17T17:36:45.147717 10688] Config: (default) compression_level = 6
+[2021-03-17T17:36:45.147717 10688] Config: (default) cpp_extension = 
+[2021-03-17T17:36:45.147717 10688] Config: (default) debug = false
+[2021-03-17T17:36:45.147717 10688] Config: (default) depend_mode = false
+[2021-03-17T17:36:45.147717 10688] Config: (default) direct_mode = true
+[2021-03-17T17:36:45.147717 10688] Config: (default) disable = false
+[2021-03-17T17:36:45.147717 10688] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:45.147717 10688] Config: (default) hard_link = false
+[2021-03-17T17:36:45.147717 10688] Config: (default) hash_dir = true
+[2021-03-17T17:36:45.147717 10688] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:45.147717 10688] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:45.147717 10688] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:45.147717 10688] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:45.147717 10688] Config: (default) max_files = 0
+[2021-03-17T17:36:45.147717 10688] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:45.147717 10688] Config: (default) path = 
+[2021-03-17T17:36:45.147717 10688] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:45.147717 10688] Config: (default) prefix_command = 
+[2021-03-17T17:36:45.147717 10688] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:45.147717 10688] Config: (default) read_only = false
+[2021-03-17T17:36:45.147717 10688] Config: (default) read_only_direct = false
+[2021-03-17T17:36:45.147717 10688] Config: (default) recache = false
+[2021-03-17T17:36:45.147717 10688] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:45.147717 10688] Config: (default) sloppiness = 
+[2021-03-17T17:36:45.147717 10688] Config: (default) stats = true
+[2021-03-17T17:36:45.147717 10688] Config: (default) temporary_dir = 
+[2021-03-17T17:36:45.147717 10688] Config: (default) umask = 
+[2021-03-17T17:36:45.147717 10688] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\MainProgram.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\MainProgram.c
+[2021-03-17T17:36:45.147717 10688] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:45.147717 10688] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:45.147717 10688] Source file: static_src\MainProgram.c
+[2021-03-17T17:36:45.147717 10688] Object file: static_src\MainProgram.o
+[2021-03-17T17:36:45.147717 10688] Trying direct lookup
+[2021-03-17T17:36:45.147717 10688] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/a/563e7ba334ab02dbb0fc979ee95929-26294.manifest
+[2021-03-17T17:36:45.193981 10468] Unlink C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/3/6255b4af5e207e35c2fa51f6c0ebf2-1414516.o.tmp.stdout.DESKTOP-V96PKA3.10468.FzP5tM
+[2021-03-17T17:36:45.193981 10468] Unlink C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/3/6255b4af5e207e35c2fa51f6c0ebf2-1414516.o.tmp.stderr.DESKTOP-V96PKA3.10468.1QBI6D
+[2021-03-17T17:36:45.193981 10468] Copying module.serial.serialwin32.o to C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/3/6255b4af5e207e35c2fa51f6c0ebf2-1414516.o via C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/3/6255b4af5e207e35c2fa51f6c0ebf2-1414516.o.DESKTOP-V96PKA3.10468.SS92c3 (uncompressed)
+[2021-03-17T17:36:45.202521 10468] Stored in cache: module.serial.serialwin32.o -> C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/3/6255b4af5e207e35c2fa51f6c0ebf2-1414516.o (copied)
+[2021-03-17T17:36:45.212580 10468] Added object file hash to C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/1/6664788c58f2e6c5f3e677980e42b8-809302.manifest
+[2021-03-17T17:36:45.212580 10468] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/stats.lock
+[2021-03-17T17:36:45.216114 10468] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/stats.lock
+[2021-03-17T17:36:45.216114 10468] Result: cache miss
+[2021-03-17T17:36:45.216114 10468] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-03-17T17:36:45.226222 10468] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-03-17T17:36:45.362399 11792] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:45.362399 11792] Config: (default) base_dir = 
+[2021-03-17T17:36:45.362399 11792] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:45.362399 11792] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:45.362399 11792] Config: (default) compiler = 
+[2021-03-17T17:36:45.362399 11792] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:45.362399 11792] Config: (default) compression = false
+[2021-03-17T17:36:45.362399 11792] Config: (default) compression_level = 6
+[2021-03-17T17:36:45.362399 11792] Config: (default) cpp_extension = 
+[2021-03-17T17:36:45.362399 11792] Config: (default) debug = false
+[2021-03-17T17:36:45.362399 11792] Config: (default) depend_mode = false
+[2021-03-17T17:36:45.362399 11792] Config: (default) direct_mode = true
+[2021-03-17T17:36:45.362399 11792] Config: (default) disable = false
+[2021-03-17T17:36:45.362399 11792] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:45.362399 11792] Config: (default) hard_link = false
+[2021-03-17T17:36:45.362399 11792] Config: (default) hash_dir = true
+[2021-03-17T17:36:45.362399 11792] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:45.362399 11792] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:45.362399 11792] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:45.362399 11792] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:45.362399 11792] Config: (default) max_files = 0
+[2021-03-17T17:36:45.362399 11792] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:45.362399 11792] Config: (default) path = 
+[2021-03-17T17:36:45.362399 11792] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:45.362399 11792] Config: (default) prefix_command = 
+[2021-03-17T17:36:45.362399 11792] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:45.362399 11792] Config: (default) read_only = false
+[2021-03-17T17:36:45.362399 11792] Config: (default) read_only_direct = false
+[2021-03-17T17:36:45.362399 11792] Config: (default) recache = false
+[2021-03-17T17:36:45.362399 11792] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:45.362399 11792] Config: (default) sloppiness = 
+[2021-03-17T17:36:45.362399 11792] Config: (default) stats = true
+[2021-03-17T17:36:45.362399 11792] Config: (default) temporary_dir = 
+[2021-03-17T17:36:45.362399 11792] Config: (default) umask = 
+[2021-03-17T17:36:45.362423 11792] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledCellType.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\CompiledCellType.c
+[2021-03-17T17:36:45.362423 11792] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:45.362423 11792] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:45.362423 11792] Source file: static_src\CompiledCellType.c
+[2021-03-17T17:36:45.362423 11792] Object file: static_src\CompiledCellType.o
+[2021-03-17T17:36:45.362423 11792] Trying direct lookup
+[2021-03-17T17:36:45.362423 11792] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/8/b6d305a8cc1ec54bdb094bda3ce6cb-8044.manifest
+[2021-03-17T17:36:45.495941 11792] Got object file hash from manifest
+[2021-03-17T17:36:45.495941 11792] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/8/91fc07c579810695d2f9e0aaada90c-632326.o to static_src\CompiledCellType.o (uncompressed)
+[2021-03-17T17:36:45.527017 11792] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/8/91fc07c579810695d2f9e0aaada90c-632326.o -> static_src\CompiledCellType.o
+[2021-03-17T17:36:45.527017 11792] Succeeded getting cached result
+[2021-03-17T17:36:45.527017 11792] Result: cache hit (direct)
+[2021-03-17T17:36:45.528016 11792] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/stats.lock
+[2021-03-17T17:36:45.535013 11792] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/stats.lock
+[2021-03-17T17:36:45.707329 5492 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) base_dir = 
+[2021-03-17T17:36:45.707329 5492 ] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) compiler = 
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) compression = false
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) compression_level = 6
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) cpp_extension = 
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) debug = false
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) depend_mode = false
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) direct_mode = true
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) disable = false
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) hard_link = false
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) hash_dir = true
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:45.707329 5492 ] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) max_files = 0
+[2021-03-17T17:36:45.707329 5492 ] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) path = 
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) prefix_command = 
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) read_only = false
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) read_only_direct = false
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) recache = false
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) sloppiness = 
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) stats = true
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) temporary_dir = 
+[2021-03-17T17:36:45.707329 5492 ] Config: (default) umask = 
+[2021-03-17T17:36:45.707329 5492 ] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledFunctionType.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\CompiledFunctionType.c
+[2021-03-17T17:36:45.707329 5492 ] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:45.707329 5492 ] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:45.707329 5492 ] Source file: static_src\CompiledFunctionType.c
+[2021-03-17T17:36:45.707329 5492 ] Object file: static_src\CompiledFunctionType.o
+[2021-03-17T17:36:45.707329 5492 ] Trying direct lookup
+[2021-03-17T17:36:45.707329 5492 ] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/1/e6f6485b22f6b898a2b06ab283bdb0-79025.manifest
+[2021-03-17T17:36:45.782392 5492 ] Got object file hash from manifest
+[2021-03-17T17:36:45.787918 5492 ] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/a/683734127d9da1f299d66e0953f54c-712800.o to static_src\CompiledFunctionType.o (uncompressed)
+[2021-03-17T17:36:45.792456 5492 ] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/a/683734127d9da1f299d66e0953f54c-712800.o -> static_src\CompiledFunctionType.o
+[2021-03-17T17:36:45.797461 5492 ] Succeeded getting cached result
+[2021-03-17T17:36:45.797461 5492 ] Result: cache hit (direct)
+[2021-03-17T17:36:45.797461 5492 ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/stats.lock
+[2021-03-17T17:36:45.802031 5492 ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/stats.lock
+[2021-03-17T17:36:46.060505 10232] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:46.060505 10232] Config: (default) base_dir = 
+[2021-03-17T17:36:46.060505 10232] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:46.060505 10232] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:46.060505 10232] Config: (default) compiler = 
+[2021-03-17T17:36:46.060505 10232] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:46.060505 10232] Config: (default) compression = false
+[2021-03-17T17:36:46.060505 10232] Config: (default) compression_level = 6
+[2021-03-17T17:36:46.060505 10232] Config: (default) cpp_extension = 
+[2021-03-17T17:36:46.060505 10232] Config: (default) debug = false
+[2021-03-17T17:36:46.060505 10232] Config: (default) depend_mode = false
+[2021-03-17T17:36:46.060505 10232] Config: (default) direct_mode = true
+[2021-03-17T17:36:46.060505 10232] Config: (default) disable = false
+[2021-03-17T17:36:46.060505 10232] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:46.060505 10232] Config: (default) hard_link = false
+[2021-03-17T17:36:46.060505 10232] Config: (default) hash_dir = true
+[2021-03-17T17:36:46.060505 10232] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:46.060505 10232] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:46.060505 10232] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:46.060505 10232] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:46.060505 10232] Config: (default) max_files = 0
+[2021-03-17T17:36:46.060505 10232] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:46.060505 10232] Config: (default) path = 
+[2021-03-17T17:36:46.060505 10232] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:46.060505 10232] Config: (default) prefix_command = 
+[2021-03-17T17:36:46.060505 10232] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:46.060505 10232] Config: (default) read_only = false
+[2021-03-17T17:36:46.060505 10232] Config: (default) read_only_direct = false
+[2021-03-17T17:36:46.060505 10232] Config: (default) recache = false
+[2021-03-17T17:36:46.060505 10232] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:46.060505 10232] Config: (default) sloppiness = 
+[2021-03-17T17:36:46.060505 10232] Config: (default) stats = true
+[2021-03-17T17:36:46.060505 10232] Config: (default) temporary_dir = 
+[2021-03-17T17:36:46.060505 10232] Config: (default) umask = 
+[2021-03-17T17:36:46.060505 10232] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledGeneratorType.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\CompiledGeneratorType.c
+[2021-03-17T17:36:46.060505 10232] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:46.060505 10232] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:46.061503 10232] Source file: static_src\CompiledGeneratorType.c
+[2021-03-17T17:36:46.061503 10232] Object file: static_src\CompiledGeneratorType.o
+[2021-03-17T17:36:46.061503 10232] Trying direct lookup
+[2021-03-17T17:36:46.062016 10232] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/5/2/54bb78c6511748730e513bd44b84d4-57474.manifest
+[2021-03-17T17:36:46.127332 10232] Got object file hash from manifest
+[2021-03-17T17:36:46.127332 10232] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/6/bebcbc0bd5d3f02dd70daa2a4dbc3c-807556.o to static_src\CompiledGeneratorType.o (uncompressed)
+[2021-03-17T17:36:46.150983 10232] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/6/bebcbc0bd5d3f02dd70daa2a4dbc3c-807556.o -> static_src\CompiledGeneratorType.o
+[2021-03-17T17:36:46.150983 10232] Succeeded getting cached result
+[2021-03-17T17:36:46.150983 10232] Result: cache hit (direct)
+[2021-03-17T17:36:46.151996 10232] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-03-17T17:36:46.177162 10232] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-03-17T17:36:47.476970 256  ] Unlink C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/b/a82635289172e4d801e0f053dd8dbc-1640987.o.tmp.stdout.DESKTOP-V96PKA3.256.FzP5tM
+[2021-03-17T17:36:47.476970 256  ] Unlink C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/b/a82635289172e4d801e0f053dd8dbc-1640987.o.tmp.stderr.DESKTOP-V96PKA3.256.1QBI6D
+[2021-03-17T17:36:47.481986 256  ] Copying module.serial.serialutil.o to C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/b/a82635289172e4d801e0f053dd8dbc-1640987.o via C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/b/a82635289172e4d801e0f053dd8dbc-1640987.o.DESKTOP-V96PKA3.256.SS92c3 (uncompressed)
+[2021-03-17T17:36:47.486992 256  ] Stored in cache: module.serial.serialutil.o -> C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/b/a82635289172e4d801e0f053dd8dbc-1640987.o (copied)
+[2021-03-17T17:36:47.492036 256  ] Added object file hash to C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/0/2a1fcad92d639a8d9d5d5220843adc-1111655.manifest
+[2021-03-17T17:36:47.492036 256  ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/stats.lock
+[2021-03-17T17:36:47.502045 256  ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/stats.lock
+[2021-03-17T17:36:47.502045 256  ] Result: cache miss
+[2021-03-17T17:36:47.502045 256  ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-03-17T17:36:47.512265 256  ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-03-17T17:36:47.792091 6524 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) base_dir = 
+[2021-03-17T17:36:47.792091 6524 ] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) compiler = 
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) compression = false
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) compression_level = 6
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) cpp_extension = 
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) debug = false
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) depend_mode = false
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) direct_mode = true
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) disable = false
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) hard_link = false
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) hash_dir = true
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:47.792091 6524 ] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) max_files = 0
+[2021-03-17T17:36:47.792091 6524 ] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) path = 
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) prefix_command = 
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) read_only = false
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) read_only_direct = false
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) recache = false
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) sloppiness = 
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) stats = true
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) temporary_dir = 
+[2021-03-17T17:36:47.792091 6524 ] Config: (default) umask = 
+[2021-03-17T17:36:47.792091 6524 ] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledCodeHelpers.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\CompiledCodeHelpers.c
+[2021-03-17T17:36:47.792091 6524 ] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:47.792091 6524 ] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:47.792091 6524 ] Source file: static_src\CompiledCodeHelpers.c
+[2021-03-17T17:36:47.792091 6524 ] Object file: static_src\CompiledCodeHelpers.o
+[2021-03-17T17:36:47.792091 6524 ] Trying direct lookup
+[2021-03-17T17:36:47.792091 6524 ] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/7/3/2a5a5bf0552de9997f4cd29e9248bf-55549.manifest
+[2021-03-17T17:36:47.807138 10688] Got object file hash from manifest
+[2021-03-17T17:36:47.807138 10688] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/9/48de1a774bc8d637625935c799c5ce-4120055.o to static_src\MainProgram.o (uncompressed)
+[2021-03-17T17:36:47.807138 10148] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:47.807138 10148] Config: (default) base_dir = 
+[2021-03-17T17:36:47.807138 10148] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:47.807138 10148] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:47.807138 10148] Config: (default) compiler = 
+[2021-03-17T17:36:47.807138 10148] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:47.807138 10148] Config: (default) compression = false
+[2021-03-17T17:36:47.807138 10148] Config: (default) compression_level = 6
+[2021-03-17T17:36:47.807138 10148] Config: (default) cpp_extension = 
+[2021-03-17T17:36:47.807138 10148] Config: (default) debug = false
+[2021-03-17T17:36:47.807138 10148] Config: (default) depend_mode = false
+[2021-03-17T17:36:47.807138 10148] Config: (default) direct_mode = true
+[2021-03-17T17:36:47.807138 10148] Config: (default) disable = false
+[2021-03-17T17:36:47.807138 10148] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:47.807138 10148] Config: (default) hard_link = false
+[2021-03-17T17:36:47.807138 10148] Config: (default) hash_dir = true
+[2021-03-17T17:36:47.807138 10148] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:47.807138 10148] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:47.807138 10148] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:47.807138 10148] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:47.807138 10148] Config: (default) max_files = 0
+[2021-03-17T17:36:47.807138 10148] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:47.807138 10148] Config: (default) path = 
+[2021-03-17T17:36:47.807138 10148] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:47.807138 10148] Config: (default) prefix_command = 
+[2021-03-17T17:36:47.807138 10148] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:47.807138 10148] Config: (default) read_only = false
+[2021-03-17T17:36:47.807138 10148] Config: (default) read_only_direct = false
+[2021-03-17T17:36:47.807138 10148] Config: (default) recache = false
+[2021-03-17T17:36:47.807138 10148] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:47.807138 10148] Config: (default) sloppiness = 
+[2021-03-17T17:36:47.807138 10148] Config: (default) stats = true
+[2021-03-17T17:36:47.807138 10148] Config: (default) temporary_dir = 
+[2021-03-17T17:36:47.807138 10148] Config: (default) umask = 
+[2021-03-17T17:36:47.807138 10148] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\InspectPatcher.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\InspectPatcher.c
+[2021-03-17T17:36:47.807138 10148] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:47.807138 10148] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:47.812159 10148] Source file: static_src\InspectPatcher.c
+[2021-03-17T17:36:47.812159 10148] Object file: static_src\InspectPatcher.o
+[2021-03-17T17:36:47.812159 10148] Trying direct lookup
+[2021-03-17T17:36:47.812159 10148] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/8/44caee71a310557054823f79286bdc-13708.manifest
+[2021-03-17T17:36:47.822230 10688] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/9/48de1a774bc8d637625935c799c5ce-4120055.o -> static_src\MainProgram.o
+[2021-03-17T17:36:47.822230 10688] Succeeded getting cached result
+[2021-03-17T17:36:47.822230 10688] Result: cache hit (direct)
+[2021-03-17T17:36:47.822230 10688] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/stats.lock
+[2021-03-17T17:36:47.827234 10688] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/stats.lock
+[2021-03-17T17:36:47.897236 10148] Got object file hash from manifest
+[2021-03-17T17:36:47.898273 10148] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/d/694415738502ace592fa816b199a18-638011.o to static_src\InspectPatcher.o (uncompressed)
+[2021-03-17T17:36:47.905305 10148] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/d/694415738502ace592fa816b199a18-638011.o -> static_src\InspectPatcher.o
+[2021-03-17T17:36:47.905305 10148] Succeeded getting cached result
+[2021-03-17T17:36:47.905305 10148] Result: cache hit (direct)
+[2021-03-17T17:36:47.907321 10148] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/stats.lock
+[2021-03-17T17:36:47.912346 10148] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/stats.lock
+[2021-03-17T17:36:47.992316 9044 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) base_dir = 
+[2021-03-17T17:36:47.992316 9044 ] Config: (environment) cache_dir = C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) cache_dir_levels = 2
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) compiler = 
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) compiler_check = mtime
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) compression = false
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) compression_level = 6
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) cpp_extension = 
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) debug = false
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) depend_mode = false
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) direct_mode = true
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) disable = false
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) extra_files_to_hash = 
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) hard_link = false
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) hash_dir = true
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) ignore_headers_in_manifest = 
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) keep_comments_cpp = false
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) limit_multiple = 0.8
+[2021-03-17T17:36:47.992316 9044 ] Config: (environment) log_file = C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build\ccache-9596.txt
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) max_files = 0
+[2021-03-17T17:36:47.992316 9044 ] Config: (C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) path = 
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) pch_external_checksum = false
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) prefix_command = 
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) prefix_command_cpp = 
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) read_only = false
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) read_only_direct = false
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) recache = false
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) run_second_cpp = true
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) sloppiness = 
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) stats = true
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) temporary_dir = 
+[2021-03-17T17:36:47.992316 9044 ] Config: (default) umask = 
+[2021-03-17T17:36:47.992316 9044 ] Command line: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\Formula\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\MetaPathBasedLoader.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\Formula\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\MetaPathBasedLoader.c
+[2021-03-17T17:36:47.992316 9044 ] Hostname: DESKTOP-V96PKA3
+[2021-03-17T17:36:47.992316 9044 ] Working directory: C:\Users\Formula\Documents\live-telemetry-viewer-pyqt\main.build
+[2021-03-17T17:36:47.992316 9044 ] Source file: static_src\MetaPathBasedLoader.c
+[2021-03-17T17:36:47.992316 9044 ] Object file: static_src\MetaPathBasedLoader.o
+[2021-03-17T17:36:47.992316 9044 ] Trying direct lookup
+[2021-03-17T17:36:47.992316 9044 ] Looking for object file hash in C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/1/933e8c3c3265443b7b7a1a2137d3bc-52280.manifest
+[2021-03-17T17:36:48.017405 6524 ] Got object file hash from manifest
+[2021-03-17T17:36:48.017405 6524 ] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/9/2d49932783d564fffdc015a7d4edd1-5658875.o to static_src\CompiledCodeHelpers.o (uncompressed)
+[2021-03-17T17:36:48.082251 9044 ] Got object file hash from manifest
+[2021-03-17T17:36:48.082251 9044 ] Copying C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/f/779a573134b3446167835df3558ca6-2989715.o to static_src\MetaPathBasedLoader.o (uncompressed)
+[2021-03-17T17:36:48.082251 9044 ] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/f/779a573134b3446167835df3558ca6-2989715.o -> static_src\MetaPathBasedLoader.o
+[2021-03-17T17:36:48.082251 9044 ] Succeeded getting cached result
+[2021-03-17T17:36:48.082251 9044 ] Result: cache hit (direct)
+[2021-03-17T17:36:48.082251 9044 ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/stats.lock
+[2021-03-17T17:36:48.096968 9044 ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/stats.lock
+[2021-03-17T17:36:48.114758 6524 ] Created from cache: C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/9/2d49932783d564fffdc015a7d4edd1-5658875.o -> static_src\CompiledCodeHelpers.o
+[2021-03-17T17:36:48.115738 6524 ] Succeeded getting cached result
+[2021-03-17T17:36:48.115738 6524 ] Result: cache hit (direct)
+[2021-03-17T17:36:48.115738 6524 ] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/stats.lock
+[2021-03-17T17:36:48.122736 6524 ] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/stats.lock
+[2021-03-17T17:36:52.002121 11268] Unlink C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/6/0e69ba9285ec0323bdc1c8ff0f01f4-2332885.o.tmp.stdout.DESKTOP-V96PKA3.11268.FzP5tM
+[2021-03-17T17:36:52.002121 11268] Unlink C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/6/0e69ba9285ec0323bdc1c8ff0f01f4-2332885.o.tmp.stderr.DESKTOP-V96PKA3.11268.1QBI6D
+[2021-03-17T17:36:52.002121 11268] Copying module.serial.serialposix.o to C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/6/0e69ba9285ec0323bdc1c8ff0f01f4-2332885.o via C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/6/0e69ba9285ec0323bdc1c8ff0f01f4-2332885.o.DESKTOP-V96PKA3.11268.SS92c3 (uncompressed)
+[2021-03-17T17:36:52.002121 11268] Stored in cache: module.serial.serialposix.o -> C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/6/0e69ba9285ec0323bdc1c8ff0f01f4-2332885.o (copied)
+[2021-03-17T17:36:52.012173 11268] Added object file hash to C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/a/3ac0b1f0ea465ec4083ced9738d966-1732145.manifest
+[2021-03-17T17:36:52.012173 11268] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-03-17T17:36:52.022220 11268] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-03-17T17:36:52.022220 11268] Result: cache miss
+[2021-03-17T17:36:52.022220 11268] Acquired lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/stats.lock
+[2021-03-17T17:36:52.032422 11268] Releasing lock C:\Users\Formula\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/stats.lock
