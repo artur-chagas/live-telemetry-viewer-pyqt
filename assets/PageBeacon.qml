@@ -32,11 +32,11 @@ Page{
                                 Row{
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     anchors.verticalCenter: parent.verticalCenter
-                                    spacing: width * 0.05
+                                    spacing: width * 0.025
                                     ComboBox{
                                         Component.onCompleted: bridge.getSerialPorts()
                                         id:combobox
-                                        width: parent.width * 0.5
+                                        width: parent.width * 0.3
                                     }
                                     Button{
                                         text:"Buscar"
@@ -45,7 +45,11 @@ Page{
                                     }
                                     Button{
                                         text:"Conectar"
-                                        onClicked: bridge.connectSerial("/dev/ttyACM0")
+                                        onClicked: bridge.connectSerial(combobox.currentText)
+                                    }
+                                    Button{
+                                        text:"Desconectar"
+                                        onClicked: bridge.disconnectSerial()
                                     }
                                 }
 
@@ -60,6 +64,7 @@ Page{
                                     ScrollView{
                                     anchors.fill: parent
                                         TextArea{
+                                            id: textarea
                                             readOnly: true
                                             anchors.left: parent.left
                                             anchors.leftMargin: 0.03*width

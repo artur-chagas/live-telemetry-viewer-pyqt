@@ -16,7 +16,28 @@ import beacon as beacon
 #region other imports
 import serial
 import serial.tools.list_ports
+from multiprocessing import Process
+import atexit
 #endregion
+
+class SerialProcess(Process):
+    def __init__(self, serial_port:str, baudrate=9600, timeout=3600):
+        super(SerialProcess, self).__init__(target=self.startSerial, args=(serial_port, baudrate, timeout))
+        
+        print('SerialProcess.__init__()')
+    def startSerial(self, serial_port, baudrate, timeout):
+        self.ser = serial.Serial(serial_port, baudrate=baudrate, timeout=timeout)
+        self.loopRead()
+        self.closeSerial()
+    def loopRead(self):
+        self.ser.read(17)
+        while(self.ser.is_open):
+            s = self.ser.readline()
+            print(s)
+    def closeSerial(self):
+        if self.ser.is_open:
+            self.ser.close()
+
 
 class Bridge(QObject):
     def __init__(self, app, engine):
@@ -26,6 +47,7 @@ class Bridge(QObject):
 
     setComboBoxModel = pyqtSignal(list)
     
+
     @pyqtSlot()
     def getSerialPorts(self):
         list = []
@@ -39,18 +61,18 @@ class Bridge(QObject):
         #     self.setComboBoxModel.emit(serial.tools.list_ports)
 
     @pyqtSlot(str)
-    def connectSerial(self, s:str):
+    def connectSerial(self, port:str):
+        self.p = SerialProcess(port)
         try:
-            #responder a KeyboardInterrupt
-            signal.signal(signal.SIGINT, signal.SIG_DFL)
-            ser = serial.Serial(s, 9600)
-            #cada string de lap enviada tem 22bytes 
-            s = ser.read(17)
-            print(s)
+            self.p.start()
         except serial.SerialException:
-            print("couldn't read")
+            print("couldn't connect")
+        except KeyboardInterrupt:
+            print("KeyboardInterrupt")
 
-
+    @pyqtSlot()
+    def disconnectSerial(self):
+        self.p.terminate()
 class App():
     def __init__(self):
         self.app = QGuiApplication(sys.argv + ['--style', 'material'])
@@ -80,9 +102,12 @@ class App():
     
     #endregion
 
+def ex(a):
+    if a.bridge.p.is_alive:
+        a.bridge.p.kill()
+
 if __name__ == "__main__":
     b = beacon.Functions()
-
-    
-
-    sys.exit(App())
+    a = App()
+    atexit.register(ex(a))
+    sys.exit(a)
