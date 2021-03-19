@@ -15,11 +15,45 @@ import beacon as beacon
 
 #region other imports
 import serial
+import serial.tools.list_ports
 #endregion
+
+class Bridge(QObject):
+    def __init__(self, app, engine):
+        QObject.__init__(self)
+        self.app = app
+        self.engine = engine
+
+    setComboBoxModel = pyqtSignal(list)
+    
+    @pyqtSlot()
+    def getSerialPorts(self):
+        list = []
+        try:
+            for t in serial.tools.list_ports.comports():
+                list += [t.device]
+        except:
+            list = []
+        self.setComboBoxModel.emit(list)
+        # if len(serial.tools.list_ports) != 0:
+        #     self.setComboBoxModel.emit(serial.tools.list_ports)
+
+    @pyqtSlot(str)
+    def connectSerial(self, s:str):
+        try:
+            #responder a KeyboardInterrupt
+            signal.signal(signal.SIGINT, signal.SIG_DFL)
+            ser = serial.Serial(s, 9600)
+            #cada string de lap enviada tem 22bytes 
+            s = ser.read(17)
+            print(s)
+        except serial.SerialException:
+            print("couldn't read")
+
 
 class App():
     def __init__(self):
-        self.app = QGuiApplication(sys.argv)
+        self.app = QGuiApplication(sys.argv + ['--style', 'material'])
         
         fontdatabase = QFontDatabase()
         fontdatabase.addApplicationFont("fonts/Exo2-Regular.ttf")
@@ -33,33 +67,22 @@ class App():
         signal.signal(signal.SIGINT, signal.SIG_DFL)
         self.engine.rootContext().setContextProperty("bridge", self.bridge)
         self.engine.load("assets/main.qml")
+        
         self.engine.quit.connect(self.app.quit)
         self.app.exec()
 
-class Bridge(QObject):
-    def __init__(self, app, engine):
-        QObject.__init__(self)
-        self.app = app
-        self.engine = engine
+
         
     #region header
-    @pyqtSlot(int)
-    def updateHeaderBold(self, i:int):
-        print("button"+str(i))
-        button = QQmlComponent(self.engine).findChild(QObject, "button"+str(i))
+    @pyqtSlot(list)
+    def getSerialPorts(self):
+        return serial.tools.list_ports
+    
     #endregion
 
 if __name__ == "__main__":
     b = beacon.Functions()
 
-    try:
-        #responder a KeyboardInterrupt
-        signal.signal(signal.SIGINT, signal.SIG_DFL)
-        ser = serial.Serial("COM5", 9600)
-        #cada string de lap enviada tem 22bytes 
-        s = ser.read(17)
-        print(s)
-    except serial.SerialException:
-        print("couldn't read")
+    
 
     sys.exit(App())

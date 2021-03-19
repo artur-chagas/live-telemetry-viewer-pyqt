@@ -38,4 +38,5 @@ Rectangle{
                 color: "#fed700"
             }
         }
+    }
 }

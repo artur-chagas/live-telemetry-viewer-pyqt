@@ -98,13 +98,10 @@ ApplicationWindow{
     SwipeView{
         id:view
         anchors.fill: parent
-        currentIndex:0
+        currentIndex:4
         interactive: false
-        onCurrentIndexChanged: {
-        }
-        FormulaPage{
-            text:"aa"
-        }
+     
+        PageMain{}
         FormulaPage{
             text:"Sensores Auxiliares"
         }
@@ -113,12 +110,9 @@ ApplicationWindow{
         }
         FormulaPage{
             text:"Envio de Mensagens"
+            
         }
-        FormulaPage{
-            Text{
-                text:"aaa"
-            }
-        }
+        PageBeacon{}
     }
 
     }
