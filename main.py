@@ -6,7 +6,7 @@ import signal
 #region qt imports
 from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
 from PyQt5.QtQml import QQmlApplicationEngine
-from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot
+from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
 #endregion
 
 #region py-backend imports
@@ -23,17 +23,19 @@ import atexit
 class SerialProcess(Process):
     def __init__(self, serial_port:str, baudrate=9600, timeout=3600):
         super(SerialProcess, self).__init__(target=self.startSerial, args=(serial_port, baudrate, timeout))
-        
         print('SerialProcess.__init__()')
+
     def startSerial(self, serial_port, baudrate, timeout):
         self.ser = serial.Serial(serial_port, baudrate=baudrate, timeout=timeout)
         self.loopRead()
         self.closeSerial()
-    def loopRead(self):
+
+    def loopRead(self, ):
         self.ser.read(17)
         while(self.ser.is_open):
             s = self.ser.readline()
             print(s)
+
     def closeSerial(self):
         if self.ser.is_open:
             self.ser.close()
@@ -44,9 +46,10 @@ class Bridge(QObject):
         QObject.__init__(self)
         self.app = app
         self.engine = engine
+        self._serialString = ""
 
     setComboBoxModel = pyqtSignal(list)
-    
+    setConsoleText = pyqtSignal(str, arguments=['text'])
 
     @pyqtSlot()
     def getSerialPorts(self):
@@ -65,6 +68,7 @@ class Bridge(QObject):
         self.p = SerialProcess(port)
         try:
             self.p.start()
+            self.engine.rootContext().setContextProperty("serialProcess", self.p)
         except serial.SerialException:
             print("couldn't connect")
         except KeyboardInterrupt:
@@ -73,6 +77,12 @@ class Bridge(QObject):
     @pyqtSlot()
     def disconnectSerial(self):
         self.p.terminate()
+        print("Process terminated")
+
+    @pyqtSlot()
+    def getSerialString(self):
+        self.setConsoleText.emit(self._serialString)
+        
 class App():
     def __init__(self):
         self.app = QGuiApplication(sys.argv + ['--style', 'material'])
@@ -92,15 +102,6 @@ class App():
         
         self.engine.quit.connect(self.app.quit)
         self.app.exec()
-
-
-        
-    #region header
-    @pyqtSlot(list)
-    def getSerialPorts(self):
-        return serial.tools.list_ports
-    
-    #endregion
 
 def ex(a):
     if a.bridge.p.is_alive:

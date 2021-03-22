@@ -3,14 +3,30 @@ import QtQuick.Controls 2.14
 
 
 Page{
+
+    Connections{
+        target: bridge
+        function onSetComboBoxModel(model) {
+            combobox.model = model
+        }
+        function onSetConsoleText(text) {
+            textConsole.text += qsTr(text)
+        }
+        
+    }
+    
     Rectangle{
         color: "#181818"
         anchors.fill: parent
+        id: pageRect
+        property alias text1: textConsole.text
+
         Rectangle{
             color: "#181818"
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width*0.95
             height: parent.height*0.95
+
                 Row{
                     spacing: parent.width * 0.02
                     anchors.fill: parent
@@ -45,11 +61,24 @@ Page{
                                     }
                                     Button{
                                         text:"Conectar"
-                                        onClicked: bridge.connectSerial(combobox.currentText)
+                                        Timer{
+                                            id: timer
+                                            interval: 500; running: false; repeat: true
+                                            onTriggered: {
+                                                bridge.getSerialString()
+                                            }
+                                        }
+                                        onClicked: {
+                                            bridge.connectSerial(combobox.currentText);
+                                            timer.running = true;
+                                        }
                                     }
                                     Button{
                                         text:"Desconectar"
-                                        onClicked: bridge.disconnectSerial()
+                                        onClicked: {
+                                            bridge.disconnectSerial()
+                                            timer.running = false;
+                                        }
                                     }
                                 }
 
@@ -63,12 +92,11 @@ Page{
                                 radius: 16
                                     ScrollView{
                                     anchors.fill: parent
-                                        TextArea{
-                                            id: textarea
-                                            readOnly: true
+                                        Text{
+                                            id: textConsole
+                                            height: 500
                                             anchors.left: parent.left
                                             anchors.leftMargin: 0.03*width
-                                            placeholderText: qsTr("a\na\na\n")
                                         }
                                 }
                             }
@@ -88,10 +116,5 @@ Page{
     }
     
 
-    Connections{
-        target: bridge
-        function onSetComboBoxModel(model) {
-            combobox.model = model
-        }
-    }
+    
 }
