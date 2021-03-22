@@ -1,4 +1,36 @@
-#region python imports
+"""# **Live Telemetry Viewer**
+    ## Introdução ao programa
+    O LTV é a principal integração entre os sinais transmitidos, em tempo real
+    pelo transmissor (hoje LoRa, antigamente, XBee) do carro atual e um computador,
+    rodando Windows.
+    A versão a que se refere essa documentação é desenvolvida em Python, com interface de usuário
+    em Qt (PyQt5 + QML) e com alguns módulos de backend.
+    A escolha pela linguagem e o framework de desenvolvimento se devem à facilidade
+    de desenvolvimento, a abudância de módulos e ao pouco espaço em disco e poder de processamento
+    necessários para gerar o programa final executável ```.exe```.
+    
+    ## Dependências
+    O usuário final não necessita instalar nada, apenas executar o arquivo '''.exe'''.
+
+    O desenvolvedor deve instalar **Python >=3.9**, e em seguida,
+    rodar
+    ```pip install PyQt5 Nuitka pyserial dill pathos pdoc3```
+
+    * **PyQt5**: proporciona interface de usuário, desenvolvida em QtQuick/QML
+    * **Nuitka**: compila o código fonte ```.py``` em um executável nativo ```.exe``` ou ```.bin``` (Linux).
+    Isso facilita a vida do usuário final e produz um código com excelente perfomance, por utilizar
+    a correlação entre os objetos do Python e a sua implementação original em C
+    * **pyserial**: permite o facil acesso à porta serial
+    * **dill**: dependência de pathos, serialização eficiente de objectos
+    * **pathos**: melhora o processamento paralelo do Python (modulo *multiprocessing*), pois este usa
+    *pickle*, incapaz de serializar o *QObject* (Bridge)[#main.Bridge], usado em (SerialProcess)[#main.SerialProcess]
+    * **pdoc3**: proporciona a documentação que você está lendo neste momento
+
+"""
+
+
+
+#region Python Imports
 import sys
 import signal
 #endregion
@@ -16,16 +48,19 @@ import beacon as beacon
 #region other imports
 import serial
 import serial.tools.list_ports
-from multiprocessing import Process
+import pathos.helpers
 import atexit
 #endregion
 
-class SerialProcess(Process):
-    def __init__(self, serial_port:str, baudrate=9600, timeout=3600):
-        super(SerialProcess, self).__init__(target=self.startSerial, args=(serial_port, baudrate, timeout))
-        print('SerialProcess.__init__()')
+class SerialProcess(pathos.helpers.mp.Process):
 
-    def startSerial(self, serial_port, baudrate, timeout):
+
+    def __init__(self, serial_port:str, bridge: QObject, baudrate=9600, timeout=3600):
+        super(SerialProcess, self).__init__(target=self.startSerial, args=(serial_port, bridge, baudrate, timeout))
+        print('SerialProcess.__init__()')
+        self.daemon = True
+
+    def startSerial(self, serial_port, bridge, baudrate, timeout):
         self.ser = serial.Serial(serial_port, baudrate=baudrate, timeout=timeout)
         self.loopRead()
         self.closeSerial()
@@ -36,9 +71,9 @@ class SerialProcess(Process):
             s = self.ser.readline()
             print(s)
 
-    def closeSerial(self):
-        if self.ser.is_open:
-            self.ser.close()
+#     def closeSerial(self):
+#         if self.ser.is_open:
+#             self.ser.close()
 
 
 class Bridge(QObject):
@@ -65,10 +100,9 @@ class Bridge(QObject):
 
     @pyqtSlot(str)
     def connectSerial(self, port:str):
-        self.p = SerialProcess(port)
+        self.p = SerialProcess(port, self)
         try:
             self.p.start()
-            self.engine.rootContext().setContextProperty("serialProcess", self.p)
         except serial.SerialException:
             print("couldn't connect")
         except KeyboardInterrupt:
@@ -103,12 +137,8 @@ class App():
         self.engine.quit.connect(self.app.quit)
         self.app.exec()
 
-def ex(a):
-    if a.bridge.p.is_alive:
-        a.bridge.p.kill()
 
 if __name__ == "__main__":
     b = beacon.Functions()
     a = App()
-    atexit.register(ex(a))
     sys.exit(a)
