@@ -14,7 +14,9 @@
 
     O desenvolvedor deve instalar **Python >=3.9**, e em seguida,
     rodar
-    ```pip install PyQt5 Nuitka pyserial dill pathos pdoc3```
+    ```
+    pip install PyQt5 Nuitka pyserial dill pathos pdoc3
+    ```
 
     * **PyQt5**: proporciona interface de usuário, desenvolvida em QtQuick/QML
     * **Nuitka**: compila o código fonte ```.py``` em um executável nativo ```.exe``` ou ```.bin``` (Linux).
@@ -26,6 +28,9 @@
     *pickle*, incapaz de serializar o *QObject* (Bridge)[#main.Bridge], usado em (SerialProcess)[#main.SerialProcess]
     * **pdoc3**: proporciona a documentação que você está lendo neste momento
 
+    ## Como documentar
+    Recomenda-se documentar o projeto logo antes de submeter um release de uma versão nova,
+    por meio de comentários nos arquivos .py e pelo uso do módulo pdoc.
 """
 
 
@@ -53,7 +58,6 @@ import atexit
 #endregion
 
 class SerialProcess(pathos.helpers.mp.Process):
-
 
     def __init__(self, serial_port:str, bridge: QObject, baudrate=9600, timeout=3600):
         super(SerialProcess, self).__init__(target=self.startSerial, args=(serial_port, bridge, baudrate, timeout))
