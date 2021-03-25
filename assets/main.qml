@@ -98,7 +98,7 @@ ApplicationWindow{
     SwipeView{
         id:view
         anchors.fill: parent
-        currentIndex:4
+        currentIndex:0
         interactive: false
      
         PageMain{}
@@ -115,5 +115,5 @@ ApplicationWindow{
         PageBeacon{}
     }
 
-    }
+}
     

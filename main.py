@@ -38,12 +38,14 @@
 #region Python Imports
 import sys
 import signal
+import threading
 #endregion
 
 #region qt imports
-from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
-from PyQt5.QtQml import QQmlApplicationEngine
-from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
+from PyQt5 import QtGui, QtQml, QtCore
+# from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
+# from PyQt5.QtQml import QQmlApplicationEngine
+# from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
 #endregion
 
 #region py-backend imports
@@ -53,44 +55,49 @@ import beacon as beacon
 #region other imports
 import serial
 import serial.tools.list_ports
-import pathos.helpers
+# import pathos.helpers
 import atexit
 #endregion
 
-class SerialProcess(pathos.helpers.mp.Process):
+class SerialProcess(serial.Serial):
 
-    def __init__(self, serial_port:str, bridge: QObject, baudrate=9600, timeout=3600):
-        super(SerialProcess, self).__init__(target=self.startSerial, args=(serial_port, bridge, baudrate, timeout))
-        print('SerialProcess.__init__()')
-        self.daemon = True
+    def __init__(self):
+        serial.Serial.__init__(self)
+        self.thr_stop_cond = False
 
-    def startSerial(self, serial_port, bridge, baudrate, timeout):
-        self.ser = serial.Serial(serial_port, baudrate=baudrate, timeout=timeout)
-        self.loopRead()
-        self.closeSerial()
+    def startSerial(self, serial_port, baudrate):
+        self.ser = serial.Serial(serial_port, baudrate=baudrate, timeout=0)
+        if self.ser.is_open:
+            self.thr_stop_cond = False
+            self.thr = threading.Thread(target=self.loopRead, args=(), daemon=True)
+            self.thr.start()
 
     def loopRead(self, ):
-        self.ser.read(17)
-        while(self.ser.is_open):
-            s = self.ser.readline()
+        # self.ser.read(17)
+        x = 0
+        while(self.ser.is_open and not self.thr_stop_cond):
+            s = self.ser.read(40)
+            x += 1
             print(s)
 
-#     def closeSerial(self):
-#         if self.ser.is_open:
-#             self.ser.close()
+    def closeSerial(self):
+        if self.thr.is_alive:
+            self.thr_stop_cond = True
+        if self.ser.is_open:
+            self.ser.close()
 
-
-class Bridge(QObject):
+class Bridge(QtCore.QObject):
     def __init__(self, app, engine):
-        QObject.__init__(self)
+        QtCore.QObject.__init__(self)
         self.app = app
         self.engine = engine
         self._serialString = ""
+        self.p = SerialProcess()
 
-    setComboBoxModel = pyqtSignal(list)
-    setConsoleText = pyqtSignal(str, arguments=['text'])
+    setComboBoxModel = QtCore.pyqtSignal(list)
+    setConsoleText = QtCore.pyqtSignal(str, arguments=['text'])
 
-    @pyqtSlot()
+    @QtCore.pyqtSlot()
     def getSerialPorts(self):
         list = []
         try:
@@ -99,38 +106,34 @@ class Bridge(QObject):
         except:
             list = []
         self.setComboBoxModel.emit(list)
-        # if len(serial.tools.list_ports) != 0:
-        #     self.setComboBoxModel.emit(serial.tools.list_ports)
 
-    @pyqtSlot(str)
+    @QtCore.pyqtSlot(str)
     def connectSerial(self, port:str):
-        self.p = SerialProcess(port, self)
         try:
-            self.p.start()
+            self.p.startSerial(port, 115200)
         except serial.SerialException:
-            print("couldn't connect")
+            print("Couldn't connect")
         except KeyboardInterrupt:
             print("KeyboardInterrupt")
 
-    @pyqtSlot()
+    @QtCore.pyqtSlot()
     def disconnectSerial(self):
-        self.p.terminate()
-        print("Process terminated")
+        self.p.closeSerial()
 
-    @pyqtSlot()
+    @QtCore.pyqtSlot()
     def getSerialString(self):
         self.setConsoleText.emit(self._serialString)
         
 class App():
     def __init__(self):
-        self.app = QGuiApplication(sys.argv + ['--style', 'material'])
+        self.app = QtGui.QGuiApplication(sys.argv + ['--style', 'material'])
         
-        fontdatabase = QFontDatabase()
+        fontdatabase = QtGui.QFontDatabase()
         fontdatabase.addApplicationFont("fonts/Exo2-Regular.ttf")
-        exo = QFont("Exo 2",15)
+        exo = QtGui.QFont("Exo 2",15)
         self.app.setFont(exo)
 
-        self.engine = QQmlApplicationEngine()
+        self.engine = QtQml.QQmlApplicationEngine()
         self.bridge = Bridge(self.app,self.engine)
 
         #responder a KeyboardInterrupt
@@ -144,5 +147,5 @@ class App():
 
 if __name__ == "__main__":
     b = beacon.Functions()
-    a = App()
-    sys.exit(a)
+    LTV_Application = App()
+    sys.exit(LTV_Application)
