@@ -59,30 +59,36 @@ import serial.tools.list_ports
 import atexit
 #endregion
 
-class SerialProcess(serial.Serial):
+class SerialProcess():
 
     def __init__(self):
-        serial.Serial.__init__(self)
-        self.thr_stop_cond = False
+        self.ser = serial.Serial()
+        self.ser.timeout = 1
+        self.thr = threading.Thread()
+        self.thr.stop_condition = False
 
     def startSerial(self, serial_port, baudrate):
-        self.ser = serial.Serial(serial_port, baudrate=baudrate, timeout=0)
+        self.ser.port = serial_port
+        self.ser.baudrate = baudrate
+        self.ser.open()
         if self.ser.is_open:
-            self.thr_stop_cond = False
-            self.thr = threading.Thread(target=self.loopRead, args=(), daemon=True)
+            self.thr.stop_condition = False
+            self.thr.target = self.loopRead
+            self.thr.daemon = True
             self.thr.start()
 
     def loopRead(self, ):
-        # self.ser.read(17)
-        x = 0
-        while(self.ser.is_open and not self.thr_stop_cond):
-            s = self.ser.read(40)
-            x += 1
-            print(s)
+        self.data_stream = property("text")
+        while(self.ser.is_open and not self.thr.stop_condition):
+            self.data_stream = self.ser.readlines(40)
+            if data_stream
+                print(self.data_stream)
+                self.ser.reset_input_buffer()
+                self.data_stream.setpr
 
     def closeSerial(self):
         if self.thr.is_alive:
-            self.thr_stop_cond = True
+            self.thr.stop_condition = True
         if self.ser.is_open:
             self.ser.close()
 
@@ -111,10 +117,16 @@ class Bridge(QtCore.QObject):
     def connectSerial(self, port:str):
         try:
             self.p.startSerial(port, 115200)
+        except serial.PortNotOpenError:
+            print("Port isn't open")
+        except serial.SerialTimeoutException:
+            print("Exceeded timeout")
         except serial.SerialException:
             print("Couldn't connect")
         except KeyboardInterrupt:
             print("KeyboardInterrupt")
+        else:
+            print("Connected")
 
     @QtCore.pyqtSlot()
     def disconnectSerial(self):
@@ -134,12 +146,17 @@ class App():
         self.app.setFont(exo)
 
         self.engine = QtQml.QQmlApplicationEngine()
-        self.bridge = Bridge(self.app,self.engine)
+        self.bridge_receptor = Bridge(self.app, self.engine)
+        self.bridge_beacon = Bridge(self.app, self.engine)
 
         #responder a KeyboardInterrupt
         signal.signal(signal.SIGINT, signal.SIG_DFL)
-        self.engine.rootContext().setContextProperty("bridge", self.bridge)
+
         self.engine.load("assets/main.qml")
+        if not self.engine.rootContext():
+            return -1
+        self.engine.rootContext().setContextProperty("bridge_receptor", self.bridge_receptor)
+        self.engine.rootContext().setContextProperty("bridge_beacon", self.bridge_beacon)
         
         self.engine.quit.connect(self.app.quit)
         self.app.exec()

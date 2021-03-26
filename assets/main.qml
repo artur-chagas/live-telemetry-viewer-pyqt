@@ -28,7 +28,7 @@ ApplicationWindow{
     header: RowLayout{
         id: header
         width: parent.width * 0.95
-        height: Screen.desktopAvailableHeight * 0.1
+        height: 110 //Screen.desktopAvailableHeight * 0.15
         anchors.horizontalCenter: parent.horizontalCenter
 
         Rectangle{
@@ -37,7 +37,7 @@ ApplicationWindow{
             
             border.color: "#fed700"
             border.width: 0.5
-            radius: 16
+            radius: 10
             gradient: Gradient{
                 orientation: Gradient.Horizontal
                 stops:

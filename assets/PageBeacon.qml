@@ -5,7 +5,7 @@ import QtQuick.Controls 2.14
 Page{
 
     Connections{
-        target: bridge
+        target: bridge_beacon
         function onSetComboBoxModel(model) {
             combobox.model = model
         }
@@ -50,14 +50,14 @@ Page{
                                     anchors.verticalCenter: parent.verticalCenter
                                     spacing: width * 0.025
                                     ComboBox{
-                                        Component.onCompleted: bridge.getSerialPorts()
+                                        Component.onCompleted: bridge_beacon.getSerialPorts()
                                         id:combobox
                                         width: parent.width * 0.3
                                     }
                                     Button{
                                         text:"Buscar"
                                         enabled:true
-                                        onClicked: bridge.getSerialPorts()
+                                        onClicked: bridge_beacon.getSerialPorts()
                                     }
                                     Button{
                                         text:"Conectar"
@@ -65,18 +65,18 @@ Page{
                                             id: timer
                                             interval: 500; running: false; repeat: true
                                             onTriggered: {
-                                                bridge.getSerialString()
+                                                bridge_beacon.getSerialString()
                                             }
                                         }
                                         onClicked: {
-                                            bridge.connectSerial(combobox.currentText);
+                                            bridge_beacon.connectSerial(combobox.currentText);
                                             timer.running = true;
                                         }
                                     }
                                     Button{
                                         text:"Desconectar"
                                         onClicked: {
-                                            bridge.disconnectSerial()
+                                            bridge_beacon.disconnectSerial()
                                             timer.running = false;
                                         }
                                     }
