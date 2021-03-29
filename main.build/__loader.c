@@ -22,6 +22,7 @@ static unsigned char **bytecode_data = NULL;
  * binary or module, or put along this binary as extension modules. We do
  * our own loading for each of these.
  */
+extern PyObject *modulecode_PyQt5(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
 extern PyObject *modulecode___main__(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
 extern PyObject *modulecode_beacon(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
 extern PyObject *modulecode_serial(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
@@ -30,9 +31,17 @@ extern PyObject *modulecode_serial$serialjava(PyObject *, struct Nuitka_MetaPath
 extern PyObject *modulecode_serial$serialposix(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
 extern PyObject *modulecode_serial$serialutil(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
 extern PyObject *modulecode_serial$serialwin32(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
+extern PyObject *modulecode_serial$tools(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
+extern PyObject *modulecode_serial$tools$list_ports(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
+extern PyObject *modulecode_serial$tools$list_ports_common(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
+extern PyObject *modulecode_serial$tools$list_ports_linux(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
+extern PyObject *modulecode_serial$tools$list_ports_osx(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
+extern PyObject *modulecode_serial$tools$list_ports_posix(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
+extern PyObject *modulecode_serial$tools$list_ports_windows(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
 extern PyObject *modulecode_serial$win32(PyObject *, struct Nuitka_MetaPathBasedLoaderEntry const *);
 
 static struct Nuitka_MetaPathBasedLoaderEntry meta_path_loader_entries[] = {
+    {"PyQt5", modulecode_PyQt5, 0, 0, NUITKA_PACKAGE_FLAG},
     {"__main__", modulecode___main__, 0, 0, },
     {"beacon", modulecode_beacon, 0, 0, },
     {"serial", modulecode_serial, 0, 0, NUITKA_PACKAGE_FLAG},
@@ -41,6 +50,13 @@ static struct Nuitka_MetaPathBasedLoaderEntry meta_path_loader_entries[] = {
     {"serial.serialposix", modulecode_serial$serialposix, 0, 0, },
     {"serial.serialutil", modulecode_serial$serialutil, 0, 0, },
     {"serial.serialwin32", modulecode_serial$serialwin32, 0, 0, },
+    {"serial.tools", modulecode_serial$tools, 0, 0, NUITKA_PACKAGE_FLAG},
+    {"serial.tools.list_ports", modulecode_serial$tools$list_ports, 0, 0, },
+    {"serial.tools.list_ports_common", modulecode_serial$tools$list_ports_common, 0, 0, },
+    {"serial.tools.list_ports_linux", modulecode_serial$tools$list_ports_linux, 0, 0, },
+    {"serial.tools.list_ports_osx", modulecode_serial$tools$list_ports_osx, 0, 0, },
+    {"serial.tools.list_ports_posix", modulecode_serial$tools$list_ports_posix, 0, 0, },
+    {"serial.tools.list_ports_windows", modulecode_serial$tools$list_ports_windows, 0, 0, },
     {"serial.win32", modulecode_serial$win32, 0, 0, },
     {NULL, NULL, 0, 0, 0}
 };

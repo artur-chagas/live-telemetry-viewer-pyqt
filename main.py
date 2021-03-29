@@ -80,11 +80,9 @@ class SerialProcess():
     def loopRead(self, ):
         self.data_stream = property("text")
         while(self.ser.is_open and not self.thr.stop_condition):
-            self.data_stream = self.ser.readlines(40)
-            if data_stream
+            self.data_stream = self.ser.read(1)
+            if data_stream:
                 print(self.data_stream)
-                self.ser.reset_input_buffer()
-                self.data_stream.setpr
 
     def closeSerial(self):
         if self.thr.is_alive:
@@ -117,12 +115,12 @@ class Bridge(QtCore.QObject):
     def connectSerial(self, port:str):
         try:
             self.p.startSerial(port, 115200)
-        except serial.PortNotOpenError:
-            print("Port isn't open")
-        except serial.SerialTimeoutException:
-            print("Exceeded timeout")
-        except serial.SerialException:
-            print("Couldn't connect")
+        except serial.PortNotOpenError as e:
+            print(e)
+        except serial.SerialTimeoutException as e:
+            print(e)
+        except serial.SerialException as e:
+            print(e)
         except KeyboardInterrupt:
             print("KeyboardInterrupt")
         else:
