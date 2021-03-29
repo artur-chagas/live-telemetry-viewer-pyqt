@@ -8,21 +8,30 @@ Page{
     Connections{
         target: bridge
         function onSetComboBoxModel(model) {
-            combobox.model = model
+            combobox.model = model;
         }
         function onSetConsoleText(text) {
-            textConsole.text += qsTr(text)
+            textConsole.text = qsTr(text);
         }
+
         function onSetExceptionText(text) {
-            print(text);
-            dialog.text = text;
-            dialog.open();
+            print("ExceptionText:" + text);
+            exceptionDialog.text = text;
+            exceptionDialog.open();
         }
-        
+        function onCallSuccessDialog(text) {
+            print("SuccessDialog:" + text);
+            sucessDialog.text = text
+            sucessDialog.open();
+        }
     }
     FormulaDialog{
-        id: dialog
+        id: exceptionDialog
         iconSource: "images/icon_error.svg"
+    }
+    FormulaDialog{
+        id: sucessDialog
+        iconSource: "images/icon_success.svg"
     }
 
     Rectangle{
@@ -62,18 +71,18 @@ Page{
                                     ComboBox{
                                         Component.onCompleted: bridge.getSerialPorts()
                                         id:combobox
-                                        width: parent.width * 0.3
+                                        width: parent.width * 0.4
                                     }
                                     Button{
                                         text:"Buscar"
-                                        enabled:true
                                         onClicked: bridge.getSerialPorts()
+                                        
                                     }
                                     Button{
                                         text:"Conectar"
                                         Timer{
                                             id: timer
-                                            interval: 500; running: false; repeat: true
+                                            interval: 250; running: false; repeat: true
                                             onTriggered: {
                                                 bridge.getSerialString()
                                             }
@@ -100,13 +109,15 @@ Page{
                                 width: parent.width * 0.9
                                 height: parent.height * 0.8
                                 radius: 16
+                                clip: true
                                     ScrollView{
                                     anchors.fill: parent
                                         Text{
                                             id: textConsole
                                             height: 500
                                             anchors.left: parent.left
-                                            anchors.leftMargin: 0.03*width
+                                            anchors.leftMargin: 10
+                                            anchors.rightMargin: 10
                                         }
                                 }
                             }

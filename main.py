@@ -61,11 +61,11 @@ import atexit
 
 class SerialProcess():
 
-    def __init__(self):
-        self.ser = serial.Serial()
-        self.ser.timeout = 1
-        self.thr = threading.Thread()
+    def __init__(self, bridge):
+        self.ser = serial.Serial(timeout=3600)
+        self.thr = threading.Thread(target=self.loopRead, args=(bridge,), daemon=True)
         self.thr.stop_condition = False
+
 
     def startSerial(self, serial_port, baudrate):
         self.ser.port = serial_port
@@ -73,16 +73,16 @@ class SerialProcess():
         self.ser.open()
         if self.ser.is_open:
             self.thr.stop_condition = False
-            self.thr.target = self.loopRead
-            self.thr.daemon = True
             self.thr.start()
 
-    def loopRead(self, ):
-        self.data_stream = property("text")
+    def loopRead(self, bridge):
         while(self.ser.is_open and not self.thr.stop_condition):
-            self.data_stream = self.ser.read(1)
-            if data_stream:
-                print(self.data_stream)
+            s = self.ser.readline(1)
+            if (s != " "):
+                bridge._serialString += s.decode("utf-8")
+                print(bridge._serialString)
+        # self.data_stream = property("text")
+            
 
     def closeSerial(self):
         if self.thr.is_alive:
@@ -96,8 +96,9 @@ class Bridge(QtCore.QObject):
         self.app = app
         self.engine = engine
         self._serialString = ""
-        self.p = SerialProcess()
+        self.p = SerialProcess(self)
 
+    callSuccessDialog = QtCore.pyqtSignal(str) 
     setComboBoxModel = QtCore.pyqtSignal(list)
     setConsoleText = QtCore.pyqtSignal(str, arguments=['text'])
     setExceptionText = QtCore.pyqtSignal(str)
@@ -116,23 +117,19 @@ class Bridge(QtCore.QObject):
     def connectSerial(self, port:str):
         try:
             self.p.startSerial(port, 115200)
-        except serial.PortNotOpenError as e:
+        except Exception as e:
             print(e)
             self.setExceptionText.emit(str(e))
-        except serial.SerialTimeoutException as e:
-            print(e)
-            self.setExceptionText.emit(str(e))
-        except serial.SerialException as e:
-            print(e)
-            self.setExceptionText.emit(str(e))
-        except KeyboardInterrupt:
-            print("KeyboardInterrupt")
         else:
             print("Connected")
+            self.callSuccessDialog.emit("Conectado com sucesso")
 
     @QtCore.pyqtSlot()
     def disconnectSerial(self):
-        self.p.closeSerial()
+        if self.p.ser.is_open:
+            self.p.closeSerial()
+            self.callSuccessDialog.emit("Desconectado com sucesso")
+
 
     @QtCore.pyqtSlot()
     def getSerialString(self):
