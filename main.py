@@ -100,6 +100,7 @@ class Bridge(QtCore.QObject):
 
     setComboBoxModel = QtCore.pyqtSignal(list)
     setConsoleText = QtCore.pyqtSignal(str, arguments=['text'])
+    setExceptionText = QtCore.pyqtSignal(str)
 
     @QtCore.pyqtSlot()
     def getSerialPorts(self):
@@ -117,10 +118,13 @@ class Bridge(QtCore.QObject):
             self.p.startSerial(port, 115200)
         except serial.PortNotOpenError as e:
             print(e)
+            self.setExceptionText.emit(str(e))
         except serial.SerialTimeoutException as e:
             print(e)
+            self.setExceptionText.emit(str(e))
         except serial.SerialException as e:
             print(e)
+            self.setExceptionText.emit(str(e))
         except KeyboardInterrupt:
             print("KeyboardInterrupt")
         else:
@@ -144,17 +148,13 @@ class App():
         self.app.setFont(exo)
 
         self.engine = QtQml.QQmlApplicationEngine()
-        self.bridge_receptor = Bridge(self.app, self.engine)
-        self.bridge_beacon = Bridge(self.app, self.engine)
+        self.bridge = Bridge(self.app, self.engine)
 
         #responder a KeyboardInterrupt
         signal.signal(signal.SIGINT, signal.SIG_DFL)
 
+        self.engine.rootContext().setContextProperty("bridge", self.bridge)
         self.engine.load("assets/main.qml")
-        if not self.engine.rootContext():
-            return -1
-        self.engine.rootContext().setContextProperty("bridge_receptor", self.bridge_receptor)
-        self.engine.rootContext().setContextProperty("bridge_beacon", self.bridge_beacon)
         
         self.engine.quit.connect(self.app.quit)
         self.app.exec()

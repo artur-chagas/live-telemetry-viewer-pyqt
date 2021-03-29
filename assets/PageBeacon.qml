@@ -2,19 +2,29 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 
 
+
 Page{
 
     Connections{
-        target: bridge_beacon
+        target: bridge
         function onSetComboBoxModel(model) {
             combobox.model = model
         }
         function onSetConsoleText(text) {
             textConsole.text += qsTr(text)
         }
+        function onSetExceptionText(text) {
+            print(text);
+            dialog.text = text;
+            dialog.open();
+        }
         
     }
-    
+    FormulaDialog{
+        id: dialog
+        iconSource: "images/icon_error.svg"
+    }
+
     Rectangle{
         color: "#181818"
         anchors.fill: parent
@@ -50,14 +60,14 @@ Page{
                                     anchors.verticalCenter: parent.verticalCenter
                                     spacing: width * 0.025
                                     ComboBox{
-                                        Component.onCompleted: bridge_beacon.getSerialPorts()
+                                        Component.onCompleted: bridge.getSerialPorts()
                                         id:combobox
                                         width: parent.width * 0.3
                                     }
                                     Button{
                                         text:"Buscar"
                                         enabled:true
-                                        onClicked: bridge_beacon.getSerialPorts()
+                                        onClicked: bridge.getSerialPorts()
                                     }
                                     Button{
                                         text:"Conectar"
@@ -65,18 +75,18 @@ Page{
                                             id: timer
                                             interval: 500; running: false; repeat: true
                                             onTriggered: {
-                                                bridge_beacon.getSerialString()
+                                                bridge.getSerialString()
                                             }
                                         }
                                         onClicked: {
-                                            bridge_beacon.connectSerial(combobox.currentText);
+                                            bridge.connectSerial(combobox.currentText);
                                             timer.running = true;
                                         }
                                     }
                                     Button{
                                         text:"Desconectar"
                                         onClicked: {
-                                            bridge_beacon.disconnectSerial()
+                                            bridge.disconnectSerial()
                                             timer.running = false;
                                         }
                                     }
