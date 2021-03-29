@@ -99,12 +99,14 @@ por meio de comentários nos arquivos .py e pelo uso do módulo pdoc.</p>
 #region Python Imports
 import sys
 import signal
+import threading
 #endregion
 
 #region qt imports
-from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
-from PyQt5.QtQml import QQmlApplicationEngine
-from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
+from PyQt5 import QtGui, QtQml, QtCore
+# from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
+# from PyQt5.QtQml import QQmlApplicationEngine
+# from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
 #endregion
 
 #region py-backend imports
@@ -114,44 +116,55 @@ import beacon as beacon
 #region other imports
 import serial
 import serial.tools.list_ports
-import pathos.helpers
+# import pathos.helpers
 import atexit
 #endregion
 
-class SerialProcess(pathos.helpers.mp.Process):
+class SerialProcess():
 
-    def __init__(self, serial_port:str, bridge: QObject, baudrate=9600, timeout=3600):
-        super(SerialProcess, self).__init__(target=self.startSerial, args=(serial_port, bridge, baudrate, timeout))
-        print(&#39;SerialProcess.__init__()&#39;)
-        self.daemon = True
-
-    def startSerial(self, serial_port, bridge, baudrate, timeout):
-        self.ser = serial.Serial(serial_port, baudrate=baudrate, timeout=timeout)
-        self.loopRead()
-        self.closeSerial()
-
-    def loopRead(self, ):
-        self.ser.read(17)
-        while(self.ser.is_open):
-            s = self.ser.readline()
-            print(s)
-
-#     def closeSerial(self):
-#         if self.ser.is_open:
-#             self.ser.close()
+    def __init__(self, bridge):
+        self.ser = serial.Serial(timeout=3600)
+        self.thr = threading.Thread(target=self.loopRead, args=(bridge,), daemon=True)
+        self.thr.stop_condition = False
 
 
-class Bridge(QObject):
+    def startSerial(self, serial_port, baudrate):
+        self.ser.port = serial_port
+        self.ser.baudrate = baudrate
+        self.ser.open()
+        if self.ser.is_open:
+            self.thr.stop_condition = False
+            self.thr.start()
+
+    def loopRead(self, bridge):
+        while(self.ser.is_open and not self.thr.stop_condition):
+            s = self.ser.readline(1)
+            if (s != &#34; &#34;):
+                bridge._serialString += s.decode(&#34;utf-8&#34;)
+                print(bridge._serialString)
+        # self.data_stream = property(&#34;text&#34;)
+            
+
+    def closeSerial(self):
+        if self.thr.is_alive:
+            self.thr.stop_condition = True
+        if self.ser.is_open:
+            self.ser.close()
+
+class Bridge(QtCore.QObject):
     def __init__(self, app, engine):
-        QObject.__init__(self)
+        QtCore.QObject.__init__(self)
         self.app = app
         self.engine = engine
         self._serialString = &#34;&#34;
+        self.p = SerialProcess(self)
 
-    setComboBoxModel = pyqtSignal(list)
-    setConsoleText = pyqtSignal(str, arguments=[&#39;text&#39;])
+    callSuccessDialog = QtCore.pyqtSignal(str) 
+    setComboBoxModel = QtCore.pyqtSignal(list)
+    setConsoleText = QtCore.pyqtSignal(str, arguments=[&#39;text&#39;])
+    setExceptionText = QtCore.pyqtSignal(str)
 
-    @pyqtSlot()
+    @QtCore.pyqtSlot()
     def getSerialPorts(self):
         list = []
         try:
@@ -160,42 +173,44 @@ class Bridge(QObject):
         except:
             list = []
         self.setComboBoxModel.emit(list)
-        # if len(serial.tools.list_ports) != 0:
-        #     self.setComboBoxModel.emit(serial.tools.list_ports)
 
-    @pyqtSlot(str)
+    @QtCore.pyqtSlot(str)
     def connectSerial(self, port:str):
-        self.p = SerialProcess(port, self)
         try:
-            self.p.start()
-        except serial.SerialException:
-            print(&#34;couldn&#39;t connect&#34;)
-        except KeyboardInterrupt:
-            print(&#34;KeyboardInterrupt&#34;)
+            self.p.startSerial(port, 115200)
+        except Exception as e:
+            print(e)
+            self.setExceptionText.emit(str(e))
+        else:
+            print(&#34;Connected&#34;)
+            self.callSuccessDialog.emit(&#34;Conectado com sucesso&#34;)
 
-    @pyqtSlot()
+    @QtCore.pyqtSlot()
     def disconnectSerial(self):
-        self.p.terminate()
-        print(&#34;Process terminated&#34;)
+        if self.p.ser.is_open:
+            self.p.closeSerial()
+            self.callSuccessDialog.emit(&#34;Desconectado com sucesso&#34;)
 
-    @pyqtSlot()
+
+    @QtCore.pyqtSlot()
     def getSerialString(self):
         self.setConsoleText.emit(self._serialString)
         
 class App():
     def __init__(self):
-        self.app = QGuiApplication(sys.argv + [&#39;--style&#39;, &#39;material&#39;])
+        self.app = QtGui.QGuiApplication(sys.argv + [&#39;--style&#39;, &#39;material&#39;])
         
-        fontdatabase = QFontDatabase()
+        fontdatabase = QtGui.QFontDatabase()
         fontdatabase.addApplicationFont(&#34;fonts/Exo2-Regular.ttf&#34;)
-        exo = QFont(&#34;Exo 2&#34;,15)
+        exo = QtGui.QFont(&#34;Exo 2&#34;,15)
         self.app.setFont(exo)
 
-        self.engine = QQmlApplicationEngine()
-        self.bridge = Bridge(self.app,self.engine)
+        self.engine = QtQml.QQmlApplicationEngine()
+        self.bridge = Bridge(self.app, self.engine)
 
         #responder a KeyboardInterrupt
         signal.signal(signal.SIGINT, signal.SIG_DFL)
+
         self.engine.rootContext().setContextProperty(&#34;bridge&#34;, self.bridge)
         self.engine.load(&#34;assets/main.qml&#34;)
         
@@ -205,8 +220,8 @@ class App():
 
 if __name__ == &#34;__main__&#34;:
     b = beacon.Functions()
-    a = App()
-    sys.exit(a)</code></pre>
+    LTV_Application = App()
+    sys.exit(LTV_Application)</code></pre>
 </details>
 </section>
 <section>
@@ -229,18 +244,19 @@ if __name__ == &#34;__main__&#34;:
 </summary>
 <pre><code class="python">class App():
     def __init__(self):
-        self.app = QGuiApplication(sys.argv + [&#39;--style&#39;, &#39;material&#39;])
+        self.app = QtGui.QGuiApplication(sys.argv + [&#39;--style&#39;, &#39;material&#39;])
         
-        fontdatabase = QFontDatabase()
+        fontdatabase = QtGui.QFontDatabase()
         fontdatabase.addApplicationFont(&#34;fonts/Exo2-Regular.ttf&#34;)
-        exo = QFont(&#34;Exo 2&#34;,15)
+        exo = QtGui.QFont(&#34;Exo 2&#34;,15)
         self.app.setFont(exo)
 
-        self.engine = QQmlApplicationEngine()
-        self.bridge = Bridge(self.app,self.engine)
+        self.engine = QtQml.QQmlApplicationEngine()
+        self.bridge = Bridge(self.app, self.engine)
 
         #responder a KeyboardInterrupt
         signal.signal(signal.SIGINT, signal.SIG_DFL)
+
         self.engine.rootContext().setContextProperty(&#34;bridge&#34;, self.bridge)
         self.engine.load(&#34;assets/main.qml&#34;)
         
@@ -258,17 +274,20 @@ if __name__ == &#34;__main__&#34;:
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">class Bridge(QObject):
+<pre><code class="python">class Bridge(QtCore.QObject):
     def __init__(self, app, engine):
-        QObject.__init__(self)
+        QtCore.QObject.__init__(self)
         self.app = app
         self.engine = engine
         self._serialString = &#34;&#34;
+        self.p = SerialProcess(self)
 
-    setComboBoxModel = pyqtSignal(list)
-    setConsoleText = pyqtSignal(str, arguments=[&#39;text&#39;])
+    callSuccessDialog = QtCore.pyqtSignal(str) 
+    setComboBoxModel = QtCore.pyqtSignal(list)
+    setConsoleText = QtCore.pyqtSignal(str, arguments=[&#39;text&#39;])
+    setExceptionText = QtCore.pyqtSignal(str)
 
-    @pyqtSlot()
+    @QtCore.pyqtSlot()
     def getSerialPorts(self):
         list = []
         try:
@@ -277,25 +296,26 @@ if __name__ == &#34;__main__&#34;:
         except:
             list = []
         self.setComboBoxModel.emit(list)
-        # if len(serial.tools.list_ports) != 0:
-        #     self.setComboBoxModel.emit(serial.tools.list_ports)
 
-    @pyqtSlot(str)
+    @QtCore.pyqtSlot(str)
     def connectSerial(self, port:str):
-        self.p = SerialProcess(port, self)
         try:
-            self.p.start()
-        except serial.SerialException:
-            print(&#34;couldn&#39;t connect&#34;)
-        except KeyboardInterrupt:
-            print(&#34;KeyboardInterrupt&#34;)
+            self.p.startSerial(port, 115200)
+        except Exception as e:
+            print(e)
+            self.setExceptionText.emit(str(e))
+        else:
+            print(&#34;Connected&#34;)
+            self.callSuccessDialog.emit(&#34;Conectado com sucesso&#34;)
 
-    @pyqtSlot()
+    @QtCore.pyqtSlot()
     def disconnectSerial(self):
-        self.p.terminate()
-        print(&#34;Process terminated&#34;)
+        if self.p.ser.is_open:
+            self.p.closeSerial()
+            self.callSuccessDialog.emit(&#34;Desconectado com sucesso&#34;)
 
-    @pyqtSlot()
+
+    @QtCore.pyqtSlot()
     def getSerialString(self):
         self.setConsoleText.emit(self._serialString)</code></pre>
 </details>
@@ -307,6 +327,12 @@ if __name__ == &#34;__main__&#34;:
 </ul>
 <h3>Methods</h3>
 <dl>
+<dt id="main.Bridge.callSuccessDialog"><code class="name flex">
+<span>def <span class="ident">callSuccessDialog</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
 <dt id="main.Bridge.connectSerial"><code class="name flex">
 <span>def <span class="ident">connectSerial</span></span>(<span>self, port: str)</span>
 </code></dt>
@@ -316,15 +342,16 @@ if __name__ == &#34;__main__&#34;:
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">@pyqtSlot(str)
+<pre><code class="python">@QtCore.pyqtSlot(str)
 def connectSerial(self, port:str):
-    self.p = SerialProcess(port, self)
     try:
-        self.p.start()
-    except serial.SerialException:
-        print(&#34;couldn&#39;t connect&#34;)
-    except KeyboardInterrupt:
-        print(&#34;KeyboardInterrupt&#34;)</code></pre>
+        self.p.startSerial(port, 115200)
+    except Exception as e:
+        print(e)
+        self.setExceptionText.emit(str(e))
+    else:
+        print(&#34;Connected&#34;)
+        self.callSuccessDialog.emit(&#34;Conectado com sucesso&#34;)</code></pre>
 </details>
 </dd>
 <dt id="main.Bridge.disconnectSerial"><code class="name flex">
@@ -336,10 +363,11 @@ def connectSerial(self, port:str):
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">@pyqtSlot()
+<pre><code class="python">@QtCore.pyqtSlot()
 def disconnectSerial(self):
-    self.p.terminate()
-    print(&#34;Process terminated&#34;)</code></pre>
+    if self.p.ser.is_open:
+        self.p.closeSerial()
+        self.callSuccessDialog.emit(&#34;Desconectado com sucesso&#34;)</code></pre>
 </details>
 </dd>
 <dt id="main.Bridge.getSerialPorts"><code class="name flex">
@@ -351,7 +379,7 @@ def disconnectSerial(self):
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">@pyqtSlot()
+<pre><code class="python">@QtCore.pyqtSlot()
 def getSerialPorts(self):
     list = []
     try:
@@ -359,9 +387,7 @@ def getSerialPorts(self):
             list += [t.device]
     except:
         list = []
-    self.setComboBoxModel.emit(list)
-    # if len(serial.tools.list_ports) != 0:
-    #     self.setComboBoxModel.emit(serial.tools.list_ports)</code></pre>
+    self.setComboBoxModel.emit(list)</code></pre>
 </details>
 </dd>
 <dt id="main.Bridge.getSerialString"><code class="name flex">
@@ -373,7 +399,7 @@ def getSerialPorts(self):
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">@pyqtSlot()
+<pre><code class="python">@QtCore.pyqtSlot()
 def getSerialString(self):
     self.setConsoleText.emit(self._serialString)</code></pre>
 </details>
@@ -390,46 +416,17 @@ def getSerialString(self):
 <dd>
 <div class="desc"></div>
 </dd>
+<dt id="main.Bridge.setExceptionText"><code class="name flex">
+<span>def <span class="ident">setExceptionText</span></span>(<span>...)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
 </dl>
 </dd>
 <dt id="main.SerialProcess"><code class="flex name class">
 <span>class <span class="ident">SerialProcess</span></span>
-<span>(</span><span>serial_port: str, bridge: PyQt5.QtCore.QObject, baudrate=9600, timeout=3600)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Process objects represent activity that is run in a separate process</p>
-<p>The class is analogous to <code>threading.Thread</code></p></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">class SerialProcess(pathos.helpers.mp.Process):
-
-    def __init__(self, serial_port:str, bridge: QObject, baudrate=9600, timeout=3600):
-        super(SerialProcess, self).__init__(target=self.startSerial, args=(serial_port, bridge, baudrate, timeout))
-        print(&#39;SerialProcess.__init__()&#39;)
-        self.daemon = True
-
-    def startSerial(self, serial_port, bridge, baudrate, timeout):
-        self.ser = serial.Serial(serial_port, baudrate=baudrate, timeout=timeout)
-        self.loopRead()
-        self.closeSerial()
-
-    def loopRead(self, ):
-        self.ser.read(17)
-        while(self.ser.is_open):
-            s = self.ser.readline()
-            print(s)</code></pre>
-</details>
-<h3>Ancestors</h3>
-<ul class="hlist">
-<li>multiprocess.context.Process</li>
-<li>multiprocess.process.BaseProcess</li>
-</ul>
-<h3>Methods</h3>
-<dl>
-<dt id="main.SerialProcess.loopRead"><code class="name flex">
-<span>def <span class="ident">loopRead</span></span>(<span>self)</span>
+<span>(</span><span>bridge)</span>
 </code></dt>
 <dd>
 <div class="desc"></div>
@@ -437,15 +434,75 @@ def getSerialString(self):
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def loopRead(self, ):
-    self.ser.read(17)
-    while(self.ser.is_open):
-        s = self.ser.readline()
-        print(s)</code></pre>
+<pre><code class="python">class SerialProcess():
+
+    def __init__(self, bridge):
+        self.ser = serial.Serial(timeout=3600)
+        self.thr = threading.Thread(target=self.loopRead, args=(bridge,), daemon=True)
+        self.thr.stop_condition = False
+
+
+    def startSerial(self, serial_port, baudrate):
+        self.ser.port = serial_port
+        self.ser.baudrate = baudrate
+        self.ser.open()
+        if self.ser.is_open:
+            self.thr.stop_condition = False
+            self.thr.start()
+
+    def loopRead(self, bridge):
+        while(self.ser.is_open and not self.thr.stop_condition):
+            s = self.ser.readline(1)
+            if (s != &#34; &#34;):
+                bridge._serialString += s.decode(&#34;utf-8&#34;)
+                print(bridge._serialString)
+        # self.data_stream = property(&#34;text&#34;)
+            
+
+    def closeSerial(self):
+        if self.thr.is_alive:
+            self.thr.stop_condition = True
+        if self.ser.is_open:
+            self.ser.close()</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="main.SerialProcess.closeSerial"><code class="name flex">
+<span>def <span class="ident">closeSerial</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def closeSerial(self):
+    if self.thr.is_alive:
+        self.thr.stop_condition = True
+    if self.ser.is_open:
+        self.ser.close()</code></pre>
+</details>
+</dd>
+<dt id="main.SerialProcess.loopRead"><code class="name flex">
+<span>def <span class="ident">loopRead</span></span>(<span>self, bridge)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def loopRead(self, bridge):
+    while(self.ser.is_open and not self.thr.stop_condition):
+        s = self.ser.readline(1)
+        if (s != &#34; &#34;):
+            bridge._serialString += s.decode(&#34;utf-8&#34;)
+            print(bridge._serialString)
+    # self.data_stream = property(&#34;text&#34;)</code></pre>
 </details>
 </dd>
 <dt id="main.SerialProcess.startSerial"><code class="name flex">
-<span>def <span class="ident">startSerial</span></span>(<span>self, serial_port, bridge, baudrate, timeout)</span>
+<span>def <span class="ident">startSerial</span></span>(<span>self, serial_port, baudrate)</span>
 </code></dt>
 <dd>
 <div class="desc"></div>
@@ -453,10 +510,13 @@ def getSerialString(self):
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def startSerial(self, serial_port, bridge, baudrate, timeout):
-    self.ser = serial.Serial(serial_port, baudrate=baudrate, timeout=timeout)
-    self.loopRead()
-    self.closeSerial()</code></pre>
+<pre><code class="python">def startSerial(self, serial_port, baudrate):
+    self.ser.port = serial_port
+    self.ser.baudrate = baudrate
+    self.ser.open()
+    if self.ser.is_open:
+        self.thr.stop_condition = False
+        self.thr.start()</code></pre>
 </details>
 </dd>
 </dl>
@@ -485,17 +545,20 @@ def getSerialString(self):
 <li>
 <h4><code><a title="main.Bridge" href="#main.Bridge">Bridge</a></code></h4>
 <ul class="two-column">
+<li><code><a title="main.Bridge.callSuccessDialog" href="#main.Bridge.callSuccessDialog">callSuccessDialog</a></code></li>
 <li><code><a title="main.Bridge.connectSerial" href="#main.Bridge.connectSerial">connectSerial</a></code></li>
 <li><code><a title="main.Bridge.disconnectSerial" href="#main.Bridge.disconnectSerial">disconnectSerial</a></code></li>
 <li><code><a title="main.Bridge.getSerialPorts" href="#main.Bridge.getSerialPorts">getSerialPorts</a></code></li>
 <li><code><a title="main.Bridge.getSerialString" href="#main.Bridge.getSerialString">getSerialString</a></code></li>
 <li><code><a title="main.Bridge.setComboBoxModel" href="#main.Bridge.setComboBoxModel">setComboBoxModel</a></code></li>
 <li><code><a title="main.Bridge.setConsoleText" href="#main.Bridge.setConsoleText">setConsoleText</a></code></li>
+<li><code><a title="main.Bridge.setExceptionText" href="#main.Bridge.setExceptionText">setExceptionText</a></code></li>
 </ul>
 </li>
 <li>
 <h4><code><a title="main.SerialProcess" href="#main.SerialProcess">SerialProcess</a></code></h4>
 <ul class="">
+<li><code><a title="main.SerialProcess.closeSerial" href="#main.SerialProcess.closeSerial">closeSerial</a></code></li>
 <li><code><a title="main.SerialProcess.loopRead" href="#main.SerialProcess.loopRead">loopRead</a></code></li>
 <li><code><a title="main.SerialProcess.startSerial" href="#main.SerialProcess.startSerial">startSerial</a></code></li>
 </ul>
