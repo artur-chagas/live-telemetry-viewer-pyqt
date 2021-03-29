@@ -23,9 +23,6 @@
     Isso facilita a vida do usuário final e produz um código com excelente perfomance, por utilizar
     a correlação entre os objetos do Python e a sua implementação original em C
     * **pyserial**: permite o facil acesso à porta serial
-    * **dill**: dependência de pathos, serialização eficiente de objectos
-    * **pathos**: melhora o processamento paralelo do Python (modulo *multiprocessing*), pois este usa
-    *pickle*, incapaz de serializar o *QObject* (Bridge)[#main.Bridge], usado em (SerialProcess)[#main.SerialProcess]
     * **pdoc3**: proporciona a documentação que você está lendo neste momento
 
     ## Como documentar
