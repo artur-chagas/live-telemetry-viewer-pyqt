@@ -14,8 +14,8 @@ Page{
             textConsole.text = qsTr(text);
         }
 
-        function onSetExceptionText(text) {
-            print("ExceptionText:" + text);
+        function onCallExceptionDialog(text) {
+            print("ExceptionDialog:" + text);
             exceptionDialog.text = text;
             exceptionDialog.open();
         }
@@ -27,10 +27,12 @@ Page{
     }
     FormulaDialog{
         id: exceptionDialog
+        color: "#962726"
         iconSource: "images/icon_error.svg"
     }
     FormulaDialog{
         id: sucessDialog
+        color: "#252525"
         iconSource: "images/icon_success.svg"
     }
 

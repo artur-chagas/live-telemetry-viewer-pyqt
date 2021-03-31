@@ -80,6 +80,7 @@ class SerialProcess():
             s = self.ser.readline(1)
             if (s != " "):
                 bridge._serialString += s.decode("utf-8")
+                bridge.setConsoleText.emit(bridge._serialString)
                 print(bridge._serialString)
         # self.data_stream = property("text")
             
@@ -99,9 +100,9 @@ class Bridge(QtCore.QObject):
         self.p = SerialProcess(self)
 
     callSuccessDialog = QtCore.pyqtSignal(str) 
+    callExceptionDialog = QtCore.pyqtSignal(str)
     setComboBoxModel = QtCore.pyqtSignal(list)
     setConsoleText = QtCore.pyqtSignal(str, arguments=['text'])
-    setExceptionText = QtCore.pyqtSignal(str)
 
     @QtCore.pyqtSlot()
     def getSerialPorts(self):
@@ -119,7 +120,7 @@ class Bridge(QtCore.QObject):
             self.p.startSerial(port, 115200)
         except Exception as e:
             print(e)
-            self.setExceptionText.emit(str(e))
+            self.callExceptionDialog.emit(str(e))
         else:
             print("Connected")
             self.callSuccessDialog.emit("Conectado com sucesso")

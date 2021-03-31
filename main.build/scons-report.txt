@@ -1,6 +1,6 @@
 CC=gcc
 CCACHE_DIR=/home/artur/.cache/Nuitka/ccache
-CCACHE_LOGFILE=/home/artur/Documents/live-telemetry-viewer-pyqt/main.build/ccache-37391.txt
+CCACHE_LOGFILE=/home/artur/Documents/live-telemetry-viewer-pyqt/main.build/ccache-229871.txt
 CCCOM=$CC -o $TARGET -c $CFLAGS $CCFLAGS $_CCCOMCOM $SOURCES
 CFILESUFFIX=.c
 CPPDEFINES=['__NUITKA_NO_ASSERT__', '_NUITKA_CONSTANTS_FROM_INCBIN', '_NUITKA_FROZEN=0', '_NUITKA_EXE']
