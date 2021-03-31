@@ -1,3 +1,4 @@
 # live-telemetry-viewer-pyqt
 
-heyy
+Programa de telemetria da equipe EESC-USP Formula SAE
+[Link da documentação](https://artur-chagas.github.io/ltv-pyqt/)
