@@ -73,7 +73,8 @@ class SerialProcess():
         self.ser.open()
         if self.ser.is_open:
             self.thr.stop_condition = False
-            self.thr.start()
+            if not self.thr.is_alive():
+                self.thr.start()
 
     def loopRead(self, bridge):
         while(self.ser.is_open and not self.thr.stop_condition):

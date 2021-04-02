@@ -1,6 +1,6 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
-
+import QtQuick.Controls.Material 2.12
 
 
 Page{
@@ -76,29 +76,42 @@ Page{
                                         width: parent.width * 0.4
                                     }
                                     Button{
+                                        id:searchButton
                                         text:"Buscar"
-                                        onClicked: bridge.getSerialPorts()
-                                        
-                                    }
-                                    Button{
-                                        text:"Conectar"
+                                        onClicked: {
+                                            searchButton.enabled = false;
+                                            searchTimer.start()
+                                            
+                                        }
+
                                         Timer{
-                                            id: timer
-                                            interval: 250; running: false; repeat: true
+                                            id: searchTimer
+                                            interval: 500
                                             onTriggered: {
-                                                bridge.getSerialString()
+                                                bridge.getSerialPorts()
+                                                searchButton.enabled = true
                                             }
                                         }
+
+                                    }
+                                    Button{
+                                        id: connectButton                                        
+                                        text:"Conectar"
+                                       
                                         onClicked: {
                                             bridge.connectSerial(combobox.currentText);
-                                            timer.running = true;
+                                            connectButton.enabled = false;
+                                            disconnectButton.enabled = true;
                                         }
                                     }
                                     Button{
+                                        id: disconnectButton   
+                                        enabled: false                                     
                                         text:"Desconectar"
                                         onClicked: {
                                             bridge.disconnectSerial()
-                                            timer.running = false;
+                                            connectButton.enabled = true;
+                                            disconnectButton.enabled = false;
                                         }
                                     }
                                 }

@@ -3,17 +3,21 @@ import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14
+import QtQuick.Controls.Material 2.14
 
 
 ApplicationWindow{
     id:window
-    minimumWidth: 900
-    minimumHeight: 506
+    minimumWidth: 1280
+    minimumHeight: 720
     visible: true
     width: Screen.desktopAvailableWidth * 0.6
     height: Screen.desktopAvailableHeight * 0.6
     title: qsTr("Live Telemetry Viewer")
     color: "#181818"
+                                    
+    Material.theme: Material.Dark
+    Material.accent: Material.Yellow
 
     FontLoader{
         source:"fonts/Exo2-Regular.ttf"

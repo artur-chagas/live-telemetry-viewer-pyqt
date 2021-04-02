@@ -1,5 +1,6 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
+import QtQuick.Controls.Material 2.12
 import QtQuick.Dialogs 1.3
 
 Popup{
@@ -10,7 +11,7 @@ Popup{
 
         dim: false
         modal:true
-        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
+        closePolicy: Popup.CloseOnEscape
         
         x: (parent.width - width)/2
         y: (parent.height - height)*0.95
@@ -20,6 +21,13 @@ Popup{
             radius: 8
         }
 
+        onOpened: timer.start()
+        Timer{
+            id: timer
+            interval: 2000
+            onTriggered: popup.close()
+        }
+        
 
         
         Row{
@@ -33,11 +41,7 @@ Popup{
                 color: "#ffffff"
                 anchors.verticalCenter: parent.verticalCenter
             }
-            Button{
-                text: qsTr("OK")
-                onClicked: popup.close()
-                anchors.verticalCenter: parent.verticalCenter
-            }
+            
             
         }
         
