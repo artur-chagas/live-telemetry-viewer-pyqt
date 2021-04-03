@@ -10,7 +10,7 @@ Popup{
         property alias color: rect.color
 
         dim: false
-        modal:true
+        modal:false
         closePolicy: Popup.CloseOnEscape
         
         x: (parent.width - width)/2
