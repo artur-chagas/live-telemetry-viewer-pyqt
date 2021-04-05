@@ -1,4 +1,6 @@
+#define DLL_EXTRA_PATH "c:\\program files\\python39"
 #define NO_PYTHON_WARNINGS 0
+#define PYTHON_HOME_PATH "C:\\Program Files\\Python39"
 #define SYSFLAG_BYTES_WARNING 0
 #define SYSFLAG_NO_RANDOMIZATION 0
 #define SYSFLAG_NO_SITE 0

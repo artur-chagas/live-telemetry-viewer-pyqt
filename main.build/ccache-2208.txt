@@ -1,0 +1,537 @@
+[2021-04-05T16:56:20.155449 16400] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:20.155449 16400] Config: (default) base_dir = 
+[2021-04-05T16:56:20.155449 16400] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:20.155449 16400] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:20.155449 16400] Config: (default) compiler = 
+[2021-04-05T16:56:20.155449 16400] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:20.155449 16400] Config: (default) compression = false
+[2021-04-05T16:56:20.155449 16400] Config: (default) compression_level = 6
+[2021-04-05T16:56:20.155449 16400] Config: (default) cpp_extension = 
+[2021-04-05T16:56:20.155449 16400] Config: (default) debug = false
+[2021-04-05T16:56:20.155449 16400] Config: (default) depend_mode = false
+[2021-04-05T16:56:20.155449 16400] Config: (default) direct_mode = true
+[2021-04-05T16:56:20.155449 16400] Config: (default) disable = false
+[2021-04-05T16:56:20.155449 16400] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:20.155449 16400] Config: (default) hard_link = false
+[2021-04-05T16:56:20.155449 16400] Config: (default) hash_dir = true
+[2021-04-05T16:56:20.155449 16400] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:20.155449 16400] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:20.155449 16400] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:20.155449 16400] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:20.155449 16400] Config: (default) max_files = 0
+[2021-04-05T16:56:20.155449 16400] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:20.155449 16400] Config: (default) path = 
+[2021-04-05T16:56:20.155449 16400] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:20.155449 16400] Config: (default) prefix_command = 
+[2021-04-05T16:56:20.155449 16400] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:20.155449 16400] Config: (default) read_only = false
+[2021-04-05T16:56:20.155449 16400] Config: (default) read_only_direct = false
+[2021-04-05T16:56:20.155449 16400] Config: (default) recache = false
+[2021-04-05T16:56:20.155449 16400] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:20.155449 16400] Config: (default) sloppiness = 
+[2021-04-05T16:56:20.155449 16400] Config: (default) stats = true
+[2021-04-05T16:56:20.155449 16400] Config: (default) temporary_dir = 
+[2021-04-05T16:56:20.155449 16400] Config: (default) umask = 
+[2021-04-05T16:56:20.155449 16400] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o __constants.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src __constants.c
+[2021-04-05T16:56:20.155449 16400] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:20.155449 16400] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:20.155449 16400] Source file: __constants.c
+[2021-04-05T16:56:20.155449 16400] Object file: __constants.o
+[2021-04-05T16:56:20.155449 16400] Trying direct lookup
+[2021-04-05T16:56:20.155449 16400] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/0/0cf4ba32a859e47bb5b26a002354ee-4716.manifest
+[2021-04-05T16:56:20.155449 9152 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) base_dir = 
+[2021-04-05T16:56:20.155449 9152 ] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) compiler = 
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) compression = false
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) compression_level = 6
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) cpp_extension = 
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) debug = false
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) depend_mode = false
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) direct_mode = true
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) disable = false
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) hard_link = false
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) hash_dir = true
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:20.155449 9152 ] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) max_files = 0
+[2021-04-05T16:56:20.155449 9152 ] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) path = 
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) prefix_command = 
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) read_only = false
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) read_only_direct = false
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) recache = false
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) sloppiness = 
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) stats = true
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) temporary_dir = 
+[2021-04-05T16:56:20.155449 9152 ] Config: (default) umask = 
+[2021-04-05T16:56:20.155449 9152 ] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o __helpers.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src __helpers.c
+[2021-04-05T16:56:20.155449 9152 ] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:20.155449 9152 ] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:20.155449 9152 ] Source file: __helpers.c
+[2021-04-05T16:56:20.155449 9152 ] Object file: __helpers.o
+[2021-04-05T16:56:20.155449 9152 ] Trying direct lookup
+[2021-04-05T16:56:20.155449 9152 ] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/4/3f21f109749a41fea06936d0f0a98b-70323.manifest
+[2021-04-05T16:56:20.186734 13668] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:20.186734 13668] Config: (default) base_dir = 
+[2021-04-05T16:56:20.186734 13668] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:20.186734 13668] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:20.186734 13668] Config: (default) compiler = 
+[2021-04-05T16:56:20.186734 13668] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:20.186734 13668] Config: (default) compression = false
+[2021-04-05T16:56:20.186734 13668] Config: (default) compression_level = 6
+[2021-04-05T16:56:20.186734 13668] Config: (default) cpp_extension = 
+[2021-04-05T16:56:20.186734 13668] Config: (default) debug = false
+[2021-04-05T16:56:20.186734 13668] Config: (default) depend_mode = false
+[2021-04-05T16:56:20.186734 13668] Config: (default) direct_mode = true
+[2021-04-05T16:56:20.186734 13668] Config: (default) disable = false
+[2021-04-05T16:56:20.186734 13668] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:20.186734 13668] Config: (default) hard_link = false
+[2021-04-05T16:56:20.186734 13668] Config: (default) hash_dir = true
+[2021-04-05T16:56:20.186734 13668] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:20.186734 13668] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:20.186734 13668] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:20.186734 13668] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:20.186734 13668] Config: (default) max_files = 0
+[2021-04-05T16:56:20.186734 13668] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:20.186734 13668] Config: (default) path = 
+[2021-04-05T16:56:20.186734 13668] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:20.186734 13668] Config: (default) prefix_command = 
+[2021-04-05T16:56:20.186734 13668] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:20.186734 13668] Config: (default) read_only = false
+[2021-04-05T16:56:20.186734 13668] Config: (default) read_only_direct = false
+[2021-04-05T16:56:20.186734 13668] Config: (default) recache = false
+[2021-04-05T16:56:20.186734 13668] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:20.186734 13668] Config: (default) sloppiness = 
+[2021-04-05T16:56:20.186734 13668] Config: (default) stats = true
+[2021-04-05T16:56:20.186734 13668] Config: (default) temporary_dir = 
+[2021-04-05T16:56:20.186734 13668] Config: (default) umask = 
+[2021-04-05T16:56:20.186734 13668] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o __loader.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src __loader.c
+[2021-04-05T16:56:20.186734 13668] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:20.186734 13668] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:20.186734 13668] Source file: __loader.c
+[2021-04-05T16:56:20.186734 13668] Object file: __loader.o
+[2021-04-05T16:56:20.186734 13668] Trying direct lookup
+[2021-04-05T16:56:20.186734 13668] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/d/3cdec5653b614a8682a46433d93ac4-3110.manifest
+[2021-04-05T16:56:20.217935 1720 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) base_dir = 
+[2021-04-05T16:56:20.217935 1720 ] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) compiler = 
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) compression = false
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) compression_level = 6
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) cpp_extension = 
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) debug = false
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) depend_mode = false
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) direct_mode = true
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) disable = false
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) hard_link = false
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) hash_dir = true
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:20.217935 1720 ] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) max_files = 0
+[2021-04-05T16:56:20.217935 1720 ] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) path = 
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) prefix_command = 
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) read_only = false
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) read_only_direct = false
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) recache = false
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) sloppiness = 
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) stats = true
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) temporary_dir = 
+[2021-04-05T16:56:20.217935 1720 ] Config: (default) umask = 
+[2021-04-05T16:56:20.217935 1720 ] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.__main__.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src module.__main__.c
+[2021-04-05T16:56:20.217935 1720 ] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:20.217935 1720 ] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:20.217935 1720 ] Source file: module.__main__.c
+[2021-04-05T16:56:20.217935 1720 ] Object file: module.__main__.o
+[2021-04-05T16:56:20.217935 1720 ] Trying direct lookup
+[2021-04-05T16:56:20.217935 1720 ] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/9/2/8ca16e3fea86f74fc417359172414b-331220.manifest
+[2021-04-05T16:56:20.217935 1720 ] No such manifest file
+[2021-04-05T16:56:20.217935 1720 ] Did not find object file hash in manifest
+[2021-04-05T16:56:20.217935 1720 ] Running preprocessor
+[2021-04-05T16:56:21.589230 13668] Got object file hash from manifest
+[2021-04-05T16:56:21.590227 13668] Copying C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/b/8cb04658eb2af134d9025c2190bb70-423484.o to __loader.o (uncompressed)
+[2021-04-05T16:56:21.596917 16400] Got object file hash from manifest
+[2021-04-05T16:56:21.597914 16400] Copying C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/8/3cf05175c612c441dbd1e950624a98-605717.o to __constants.o (uncompressed)
+[2021-04-05T16:56:21.597914 9152 ] Got object file hash from manifest
+[2021-04-05T16:56:21.598946 9152 ] Copying C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/8/bce40c4ec9488de9a8bd0cbe4d9d3e-648170.o to __helpers.o (uncompressed)
+[2021-04-05T16:56:21.704233 13668] Created from cache: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/b/8cb04658eb2af134d9025c2190bb70-423484.o -> __loader.o
+[2021-04-05T16:56:21.704233 13668] Succeeded getting cached result
+[2021-04-05T16:56:21.704233 13668] Result: cache hit (direct)
+[2021-04-05T16:56:21.704233 13668] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/stats.lock
+[2021-04-05T16:56:21.704233 16400] Created from cache: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/8/3cf05175c612c441dbd1e950624a98-605717.o -> __constants.o
+[2021-04-05T16:56:21.704233 16400] Succeeded getting cached result
+[2021-04-05T16:56:21.704233 16400] Result: cache hit (direct)
+[2021-04-05T16:56:21.704233 16400] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/stats.lock
+[2021-04-05T16:56:21.704233 9152 ] Created from cache: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/8/bce40c4ec9488de9a8bd0cbe4d9d3e-648170.o -> __helpers.o
+[2021-04-05T16:56:21.719846 9152 ] Succeeded getting cached result
+[2021-04-05T16:56:21.719846 9152 ] Result: cache hit (direct)
+[2021-04-05T16:56:21.719846 9152 ] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/stats.lock
+[2021-04-05T16:56:21.719846 16400] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/stats.lock
+[2021-04-05T16:56:21.735467 13668] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/stats.lock
+[2021-04-05T16:56:21.735467 9152 ] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/stats.lock
+[2021-04-05T16:56:21.805829 15100] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:21.805829 15100] Config: (default) base_dir = 
+[2021-04-05T16:56:21.805829 15100] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:21.805829 15100] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:21.805829 15100] Config: (default) compiler = 
+[2021-04-05T16:56:21.805829 15100] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:21.805829 15100] Config: (default) compression = false
+[2021-04-05T16:56:21.805829 15100] Config: (default) compression_level = 6
+[2021-04-05T16:56:21.805829 15100] Config: (default) cpp_extension = 
+[2021-04-05T16:56:21.805829 15100] Config: (default) debug = false
+[2021-04-05T16:56:21.805829 15100] Config: (default) depend_mode = false
+[2021-04-05T16:56:21.805829 15100] Config: (default) direct_mode = true
+[2021-04-05T16:56:21.805829 15100] Config: (default) disable = false
+[2021-04-05T16:56:21.805829 15100] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:21.805829 15100] Config: (default) hard_link = false
+[2021-04-05T16:56:21.805829 15100] Config: (default) hash_dir = true
+[2021-04-05T16:56:21.805829 15100] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:21.805829 15100] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:21.805829 15100] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:21.805829 15100] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:21.805829 15100] Config: (default) max_files = 0
+[2021-04-05T16:56:21.805829 15100] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:21.805829 15100] Config: (default) path = 
+[2021-04-05T16:56:21.805829 15100] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:21.805829 15100] Config: (default) prefix_command = 
+[2021-04-05T16:56:21.805829 15100] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:21.805829 15100] Config: (default) read_only = false
+[2021-04-05T16:56:21.805829 15100] Config: (default) read_only_direct = false
+[2021-04-05T16:56:21.805829 15100] Config: (default) recache = false
+[2021-04-05T16:56:21.805829 15100] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:21.805829 15100] Config: (default) sloppiness = 
+[2021-04-05T16:56:21.805829 15100] Config: (default) stats = true
+[2021-04-05T16:56:21.805829 15100] Config: (default) temporary_dir = 
+[2021-04-05T16:56:21.805829 15100] Config: (default) umask = 
+[2021-04-05T16:56:21.805829 15100] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledCellType.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src static_src\CompiledCellType.c
+[2021-04-05T16:56:21.805829 15100] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:21.805829 15100] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:21.805829 15100] Source file: static_src\CompiledCellType.c
+[2021-04-05T16:56:21.805829 15100] Object file: static_src\CompiledCellType.o
+[2021-04-05T16:56:21.805829 15100] Trying direct lookup
+[2021-04-05T16:56:21.805829 15100] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/5/0/c06ac1919826b84af0ffa6d356bfa5-7988.manifest
+[2021-04-05T16:56:21.930810 6804 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) base_dir = 
+[2021-04-05T16:56:21.930810 6804 ] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) compiler = 
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) compression = false
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) compression_level = 6
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) cpp_extension = 
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) debug = false
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) depend_mode = false
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) direct_mode = true
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) disable = false
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) hard_link = false
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) hash_dir = true
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:21.930810 6804 ] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) max_files = 0
+[2021-04-05T16:56:21.930810 6804 ] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) path = 
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) prefix_command = 
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) read_only = false
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) read_only_direct = false
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) recache = false
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) sloppiness = 
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) stats = true
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) temporary_dir = 
+[2021-04-05T16:56:21.930810 6804 ] Config: (default) umask = 
+[2021-04-05T16:56:21.930810 6804 ] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\MainProgram.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src static_src\MainProgram.c
+[2021-04-05T16:56:21.930810 6804 ] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:21.930810 6804 ] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:21.930810 6804 ] Source file: static_src\MainProgram.c
+[2021-04-05T16:56:21.930810 6804 ] Object file: static_src\MainProgram.o
+[2021-04-05T16:56:21.930810 6804 ] Trying direct lookup
+[2021-04-05T16:56:21.930810 6804 ] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/1/c61ae9b040e621cc656a62ba7c3cfa-26238.manifest
+[2021-04-05T16:56:22.489657 14696] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:22.489657 14696] Config: (default) base_dir = 
+[2021-04-05T16:56:22.489657 14696] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:22.489657 14696] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:22.489657 14696] Config: (default) compiler = 
+[2021-04-05T16:56:22.489657 14696] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:22.489657 14696] Config: (default) compression = false
+[2021-04-05T16:56:22.489657 14696] Config: (default) compression_level = 6
+[2021-04-05T16:56:22.489657 14696] Config: (default) cpp_extension = 
+[2021-04-05T16:56:22.489657 14696] Config: (default) debug = false
+[2021-04-05T16:56:22.489657 14696] Config: (default) depend_mode = false
+[2021-04-05T16:56:22.489657 14696] Config: (default) direct_mode = true
+[2021-04-05T16:56:22.489657 14696] Config: (default) disable = false
+[2021-04-05T16:56:22.489657 14696] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:22.489657 14696] Config: (default) hard_link = false
+[2021-04-05T16:56:22.489657 14696] Config: (default) hash_dir = true
+[2021-04-05T16:56:22.489657 14696] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:22.489657 14696] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:22.489657 14696] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:22.489657 14696] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:22.489657 14696] Config: (default) max_files = 0
+[2021-04-05T16:56:22.489657 14696] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:22.489657 14696] Config: (default) path = 
+[2021-04-05T16:56:22.489657 14696] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:22.489657 14696] Config: (default) prefix_command = 
+[2021-04-05T16:56:22.489657 14696] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:22.489657 14696] Config: (default) read_only = false
+[2021-04-05T16:56:22.489657 14696] Config: (default) read_only_direct = false
+[2021-04-05T16:56:22.489657 14696] Config: (default) recache = false
+[2021-04-05T16:56:22.489657 14696] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:22.489657 14696] Config: (default) sloppiness = 
+[2021-04-05T16:56:22.489657 14696] Config: (default) stats = true
+[2021-04-05T16:56:22.489657 14696] Config: (default) temporary_dir = 
+[2021-04-05T16:56:22.489657 14696] Config: (default) umask = 
+[2021-04-05T16:56:22.489657 14696] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledFunctionType.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src static_src\CompiledFunctionType.c
+[2021-04-05T16:56:22.489657 14696] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:22.489657 14696] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:22.489657 14696] Source file: static_src\CompiledFunctionType.c
+[2021-04-05T16:56:22.489657 14696] Object file: static_src\CompiledFunctionType.o
+[2021-04-05T16:56:22.489657 14696] Trying direct lookup
+[2021-04-05T16:56:22.489657 14696] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/9/3d46f190b18e163be8c9a3d65ad2d1-78969.manifest
+[2021-04-05T16:56:23.136182 15100] Got object file hash from manifest
+[2021-04-05T16:56:23.136182 14696] Got object file hash from manifest
+[2021-04-05T16:56:23.136182 15100] Copying C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/4/b268c1a1dc4829a45756276e8eef06-609414.o to static_src\CompiledCellType.o (uncompressed)
+[2021-04-05T16:56:23.136182 14696] Copying C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/6/2025becaa31063ef9a3a8d59057522-689601.o to static_src\CompiledFunctionType.o (uncompressed)
+[2021-04-05T16:56:23.151766 15100] Created from cache: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/4/b268c1a1dc4829a45756276e8eef06-609414.o -> static_src\CompiledCellType.o
+[2021-04-05T16:56:23.151766 15100] Succeeded getting cached result
+[2021-04-05T16:56:23.151766 15100] Result: cache hit (direct)
+[2021-04-05T16:56:23.151766 15100] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/stats.lock
+[2021-04-05T16:56:23.182946 15100] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/stats.lock
+[2021-04-05T16:56:23.182946 14696] Created from cache: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/6/2025becaa31063ef9a3a8d59057522-689601.o -> static_src\CompiledFunctionType.o
+[2021-04-05T16:56:23.182946 14696] Succeeded getting cached result
+[2021-04-05T16:56:23.182946 14696] Result: cache hit (direct)
+[2021-04-05T16:56:23.182946 14696] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/stats.lock
+[2021-04-05T16:56:23.214186 14696] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/stats.lock
+[2021-04-05T16:56:23.335593 6804 ] Got object file hash from manifest
+[2021-04-05T16:56:23.351215 6804 ] Copying C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/9/c807652713bd9795fde146480a3573-4092420.o to static_src\MainProgram.o (uncompressed)
+[2021-04-05T16:56:23.382454 6804 ] Created from cache: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/9/c807652713bd9795fde146480a3573-4092420.o -> static_src\MainProgram.o
+[2021-04-05T16:56:23.382454 6804 ] Succeeded getting cached result
+[2021-04-05T16:56:23.382454 6804 ] Result: cache hit (direct)
+[2021-04-05T16:56:23.382454 6804 ] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/stats.lock
+[2021-04-05T16:56:23.382454 6804 ] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/stats.lock
+[2021-04-05T16:56:23.518787 5776 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) base_dir = 
+[2021-04-05T16:56:23.518787 5776 ] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) compiler = 
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) compression = false
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) compression_level = 6
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) cpp_extension = 
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) debug = false
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) depend_mode = false
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) direct_mode = true
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) disable = false
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) hard_link = false
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) hash_dir = true
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:23.518787 5776 ] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) max_files = 0
+[2021-04-05T16:56:23.518787 5776 ] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) path = 
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) prefix_command = 
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) read_only = false
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) read_only_direct = false
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) recache = false
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) sloppiness = 
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) stats = true
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) temporary_dir = 
+[2021-04-05T16:56:23.518787 5776 ] Config: (default) umask = 
+[2021-04-05T16:56:23.518787 5776 ] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledGeneratorType.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src static_src\CompiledGeneratorType.c
+[2021-04-05T16:56:23.518787 5776 ] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:23.518787 5776 ] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:23.518787 5776 ] Source file: static_src\CompiledGeneratorType.c
+[2021-04-05T16:56:23.518787 5776 ] Object file: static_src\CompiledGeneratorType.o
+[2021-04-05T16:56:23.518787 5776 ] Trying direct lookup
+[2021-04-05T16:56:23.518787 5776 ] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/d/5b7f2430b46ace381add9b1b2df368-57418.manifest
+[2021-04-05T16:56:23.620814 5776 ] Got object file hash from manifest
+[2021-04-05T16:56:23.620814 5776 ] Copying C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/2/222e66404ad56b358e1db991455a3e-783758.o to static_src\CompiledGeneratorType.o (uncompressed)
+[2021-04-05T16:56:23.745789 1720 ] Got object file hash from preprocessor
+[2021-04-05T16:56:23.745789 1720 ] Object file C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/7/e/2e8734e6db09dc2d36020bd97c72a8-913403.o not in cache
+[2021-04-05T16:56:23.745789 1720 ] Running real compiler
+[2021-04-05T16:56:23.761406 5776 ] Created from cache: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/2/222e66404ad56b358e1db991455a3e-783758.o -> static_src\CompiledGeneratorType.o
+[2021-04-05T16:56:23.761406 5776 ] Succeeded getting cached result
+[2021-04-05T16:56:23.761406 5776 ] Result: cache hit (direct)
+[2021-04-05T16:56:23.792652 5776 ] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/stats.lock
+[2021-04-05T16:56:24.120702 5776 ] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/c/stats.lock
+[2021-04-05T16:56:25.348895 1368 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) base_dir = 
+[2021-04-05T16:56:25.348895 1368 ] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) compiler = 
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) compression = false
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) compression_level = 6
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) cpp_extension = 
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) debug = false
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) depend_mode = false
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) direct_mode = true
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) disable = false
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) hard_link = false
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) hash_dir = true
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:25.348895 1368 ] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) max_files = 0
+[2021-04-05T16:56:25.348895 1368 ] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) path = 
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) prefix_command = 
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) read_only = false
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) read_only_direct = false
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) recache = false
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) sloppiness = 
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) stats = true
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) temporary_dir = 
+[2021-04-05T16:56:25.348895 1368 ] Config: (default) umask = 
+[2021-04-05T16:56:25.349893 1368 ] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledCodeHelpers.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src static_src\CompiledCodeHelpers.c
+[2021-04-05T16:56:25.349893 1368 ] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:25.349893 1368 ] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:25.350896 1368 ] Source file: static_src\CompiledCodeHelpers.c
+[2021-04-05T16:56:25.350896 1368 ] Object file: static_src\CompiledCodeHelpers.o
+[2021-04-05T16:56:25.350896 1368 ] Trying direct lookup
+[2021-04-05T16:56:25.351887 1368 ] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/5/3/6c277587168cbf068a3a242fb5eb24-55493.manifest
+[2021-04-05T16:56:25.355876 4168 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) base_dir = 
+[2021-04-05T16:56:25.355876 4168 ] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) compiler = 
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) compression = false
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) compression_level = 6
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) cpp_extension = 
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) debug = false
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) depend_mode = false
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) direct_mode = true
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) disable = false
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) hard_link = false
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) hash_dir = true
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:25.355876 4168 ] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) max_files = 0
+[2021-04-05T16:56:25.355876 4168 ] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) path = 
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) prefix_command = 
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) read_only = false
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) read_only_direct = false
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) recache = false
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) sloppiness = 
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) stats = true
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) temporary_dir = 
+[2021-04-05T16:56:25.355876 4168 ] Config: (default) umask = 
+[2021-04-05T16:56:25.356874 4168 ] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\InspectPatcher.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src static_src\InspectPatcher.c
+[2021-04-05T16:56:25.356874 4168 ] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:25.356874 4168 ] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:25.356874 4168 ] Source file: static_src\InspectPatcher.c
+[2021-04-05T16:56:25.356874 4168 ] Object file: static_src\InspectPatcher.o
+[2021-04-05T16:56:25.356874 4168 ] Trying direct lookup
+[2021-04-05T16:56:25.357870 4168 ] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/0/7/1adfeab138775e2a1457b3fe302ffc-13652.manifest
+[2021-04-05T16:56:25.659283 11868] === CCACHE 3.7.12 STARTED =========================================
+[2021-04-05T16:56:25.659283 11868] Config: (default) base_dir = 
+[2021-04-05T16:56:25.659283 11868] Config: (environment) cache_dir = C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-04-05T16:56:25.659283 11868] Config: (default) cache_dir_levels = 2
+[2021-04-05T16:56:25.659283 11868] Config: (default) compiler = 
+[2021-04-05T16:56:25.659283 11868] Config: (default) compiler_check = mtime
+[2021-04-05T16:56:25.659283 11868] Config: (default) compression = false
+[2021-04-05T16:56:25.659283 11868] Config: (default) compression_level = 6
+[2021-04-05T16:56:25.659283 11868] Config: (default) cpp_extension = 
+[2021-04-05T16:56:25.659283 11868] Config: (default) debug = false
+[2021-04-05T16:56:25.659283 11868] Config: (default) depend_mode = false
+[2021-04-05T16:56:25.659283 11868] Config: (default) direct_mode = true
+[2021-04-05T16:56:25.659283 11868] Config: (default) disable = false
+[2021-04-05T16:56:25.659283 11868] Config: (default) extra_files_to_hash = 
+[2021-04-05T16:56:25.659283 11868] Config: (default) hard_link = false
+[2021-04-05T16:56:25.659283 11868] Config: (default) hash_dir = true
+[2021-04-05T16:56:25.659283 11868] Config: (default) ignore_headers_in_manifest = 
+[2021-04-05T16:56:25.659283 11868] Config: (default) keep_comments_cpp = false
+[2021-04-05T16:56:25.659283 11868] Config: (default) limit_multiple = 0.8
+[2021-04-05T16:56:25.659283 11868] Config: (environment) log_file = C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build\ccache-2208.txt
+[2021-04-05T16:56:25.659283 11868] Config: (default) max_files = 0
+[2021-04-05T16:56:25.659283 11868] Config: (C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-04-05T16:56:25.659283 11868] Config: (default) path = 
+[2021-04-05T16:56:25.659283 11868] Config: (default) pch_external_checksum = false
+[2021-04-05T16:56:25.659283 11868] Config: (default) prefix_command = 
+[2021-04-05T16:56:25.659283 11868] Config: (default) prefix_command_cpp = 
+[2021-04-05T16:56:25.659283 11868] Config: (default) read_only = false
+[2021-04-05T16:56:25.659283 11868] Config: (default) read_only_direct = false
+[2021-04-05T16:56:25.659283 11868] Config: (default) recache = false
+[2021-04-05T16:56:25.659283 11868] Config: (default) run_second_cpp = true
+[2021-04-05T16:56:25.659283 11868] Config: (default) sloppiness = 
+[2021-04-05T16:56:25.659283 11868] Config: (default) stats = true
+[2021-04-05T16:56:25.659283 11868] Config: (default) temporary_dir = 
+[2021-04-05T16:56:25.659283 11868] Config: (default) umask = 
+[2021-04-05T16:56:25.659283 11868] Command line: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\rodol\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\MetaPathBasedLoader.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Program Files\Python39\include -I. -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\include -IC:\Users\rodol\AppData\Roaming\Python\Python39\SITE-P~1\nuitka\build\static_src static_src\MetaPathBasedLoader.c
+[2021-04-05T16:56:25.659283 11868] Hostname: DESKTOP-NCE9CM7
+[2021-04-05T16:56:25.659283 11868] Working directory: C:\Users\rodol\Documents\GitHub\ltv-pyqt\main.build
+[2021-04-05T16:56:25.659283 11868] Source file: static_src\MetaPathBasedLoader.c
+[2021-04-05T16:56:25.659283 11868] Object file: static_src\MetaPathBasedLoader.o
+[2021-04-05T16:56:25.659283 11868] Trying direct lookup
+[2021-04-05T16:56:25.659283 11868] Looking for object file hash in C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/5/4e0dcd8ad38dfa9729bb71927c11fc-52224.manifest
+[2021-04-05T16:56:26.326036 4168 ] Got object file hash from manifest
+[2021-04-05T16:56:26.328031 4168 ] Copying C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/d/dd20d3c67d490b605b64db98ffbd82-615099.o to static_src\InspectPatcher.o (uncompressed)
+[2021-04-05T16:56:26.356953 4168 ] Created from cache: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/d/dd20d3c67d490b605b64db98ffbd82-615099.o -> static_src\InspectPatcher.o
+[2021-04-05T16:56:26.357949 4168 ] Succeeded getting cached result
+[2021-04-05T16:56:26.357949 4168 ] Result: cache hit (direct)
+[2021-04-05T16:56:26.357949 4168 ] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-04-05T16:56:26.416792 4168 ] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-04-05T16:56:27.299929 11868] Got object file hash from manifest
+[2021-04-05T16:56:27.299929 1368 ] Got object file hash from manifest
+[2021-04-05T16:56:27.300927 11868] Copying C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/7/972d867c82dd911934ea72fe68cff4-2963741.o to static_src\MetaPathBasedLoader.o (uncompressed)
+[2021-04-05T16:56:27.300927 1368 ] Copying C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/6/9b3c8e62753e84c41a09012eeb048b-5620555.o to static_src\CompiledCodeHelpers.o (uncompressed)
+[2021-04-05T16:56:27.321666 11868] Created from cache: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/7/972d867c82dd911934ea72fe68cff4-2963741.o -> static_src\MetaPathBasedLoader.o
+[2021-04-05T16:56:27.321666 11868] Succeeded getting cached result
+[2021-04-05T16:56:27.321666 11868] Result: cache hit (direct)
+[2021-04-05T16:56:27.321666 11868] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/stats.lock
+[2021-04-05T16:56:27.337283 11868] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/stats.lock
+[2021-04-05T16:56:27.397212 1368 ] Created from cache: C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/6/9b3c8e62753e84c41a09012eeb048b-5620555.o -> static_src\CompiledCodeHelpers.o
+[2021-04-05T16:56:27.398211 1368 ] Succeeded getting cached result
+[2021-04-05T16:56:27.398211 1368 ] Result: cache hit (direct)
+[2021-04-05T16:56:27.398211 1368 ] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/stats.lock
+[2021-04-05T16:56:27.407240 1368 ] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/stats.lock
+[2021-04-05T16:56:28.089390 1720 ] Unlink C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/7/e/2e8734e6db09dc2d36020bd97c72a8-913403.o.tmp.stdout.DESKTOP-NCE9CM7.1720.1QBI6D
+[2021-04-05T16:56:28.089390 1720 ] Unlink C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/7/e/2e8734e6db09dc2d36020bd97c72a8-913403.o.tmp.stderr.DESKTOP-NCE9CM7.1720.SS92c3
+[2021-04-05T16:56:28.089390 1720 ] Copying module.__main__.o to C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/7/e/2e8734e6db09dc2d36020bd97c72a8-913403.o via C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/7/e/2e8734e6db09dc2d36020bd97c72a8-913403.o.DESKTOP-NCE9CM7.1720.1Apgjk (uncompressed)
+[2021-04-05T16:56:28.104958 1720 ] Stored in cache: module.__main__.o -> C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/7/e/2e8734e6db09dc2d36020bd97c72a8-913403.o (copied)
+[2021-04-05T16:56:28.136197 1720 ] Added object file hash to C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/9/2/8ca16e3fea86f74fc417359172414b-331220.manifest
+[2021-04-05T16:56:28.136197 1720 ] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/9/stats.lock
+[2021-04-05T16:56:28.151818 1720 ] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/9/stats.lock
+[2021-04-05T16:56:28.151818 1720 ] Result: cache miss
+[2021-04-05T16:56:28.151818 1720 ] Acquired lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/7/stats.lock
+[2021-04-05T16:56:28.167474 1720 ] Releasing lock C:\Users\rodol\AppData\Local\Nuitka\Nuitka\Cache\ccache/7/stats.lock

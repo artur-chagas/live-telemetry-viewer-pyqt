@@ -18,7 +18,7 @@ Rectangle{
     Rectangle{
         color:"#181818"
         
-        width: childrenRect.width*1.1
+        width: childrenRect.width//*1.1
         height: childrenRect.height
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom : parent.top
