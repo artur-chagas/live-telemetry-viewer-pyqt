@@ -1,0 +1,7 @@
+{
+    "files": ["main.py", "beacon.py",
+    "assets/FormulaButton.qml", "assets/FormulaDialog.qml",
+    "assets/FormulaPage.qml", "assets/LinkButton.qml",
+    "assets/main.qml", "assets/PageBeacon.qml", "assets/PageMain.qml",
+    "assets/RoundComponent.qml"]
+}

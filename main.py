@@ -84,7 +84,6 @@ class SerialProcess():
                 bridge.setConsoleText.emit(bridge._serialString)
                 print(bridge._serialString)
         # self.data_stream = property("text")
-            
 
     def closeSerial(self):
         if self.thr.is_alive:
@@ -132,15 +131,14 @@ class Bridge(QtCore.QObject):
             self.p.closeSerial()
             self.callSuccessDialog.emit("Desconectado com sucesso")
 
-
     @QtCore.pyqtSlot()
     def getSerialString(self):
         self.setConsoleText.emit(self._serialString)
-        
+
 class App():
     def __init__(self):
         self.app = QtGui.QGuiApplication(sys.argv + ['--style', 'material'])
-        
+
         fontdatabase = QtGui.QFontDatabase()
         fontdatabase.addApplicationFont("fonts/Exo2-Regular.ttf")
         exo = QtGui.QFont("Exo 2",15)
@@ -154,7 +152,7 @@ class App():
 
         self.engine.rootContext().setContextProperty("bridge", self.bridge)
         self.engine.load("assets/main.qml")
-        
+
         self.engine.quit.connect(self.app.quit)
         self.app.exec()
 

@@ -18,11 +18,20 @@ Page{
             print("ExceptionDialog:" + text);
             exceptionDialog.text = text;
             exceptionDialog.open();
+
         }
         function onCallSuccessDialog(text) {
             print("SuccessDialog:" + text);
             sucessDialog.text = text
             sucessDialog.open();
+
+            if (text == "Conectado com sucesso"){
+                connectButton.enabled = false;
+                disconnectButton.enabled = true;
+            } else if (text == "Desconectado com sucesso"){
+                connectButton.enabled = true;
+                disconnectButton.enabled = false;
+            }
         }
     }
     FormulaDialog{
@@ -100,8 +109,7 @@ Page{
                                        
                                         onClicked: {
                                             bridge.connectSerial(combobox.currentText);
-                                            connectButton.enabled = false;
-                                            disconnectButton.enabled = true;
+                                            
                                         }
                                     }
                                     Button{
@@ -110,8 +118,6 @@ Page{
                                         text:"Desconectar"
                                         onClicked: {
                                             bridge.disconnectSerial()
-                                            connectButton.enabled = true;
-                                            disconnectButton.enabled = false;
                                         }
                                     }
                                 }
