@@ -106,7 +106,6 @@ Page{
                                     Button{
                                         id: connectButton                                        
                                         text:"Conectar"
-                                       
                                         onClicked: {
                                             bridge.connectSerial(combobox.currentText);
                                             

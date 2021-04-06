@@ -64,23 +64,15 @@ class SerialProcess():
 
     def __init__(self, bridge):
         self.ser = serial.Serial(timeout=0)
-        self.thr = threading.Thread(target=self.loopRead, args=(bridge,), daemon=True)
-        self.thr.stop_condition = False
-
 
     def startSerial(self, bridge, serial_port, baudrate):
         self.ser.port = serial_port
         self.ser.baudrate = baudrate
         self.ser.open()
         if self.ser.is_open:
+            self.thr = threading.Thread(target=self.loopRead, args=(bridge,), daemon=True)
             self.thr.stop_condition = False
-            if not self.thr.is_alive():
-                try:
-                    self.thr.start()
-                except:
-                    self.thr = threading.Thread(target=self.loopRead, args=(bridge,), daemon=True)
-                    self.thr.stop_condition = False
-                    self.thr.start()
+            self.thr.start()
 
     def loopRead(self, bridge):
         while(self.ser.is_open and not self.thr.stop_condition):
@@ -88,7 +80,7 @@ class SerialProcess():
             time.sleep(0.05)
             readLength = self.ser.in_waiting
             s = self.ser.read(readLength)
-            if (s != " "):
+            if (s):
                 bridge._serialString += s.decode("utf-8")
                 bridge.setConsoleText.emit(bridge._serialString)
                 print(bridge._serialString)
@@ -121,7 +113,7 @@ class Bridge(QtCore.QObject):
                 list += [t.device]
         except:
             list = []
-        self.setComboBoxModel.emit(list)
+        self.setComboBoxModel.emit(list + ["COM6"] + ["COM100"])
 
     @QtCore.pyqtSlot(str)
     def connectSerial(self, port:str):
