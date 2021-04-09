@@ -130,7 +130,7 @@ Page{
                                 height: parent.height * 0.8
                                 radius: 16
                                 clip: true
-                                    ScrollView{
+                                ScrollView{
                                     anchors.fill: parent
                                         Text{
                                             id: textConsole
@@ -139,6 +139,13 @@ Page{
                                             anchors.leftMargin: 10
                                             anchors.rightMargin: 10
                                         }
+                                }
+                                Button{
+                                    anchors.bottom: parent.bottom
+                                    text: "Limpar tela"
+                                    onClicked: {
+                                        textConsole.text = ""
+                                    }
                                 }
                             }
                         

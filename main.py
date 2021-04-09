@@ -19,13 +19,10 @@
     ```
 
     * **PyQt5**: proporciona interface de usuário, desenvolvida em QtQuick/QML
+    * **pyserial**: possibilita o acesso às portas serial de forma independente da plataforma
     * **Nuitka**: compila o código fonte ```.py``` em um executável nativo ```.exe``` ou ```.bin``` (Linux).
     Isso facilita a vida do usuário final e produz um código com excelente perfomance, por utilizar
-    a correlação entre os objetos do Python e a sua implementação original em C
-    * **pyserial**: permite o facil acesso à porta serial
-    * **dill**: dependência de pathos, serialização eficiente de objectos
-    * **pathos**: melhora o processamento paralelo do Python (modulo *multiprocessing*), pois este usa
-    *pickle*, incapaz de serializar o *QObject* (Bridge)[#main.Bridge], usado em (SerialProcess)[#main.SerialProcess]
+    a correlação entre os objetos do Python e a sua implementação original em C (CPython)
     * **pdoc3**: proporciona a documentação que você está lendo neste momento
 
     ## Como documentar
@@ -43,82 +40,50 @@ import threading
 #endregion
 
 #region qt imports
-from PyQt5 import QtGui, QtQml, QtCore
-# from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
-# from PyQt5.QtQml import QQmlApplicationEngine
-# from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
+from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
+from PyQt5.QtQml import QQmlApplicationEngine
+from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
 #endregion
 
 #region py-backend imports
 import beacon as beacon
+from formulaThread import *
 #endregion
 
 #region other imports
 import serial
 import serial.tools.list_ports
-# import pathos.helpers
-import atexit
 #endregion
 
-class SerialProcess():
 
-    def __init__(self, bridge):
-        self.ser = serial.Serial(timeout=0)
-
-    def startSerial(self, bridge, serial_port, baudrate):
-        self.ser.port = serial_port
-        self.ser.baudrate = baudrate
-        self.ser.open()
-        if self.ser.is_open:
-            self.thr = threading.Thread(target=self.loopRead, args=(bridge,), daemon=True)
-            self.thr.stop_condition = False
-            self.thr.start()
-
-    def loopRead(self, bridge):
-        while(self.ser.is_open and not self.thr.stop_condition):
-            #Delay para acumular mais dados no buffer de recepção
-            time.sleep(0.05)
-            readLength = self.ser.in_waiting
-            s = self.ser.read(readLength)
-            if (s):
-                bridge._serialString += s.decode("utf-8")
-                bridge.setConsoleText.emit(bridge._serialString)
-                print(bridge._serialString)
-        # self.data_stream = property("text")
-
-    def closeSerial(self):
-        if self.thr.is_alive:
-            self.thr.stop_condition = True
-        if self.ser.is_open:
-            self.ser.close()
-
-class Bridge(QtCore.QObject):
+class Bridge(QObject):
     def __init__(self, app, engine):
-        QtCore.QObject.__init__(self)
+        QObject.__init__(self)
         self.app = app
         self.engine = engine
         self._serialString = ""
-        self.p = SerialProcess(self)
+        self.t = SerialThread(self)
 
-    callSuccessDialog = QtCore.pyqtSignal(str) 
-    callExceptionDialog = QtCore.pyqtSignal(str)
-    setComboBoxModel = QtCore.pyqtSignal(list)
-    setConsoleText = QtCore.pyqtSignal(str, arguments=['text'])
+    callSuccessDialog = pyqtSignal(str) 
+    callExceptionDialog = pyqtSignal(str)
+    setComboBoxModel = pyqtSignal(list)
+    setConsoleText = pyqtSignal(str, arguments=['text'])
 
-    @QtCore.pyqtSlot()
+    @pyqtSlot()
     def getSerialPorts(self):
         list = []
         try:
             for t in serial.tools.list_ports.comports():
-                list += [t.device]
+                list += [str(t)]
         except:
             list = []
-        self.setComboBoxModel.emit(list + ["COM6"] + ["COM100"])
+        self.setComboBoxModel.emit(list)
 
-    @QtCore.pyqtSlot(str)
-    def connectSerial(self, port:str):
+    @pyqtSlot(str)
+    def connectSerial(self, portDevice:str):
         try:
-            self.p.startSerial(self, port, 115200)
+            port = portDevice.split()[0]
+            self.t.startSerial(self, port, 115200)
         except Exception as e:
             print(e)
             self.callExceptionDialog.emit(str(e))
@@ -126,26 +91,26 @@ class Bridge(QtCore.QObject):
             print("Connected")
             self.callSuccessDialog.emit("Conectado com sucesso")
 
-    @QtCore.pyqtSlot()
+    @pyqtSlot()
     def disconnectSerial(self):
-        if self.p.ser.is_open:
-            self.p.closeSerial()
+        if self.t.ser.is_open:
+            self.t.closeSerial()
             self.callSuccessDialog.emit("Desconectado com sucesso")
 
-    @QtCore.pyqtSlot()
+    @pyqtSlot()
     def getSerialString(self):
         self.setConsoleText.emit(self._serialString)
 
 class App():
     def __init__(self):
-        self.app = QtGui.QGuiApplication(sys.argv + ['--style', 'material'])
+        self.app = QGuiApplication(sys.argv + ['--style', 'material'])
 
-        fontdatabase = QtGui.QFontDatabase()
+        fontdatabase = QFontDatabase()
         fontdatabase.addApplicationFont("fonts/Exo2-Regular.ttf")
-        exo = QtGui.QFont("Exo 2",15)
+        exo = QFont("Exo 2",15)
         self.app.setFont(exo)
 
-        self.engine = QtQml.QQmlApplicationEngine()
+        self.engine = QQmlApplicationEngine()
         self.bridge = Bridge(self.app, self.engine)
 
         #responder a KeyboardInterrupt
