@@ -1,0 +1,10 @@
+# Páginas:
+# 0 - Tela Principal
+# 1 - Sensores Auxiliares
+# 2 - SDDF
+# 3 - Envio de Mensagens
+# 4 - Beacon + Debug
+
+PAGINA,COMPONENTE,TITULO
+0,HorizontalGauge,aaaf
+1,HorizontalGauge,36usrv

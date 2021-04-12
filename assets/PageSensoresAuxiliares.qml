@@ -3,9 +3,7 @@ import QtQuick.Controls 2.14
 
 
 Page{
-    property alias column: motorPowertrainColumn
-
-
+    property alias column: sensoresColumn 
     Rectangle{
         color: "#181818"
         anchors.fill: parent
@@ -24,7 +22,7 @@ Page{
                         iconSource:"images/icon_lightning.svg"
                         iconWidth: 36
                         iconHeight: 36
-                        text: "Motor e Powertrain"
+                        text: "Sensores Auxiliares"
                         //prevenir overflow
                         ScrollView{
                             width: parent.width*0.9
@@ -34,7 +32,7 @@ Page{
                                 anchors.fill: parent
                                 color: "#181818"
                                 Column{
-                                    id: motorPowertrainColumn
+                                    id: sensoresColumn
                                     spacing: 10
                                     width: parent.width
                                     height: Overlay.overlay.height * 0.05

@@ -6,10 +6,12 @@ import QtQuick.Controls 2.14
 import QtQuick.Controls.Material 2.14
 
 
+
+
 ApplicationWindow{
     id:window
-    minimumWidth: 1280
-    minimumHeight: 720
+    minimumWidth: 1000
+    minimumHeight: 562
     visible: true
     width: Screen.desktopAvailableWidth * 0.6
     height: Screen.desktopAvailableHeight * 0.6
@@ -26,6 +28,23 @@ ApplicationWindow{
     FontLoader{
         source:"fonts/Exo2-ExtraBold.ttf"
         id:exoExtraBold
+    }
+
+    Connections{
+        target: bridge
+        function onCallComponentCreation(params){
+            var component;
+            var sprite;
+            var pagesParent;
+            var i;
+            i = params[0];
+            component = Qt.createComponent("HorizontalGauge.qml");
+            pagesParent = view.children[0].children[0]
+            
+            if (pagesParent.children[i] != null){
+                sprite = component.createObject(pagesParent.children[i].column, {labelText: params[1]});
+            }
+        }
     }
 
 
@@ -105,9 +124,11 @@ ApplicationWindow{
         currentIndex:0
         interactive: false
      
-        PageMain{}
-        FormulaPage{
-            text:"Sensores Auxiliares"
+        PageMain{
+            id:pageMain
+        }
+        PageSensoresAuxiliares{
+            id:pageSensoresAuxiliares
         }
         FormulaPage{
             text:"S.D.D.F"

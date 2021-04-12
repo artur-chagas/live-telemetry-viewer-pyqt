@@ -48,6 +48,7 @@ from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
 #region py-backend imports
 import beacon as beacon
 from formulaThread import *
+import csvInterpreter as csvInterpreter
 #endregion
 
 #region other imports
@@ -66,8 +67,14 @@ class Bridge(QObject):
 
     callSuccessDialog = pyqtSignal(str) 
     callExceptionDialog = pyqtSignal(str)
+    callComponentCreation = pyqtSignal(list)
     setComboBoxModel = pyqtSignal(list)
     setConsoleText = pyqtSignal(str, arguments=['text'])
+
+    def createComponent(self, index:int, title:str):
+        self.callComponentCreation.emit([index, title])
+        
+
 
     @pyqtSlot()
     def getSerialPorts(self):
@@ -119,6 +126,9 @@ class App():
         self.engine.rootContext().setContextProperty("bridge", self.bridge)
         self.engine.load("assets/main.qml")
 
+        listDicts = csvInterpreter.readCSV("components.csv")
+        for d in listDicts:
+            self.bridge.createComponent(d['PAGINA'], d['TITULO'])
         self.engine.quit.connect(self.app.quit)
         self.app.exec()
 
