@@ -40,7 +40,16 @@ ApplicationWindow{
             component = Qt.createComponent(params["COMPONENTE"]+".qml");
 
             if (pagesParent.children[params["PAGINA"]] != null){
-                sprite = component.createObject(pagesParent.children[params["PAGINA"]].column, {labelText: params["TITULO"]});
+                switch(params["COMPONENTE"]){
+                    case("HorizontalGauge"):
+                        sprite = component.createObject(pagesParent.children[params["PAGINA"]].column, {labelText: params["TITULO"],
+                        minValue: params["MINVALUE"], maxValue: params["MAXVALUE"]});
+                        break;
+                    default:
+                        break;
+                }
+
+
             } else {
                 print("Falhou ao criar componente " + params["TITULO"]);
             }

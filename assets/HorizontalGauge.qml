@@ -43,12 +43,12 @@ Rectangle{
                 Text{
                     id: minValue
                     color:"#ffffff"
-                    text:"0"
+                    text:"n/a"
                 }
                 Text{
                     id: maxValue
                     color:"#ffffff"
-                    text:"120"
+                    text:"n/a"
                 }
 
             }
