@@ -11,4 +11,4 @@ def readCSV(file:str):
         reader = csv.DictReader(removeComments(arq))
         for row in reader:
             listDicts.append(row)
-        return listDicts        
+        return listDicts      

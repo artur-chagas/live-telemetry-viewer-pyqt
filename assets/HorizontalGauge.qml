@@ -4,39 +4,65 @@ import QtQuick.Controls 2.14
 Rectangle{
     id: rect
     property alias labelText: label.text
+    property alias minValue: minValue.text
+    property alias maxValue: maxValue.text
     color: "#505050"
-    width: parent.width * 0.95
+    width: parent.width
     height: Overlay.overlay.height * 0.1
     // a altura do gauge é proporcional à janela (Overlay) pois o
     // scrollview impede overflow
     anchors.horizontalCenter: parent.horizontalCenter
     Row{
+        width: parent.width
+        height: parent.height
+        anchors.horizontalCenter: parent.horizontalCenter
         spacing: 10
-        anchors.centerIn: parent
         Text{
-            width: rect.width * 0.1
             id: label
+            width: parent.height
+            height: parent.height
             color: "#ffffff"
+            minimumPointSize:1
             font.weight: Font.ExtraBold
-            font.pointSize: 10
             fontSizeMode: Text.Fit
             wrapMode: Text.Wrap
+            verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
         }
-        Rectangle{
-            anchors.verticalCenter: label.verticalCenter
-            width: rect.width * 0.7
-            height: 10
-            color: "#fed700"
+        Column{
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width - 2*parent.height - 20
+            Rectangle{
+                width: parent.width
+                height: 10
+                color: "#fed700"
+            }
+            Row{
+                spacing: parent.width - minValue.width - maxValue.width
+                width: parent.width
+                Text{
+                    id: minValue
+                    color:"#ffffff"
+                    text:"0"
+                }
+                Text{
+                    id: maxValue
+                    color:"#ffffff"
+                    text:"120"
+                }
+
+            }
         }
         Text{
-            anchors.verticalCenter: label.verticalCenter
+            width: parent.height
+            height: parent.height
             color: "#ffffff"
             font.weight: Font.ExtraBold
-            text: "80"
+            text: "n/a"
             horizontalAlignment: Text.AlignHCenter
-            font.pointSize: 35
-
+            verticalAlignment: Text.AlignVCenter
+            fontSizeMode: Text.Fit
+            minimumPointSize: 20
         }
     }
 }

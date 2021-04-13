@@ -36,13 +36,13 @@ ApplicationWindow{
             var component;
             var sprite;
             var pagesParent;
-            var i;
-            i = params[0];
-            component = Qt.createComponent("HorizontalGauge.qml");
             pagesParent = view.children[0].children[0]
-            
-            if (pagesParent.children[i] != null){
-                sprite = component.createObject(pagesParent.children[i].column, {labelText: params[1]});
+            component = Qt.createComponent(params["COMPONENTE"]+".qml");
+
+            if (pagesParent.children[params["PAGINA"]] != null){
+                sprite = component.createObject(pagesParent.children[params["PAGINA"]].column, {labelText: params["TITULO"]});
+            } else {
+                print("Falhou ao criar componente " + params["TITULO"]);
             }
         }
     }

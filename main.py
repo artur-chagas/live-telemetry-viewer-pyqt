@@ -67,12 +67,17 @@ class Bridge(QObject):
 
     callSuccessDialog = pyqtSignal(str) 
     callExceptionDialog = pyqtSignal(str)
-    callComponentCreation = pyqtSignal(list)
+    # callComponentCreation = pyqtSignal(list)
+    callComponentCreation = pyqtSignal("QVariant")
     setComboBoxModel = pyqtSignal(list)
     setConsoleText = pyqtSignal(str, arguments=['text'])
 
-    def createComponent(self, index:int, title:str):
-        self.callComponentCreation.emit([index, title])
+    # def createComponent(self, index:int, component:str, title:str):
+        # self.callComponentCreation.emit([index, component, title])
+
+    @pyqtSlot(result="QVariant")
+    def createComponent(self, params:dict):
+        self.callComponentCreation.emit(params)
         
 
 
@@ -128,7 +133,7 @@ class App():
 
         listDicts = csvInterpreter.readCSV("components.csv")
         for d in listDicts:
-            self.bridge.createComponent(d['PAGINA'], d['TITULO'])
+            self.bridge.createComponent(d)
         self.engine.quit.connect(self.app.quit)
         self.app.exec()
 

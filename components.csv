@@ -5,6 +5,7 @@
 # 3 - Envio de Mensagens
 # 4 - Beacon + Debug
 
-PAGINA,COMPONENTE,TITULO
-0,HorizontalGauge,aaaf
-1,HorizontalGauge,36usrv
+PAGINA,COMPONENTE,TITULO,MINVALUE,MAXVALUE
+0,HorizontalGauge,Temp. do Motor,30,200
+0,HorizontalGauge,IAT,0,120
+1,HorizontalGauge,test
