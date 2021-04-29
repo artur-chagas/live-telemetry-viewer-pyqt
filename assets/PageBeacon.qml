@@ -7,31 +7,8 @@ Page{
 
     Connections{
         target: bridge
-        function onSetComboBoxModel(model) {
-            combobox.model = model;
-        }
         function onSetConsoleText(text) {
             textConsole.text = qsTr(text);
-        }
-
-        function onCallExceptionDialog(text) {
-            print("ExceptionDialog:" + text);
-            exceptionDialog.text = text;
-            exceptionDialog.open();
-
-        }
-        function onCallSuccessDialog(text) {
-            print("SuccessDialog:" + text);
-            sucessDialog.text = text
-            sucessDialog.open();
-
-            if (text == "Conectado com sucesso"){
-                connectButton.enabled = false;
-                disconnectButton.enabled = true;
-            } else if (text == "Desconectado com sucesso"){
-                connectButton.enabled = true;
-                disconnectButton.enabled = false;
-            }
         }
     }
     FormulaDialog{
@@ -75,50 +52,9 @@ Page{
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 anchors.top: parent.top
                                 anchors.topMargin: parent.height * 0.03
-                                Row{
+                                SerialConnectRow{
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     anchors.verticalCenter: parent.verticalCenter
-                                    spacing: width * 0.025
-                                    ComboBox{
-                                        Component.onCompleted: bridge.getSerialPorts()
-                                        id:combobox
-                                        width: parent.width * 0.4
-                                    }
-                                    Button{
-                                        id:searchButton
-                                        text:"Buscar"
-                                        onClicked: {
-                                            searchButton.enabled = false;
-                                            searchTimer.start()
-                                            
-                                        }
-
-                                        Timer{
-                                            id: searchTimer
-                                            interval: 500
-                                            onTriggered: {
-                                                bridge.getSerialPorts()
-                                                searchButton.enabled = true
-                                            }
-                                        }
-
-                                    }
-                                    Button{
-                                        id: connectButton                                        
-                                        text:"Conectar"
-                                        onClicked: {
-                                            bridge.connectSerial(combobox.currentText);
-                                            
-                                        }
-                                    }
-                                    Button{
-                                        id: disconnectButton   
-                                        enabled: false                                     
-                                        text:"Desconectar"
-                                        onClicked: {
-                                            bridge.disconnectSerial()
-                                        }
-                                    }
                                 }
 
                             }
@@ -157,6 +93,20 @@ Page{
                         iconWidth: 36
                         iconHeight: 36
                         text: "Debug"
+
+                         Rectangle{
+                            color: "#00000000"
+                            width: parent.width * 0.9
+                            height: parent.height * 0.1
+                            
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.top: parent.top
+                            anchors.topMargin: parent.height * 0.03
+                            SerialConnectRow{
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                anchors.verticalCenter: parent.verticalCenter
+                            }
+                        }
                     }
                 }
             
