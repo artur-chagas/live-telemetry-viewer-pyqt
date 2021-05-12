@@ -63,7 +63,7 @@ class Bridge(QObject):
         self.app = app
         self.engine = engine
         self._serialString = ""
-        self.t = SerialThread(self)
+        self.threads = []
 
     callSuccessDialog = pyqtSignal(str) 
     callExceptionDialog = pyqtSignal(str)
@@ -92,26 +92,28 @@ class Bridge(QObject):
         self.setComboBoxModel.emit(list)
 
     @pyqtSlot(str)
-    def connectSerial(self, portDevice:str):
+    def connectSerial(self, port:str):
         try:
-            port = portDevice.split()[0]
-            self.t.startSerial(self, port, 115200)
+            for thread in self.threads:
+                if str(thread.ser.port) == port:
+                    pass
+            self.threads.append(SerialThread(self))
+            self.threads[-1].startSerial(self, port, 115200)
         except Exception as e:
             print(e)
             self.callExceptionDialog.emit(str(e))
         else:
             print("Connected")
-            self.callSuccessDialog.emit("Conectado com sucesso")
+            self.callSuccessDialog.emit(port + " conectado com sucesso")
 
-    @pyqtSlot()
-    def disconnectSerial(self):
-        if self.t.ser.is_open:
-            self.t.closeSerial()
-            self.callSuccessDialog.emit("Desconectado com sucesso")
+    @pyqtSlot(str)
+    def disconnectSerial(self, port:str):
+        for thread in self.threads:
+            if str(thread.ser.port) == port:
+                thread.closeSerial()
+                self.callSuccessDialog.emit(port + " desconectado com sucesso")
+        
 
-    @pyqtSlot()
-    def getSerialString(self):
-        self.setConsoleText.emit(self._serialString)
 
 class App():
     def __init__(self):

@@ -11,6 +11,7 @@ class SerialThread():
         self.ser.port = serial_port
         self.ser.baudrate = baudrate
         self.ser.open()
+        print(SerialThread(self))
         if self.ser.is_open:
             self.thr = threading.Thread(target=self.loopRead, args=(bridge,), daemon=True)
             self.thr.stop_condition = False

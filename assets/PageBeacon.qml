@@ -44,28 +44,20 @@ Page{
                         iconHeight: 32.4
                         text: "Console"
                     
-                            Rectangle{
-                                color: "#00000000"
-                                width: parent.width * 0.9
-                                height: parent.height * 0.1
-                                
+                            SerialConnectRow{
                                 anchors.horizontalCenter: parent.horizontalCenter
-                                anchors.top: parent.top
-                                anchors.topMargin: parent.height * 0.03
-                                SerialConnectRow{
-                                    anchors.horizontalCenter: parent.horizontalCenter
-                                    anchors.verticalCenter: parent.verticalCenter
-                                }
-
+                                anchors.verticalCenter: parent.verticalCenter
                             }
+                            
                             Rectangle{
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 anchors.bottom: parent.bottom
                                 anchors.bottomMargin: parent.height * 0.05
                                 width: parent.width * 0.9
-                                height: parent.height * 0.8
+                                height: parent.height * 0.75
                                 radius: 16
                                 clip: true
+                                
                                 ScrollView{
                                     anchors.fill: parent
                                         Text{
@@ -94,18 +86,9 @@ Page{
                         iconHeight: 36
                         text: "Debug"
 
-                         Rectangle{
-                            color: "#00000000"
-                            width: parent.width * 0.9
-                            height: parent.height * 0.1
-                            
+                        SerialConnectRow{
                             anchors.horizontalCenter: parent.horizontalCenter
-                            anchors.top: parent.top
-                            anchors.topMargin: parent.height * 0.03
-                            SerialConnectRow{
-                                anchors.horizontalCenter: parent.horizontalCenter
-                                anchors.verticalCenter: parent.verticalCenter
-                            }
+                            anchors.verticalCenter: parent.verticalCenter
                         }
                     }
                 }
