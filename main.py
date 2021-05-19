@@ -63,23 +63,22 @@ class Bridge(QObject):
         self.app = app
         self.engine = engine
         self._serialString = ""
-        self.threads = []
+        self.threadsDict = dict()
 
     callSuccessDialog = pyqtSignal(str) 
     callExceptionDialog = pyqtSignal(str)
-    # callComponentCreation = pyqtSignal(list)
     callComponentCreation = pyqtSignal("QVariant")
     setComboBoxModel = pyqtSignal(list)
-    setConsoleText = pyqtSignal(str, arguments=['text'])
+    setConsoleText = pyqtSignal(str, str)
 
-    # def createComponent(self, index:int, component:str, title:str):
-        # self.callComponentCreation.emit([index, component, title])
 
+    @pyqtSlot()
+    def clearSerialString(self):
+        self._serialString = ""
+        
     @pyqtSlot(result="QVariant")
     def createComponent(self, params:dict):
         self.callComponentCreation.emit(params)
-        
-
 
     @pyqtSlot()
     def getSerialPorts(self):
@@ -94,25 +93,23 @@ class Bridge(QObject):
     @pyqtSlot(str)
     def connectSerial(self, port:str):
         try:
-            for thread in self.threads:
-                if str(thread.ser.port) == port:
-                    pass
-            self.threads.append(SerialThread(self))
-            self.threads[-1].startSerial(self, port, 115200)
+            ##se a porta já possui um thread, não cria um novo
+            if port in self.threadsDict:
+                pass
+            ##caso contrário, cria novo thread e o conecta à porta
+            self.threadsDict[port] = SerialThread(self)
+            self.threadsDict[port].startSerial(self, port, 115200)
         except Exception as e:
             print(e)
             self.callExceptionDialog.emit(str(e))
         else:
-            print("Connected")
+            print(port +" conectada com sucesso")
             self.callSuccessDialog.emit(port + " conectado com sucesso")
 
     @pyqtSlot(str)
     def disconnectSerial(self, port:str):
-        for thread in self.threads:
-            if str(thread.ser.port) == port:
-                thread.closeSerial()
-                self.callSuccessDialog.emit(port + " desconectado com sucesso")
-        
+        self.threadsDict[port].closeSerial()
+        self.callSuccessDialog.emit(port + " desconectado com sucesso")
 
 
 class App():

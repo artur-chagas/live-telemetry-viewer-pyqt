@@ -2,7 +2,8 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 
 Column{
-    property var port: ""
+    property string port: ""
+    property alias textConsole: textConsole
     // width: parent.width * 0.9
     // height: parent.height * 0.3
     
@@ -98,6 +99,35 @@ Column{
                     bridge.disconnectSerial(port);
                 }
             }
-        }
+    }
+
+    Rectangle{
+        anchors.horizontalCenter: parent.parent.horizontalCenter
+        anchors.bottom: parent.parent.bottom
+        anchors.bottomMargin: parent.parent.height * 0.05
+        width: parent.parent.width * 0.9
+        height: parent.parent.height * 0.75
+        radius: 16
+        clip: true
         
+        ScrollView{
+            anchors.fill: parent
+                Text{
+                    id: textConsole
+                    height: 500
+                    anchors.left: parent.left
+                    anchors.leftMargin: 10
+                    anchors.rightMargin: 10
+                }
+        }
+        Button{
+            anchors.bottom: parent.bottom
+            text: "Limpar tela"
+            onClicked: {
+                textConsole.text = "";
+                bridge.clearSerialString();
+            }
+        }
+    }
+    
 }

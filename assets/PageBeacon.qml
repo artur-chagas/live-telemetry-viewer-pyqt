@@ -7,8 +7,13 @@ Page{
 
     Connections{
         target: bridge
-        function onSetConsoleText(text) {
-            textConsole.text = qsTr(text);
+        function onSetConsoleText(text, port) {
+            if (port == beaconSCC.port){
+                beaconSCC.textConsole.text = qsTr(text);
+            }
+            else if (port == receptorSCC.port){
+                receptorSCC.textConsole.text = qsTr(text);
+            }
         }
     }
     FormulaDialog{
@@ -26,7 +31,7 @@ Page{
         color: "#181818"
         anchors.fill: parent
         id: pageRect
-        property alias text1: textConsole.text
+        // property alias text1: textConsole.text
 
         Rectangle{
             color: "#181818"
@@ -43,39 +48,42 @@ Page{
                         iconWidth: 36
                         iconHeight: 32.4
                         text: "Console"
-                    
-                            SerialConnectRow{
+                            
+                            
+                            SerialConnectComponent{
+                                id: beaconSCC
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 anchors.verticalCenter: parent.verticalCenter
                             }
                             
-                            Rectangle{
-                                anchors.horizontalCenter: parent.horizontalCenter
-                                anchors.bottom: parent.bottom
-                                anchors.bottomMargin: parent.height * 0.05
-                                width: parent.width * 0.9
-                                height: parent.height * 0.75
-                                radius: 16
-                                clip: true
+                            // Rectangle{
+                            //     anchors.horizontalCenter: parent.horizontalCenter
+                            //     anchors.bottom: parent.bottom
+                            //     anchors.bottomMargin: parent.height * 0.05
+                            //     width: parent.width * 0.9
+                            //     height: parent.height * 0.75
+                            //     radius: 16
+                            //     clip: true
                                 
-                                ScrollView{
-                                    anchors.fill: parent
-                                        Text{
-                                            id: textConsole
-                                            height: 500
-                                            anchors.left: parent.left
-                                            anchors.leftMargin: 10
-                                            anchors.rightMargin: 10
-                                        }
-                                }
-                                Button{
-                                    anchors.bottom: parent.bottom
-                                    text: "Limpar tela"
-                                    onClicked: {
-                                        textConsole.text = ""
-                                    }
-                                }
-                            }
+                            //     ScrollView{
+                            //         anchors.fill: parent
+                            //             Text{
+                            //                 id: textConsole
+                            //                 height: 500
+                            //                 anchors.left: parent.left
+                            //                 anchors.leftMargin: 10
+                            //                 anchors.rightMargin: 10
+                            //             }
+                            //     }
+                            //     Button{
+                            //         anchors.bottom: parent.bottom
+                            //         text: "Limpar tela"
+                            //         onClicked: {
+                            //             textConsole.text = "";
+                            //             bridge.clearSerialString();
+                            //         }
+                            //     }
+                            // }
                         
                     }
                     
@@ -86,7 +94,8 @@ Page{
                         iconHeight: 36
                         text: "Debug"
 
-                        SerialConnectRow{
+                        SerialConnectComponent{
+                            id: receptorSCC
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                         }

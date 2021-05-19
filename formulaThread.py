@@ -6,6 +6,7 @@ class SerialThread():
 
     def __init__(self, bridge):
         self.ser = serial.Serial(timeout=0)
+        self._serialString = ""
 
     def startSerial(self, bridge, serial_port, baudrate):
         self.ser.port = serial_port
@@ -25,12 +26,15 @@ class SerialThread():
             s = self.ser.read(readLength)
             if (s):
                 bridge._serialString += s.decode("utf-8")
-                bridge.setConsoleText.emit(bridge._serialString)
+                bridge.setConsoleText.emit(bridge._serialString, str(self.ser.port))
                 print(bridge._serialString)
         # self.data_stream = property("text")
 
     def closeSerial(self):
-        if self.thr.is_alive:
-            self.thr.stop_condition = True
-        if self.ser.is_open:
-            self.ser.close()
+        try:
+            if self.thr.is_alive:
+                self.thr.stop_condition = True
+            if self.ser.is_open:
+                self.ser.close()
+        except Exception:
+            pass
