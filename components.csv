@@ -5,7 +5,8 @@
 # 3 - Envio de Mensagens
 # 4 - Beacon + Debug
 
-PAGINA,COMPONENTE,TITULO,MINVALUE,MAXVALUE
-0,HorizontalGauge,Temp. do Motor,30,200
-0,HorizontalGauge,IAT,0,120
-1,HorizontalGauge,test
+PAGINA,COMPONENTE,TITULO,MINVALUE,MAXVALUE,CODIGO,POS,TAM
+0,HorizontalGauge,Temp. disco FL,20,500,40,0,2
+0,HorizontalGauge,Temp. disco FR,20,500,40,2,2
+0,HorizontalGauge,Temp. pinça FL,20,500,40,4,2
+0,HorizontalGauge,Temp. pinça FR,20,500,40,6,2

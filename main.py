@@ -62,8 +62,8 @@ class Bridge(QObject):
         QObject.__init__(self)
         self.app = app
         self.engine = engine
-        self._serialString = ""
-        self.threadsDict = dict()
+        self.serialStringsDict = {}
+        self.threadsDict = {}
 
     callSuccessDialog = pyqtSignal(str) 
     callExceptionDialog = pyqtSignal(str)
@@ -72,9 +72,9 @@ class Bridge(QObject):
     setConsoleText = pyqtSignal(str, str)
 
 
-    @pyqtSlot()
-    def clearSerialString(self):
-        self._serialString = ""
+    @pyqtSlot(str)
+    def clearSerialString(self, port:str):
+        self.serialStringsDict[port] = ""
         
     @pyqtSlot(result="QVariant")
     def createComponent(self, params:dict):
@@ -98,7 +98,10 @@ class Bridge(QObject):
                 pass
             ##caso contrário, cria novo thread e o conecta à porta
             self.threadsDict[port] = SerialThread(self)
+            self.serialStringsDict[port] = ""
             self.threadsDict[port].startSerial(self, port, 115200)
+        except serial.SerialException:
+            self.callExceptionDialog.emit("Erro de permissão: a porta provavelmente já está sendo usada")
         except Exception as e:
             print(e)
             self.callExceptionDialog.emit(str(e))
@@ -108,9 +111,13 @@ class Bridge(QObject):
 
     @pyqtSlot(str)
     def disconnectSerial(self, port:str):
-        self.threadsDict[port].closeSerial()
-        self.callSuccessDialog.emit(port + " desconectado com sucesso")
-
+        try:
+            if self.threadsDict[port].ser.is_open:
+                self.threadsDict[port].closeSerial()
+                self.callSuccessDialog.emit(port + " desconectado com sucesso")
+        except Exception as e:
+            print(e) 
+            self.callExceptionDialog.emit(str(e))
 
 class App():
     def __init__(self):

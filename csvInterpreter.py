@@ -7,7 +7,7 @@ def removeComments(file):
 
 def readCSV(file:str):
     listDicts = []
-    with open(file) as arq:
+    with open(file, encoding="utf8") as arq:
         reader = csv.DictReader(removeComments(arq))
         for row in reader:
             listDicts.append(row)

@@ -46,12 +46,16 @@ Column{
                 if (text == port + " conectado com sucesso"){
                     connectButton.enabled = false;
                     disconnectButton.enabled = true;
+                    searchButton.enabled = false;
                     connectionIndicator.visible = true;
                     connectionIndicator.children[0].text = "CONECTADO A " + port;
+                    combobox.enabled = false;
                 } else if (text == port + " desconectado com sucesso"){
                     connectButton.enabled = true;
                     disconnectButton.enabled = false;
+                    searchButton.enabled = true;
                     connectionIndicator.visible = false;
+                    combobox.enabled = true;
                 }
             }
         }
@@ -95,13 +99,14 @@ Column{
                 text:"Desconectar"
                 onClicked: {
                     port = combobox.currentText.split(" ")[0];
-                    print(port);
                     bridge.disconnectSerial(port);
+                    port = ""
                 }
             }
     }
 
     Rectangle{
+        id: consoleRect
         anchors.horizontalCenter: parent.parent.horizontalCenter
         anchors.bottom: parent.parent.bottom
         anchors.bottomMargin: parent.parent.height * 0.05
@@ -112,12 +117,15 @@ Column{
         
         ScrollView{
             anchors.fill: parent
+            contentWidth: textConsole.width
                 Text{
                     id: textConsole
-                    height: 500
+                    width: consoleRect.width*0.9
+                    height: consoleRect.height*0.9
                     anchors.left: parent.left
-                    anchors.leftMargin: 10
-                    anchors.rightMargin: 10
+                    anchors.leftMargin: consoleRect.width*0.05
+                    anchors.rightMargin: consoleRect.width*0.05
+                    wrapMode: Text.WrapAnywhere
                 }
         }
         Button{
@@ -125,7 +133,7 @@ Column{
             text: "Limpar tela"
             onClicked: {
                 textConsole.text = "";
-                bridge.clearSerialString();
+                bridge.clearSerialString(port);
             }
         }
     }
