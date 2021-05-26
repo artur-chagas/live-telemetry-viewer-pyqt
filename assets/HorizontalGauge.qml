@@ -6,6 +6,18 @@ Rectangle{
     property alias labelText: label.text
     property alias minValue: minValue.text
     property alias maxValue: maxValue.text
+    property int code
+    property int position
+
+    Connections{
+        target: bridge
+        function onSetComponentValue(code, array){
+            currentValue.text = array[position];
+        }
+    }
+
+
+
     color: "#505050"
     width: parent.width
     height: Overlay.overlay.height * 0.1
@@ -54,6 +66,7 @@ Rectangle{
             }
         }
         Text{
+            id: currentValue
             width: parent.height
             height: parent.height
             color: "#ffffff"

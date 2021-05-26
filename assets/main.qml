@@ -43,7 +43,7 @@ ApplicationWindow{
                 switch(params["COMPONENTE"]){
                     case("HorizontalGauge"):
                         sprite = component.createObject(pagesParent.children[params["PAGINA"]].column, {labelText: params["TITULO"],
-                        minValue: params["MINVALUE"], maxValue: params["MAXVALUE"]});
+                        minValue: params["MINVALUE"], maxValue: params["MAXVALUE"], code: params["CODIGO"], position: params["POS"]});
                         break;
                     default:
                         break;

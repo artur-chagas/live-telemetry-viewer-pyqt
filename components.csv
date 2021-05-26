@@ -5,8 +5,18 @@
 # 3 - Envio de Mensagens
 # 4 - Beacon + Debug
 
+#MSG teste 0x55 0x53 0x50 0x28 0x08 0x65 0x66 0x67 0x68 0x69 0x6A 0x6B 0x6C
+
 PAGINA,COMPONENTE,TITULO,MINVALUE,MAXVALUE,CODIGO,POS,TAM
-0,HorizontalGauge,Temp. disco FL,20,500,40,0,2
-0,HorizontalGauge,Temp. disco FR,20,500,40,2,2
-0,HorizontalGauge,Temp. pinça FL,20,500,40,4,2
-0,HorizontalGauge,Temp. pinça FR,20,500,40,6,2
+# 0,HorizontalGauge,MAP,0,120,27,0,2
+# 0,HorizontalGauge,Pressão Combustível,0,10,
+# 0,HorizontalGauge,TPS(%),0,100,
+# 0,HorizontalGauge,T. Ar(°C),0,70,
+# 0,HorizontalGauge,T. Água(°C),0,120,
+# 0,HorizontalGauge,P. Óleo(bar),0,5,
+# 0,HorizontalGauge,Tensão da Bateria,0,20,
+# 0,HorizontalGauge,Lambda,0,2,
+0,HorizontalGauge,Temp. disco FL,20,500,40,0
+0,HorizontalGauge,Temp. disco FR,20,500,40,1
+0,HorizontalGauge,Temp. pinça FL,20,500,40,2
+0,HorizontalGauge,Temp. pinça FR,20,500,40,3

@@ -9,10 +9,12 @@ Page{
         target: bridge
         function onSetConsoleText(text, port) {
             if (port == beaconSCC.port){
-                beaconSCC.textConsole.text = qsTr(text);
+                beaconSCC.textConsole.text += qsTr(text);
             }
             else if (port == receptorSCC.port){
-                receptorSCC.textConsole.text = qsTr(text);
+                receptorSCC.textConsole.text += qsTr(text);
+                print(text);
+                bridge.updateComponents(text);
             }
         }
     }
@@ -55,35 +57,6 @@ Page{
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 anchors.verticalCenter: parent.verticalCenter
                             }
-                            
-                            // Rectangle{
-                            //     anchors.horizontalCenter: parent.horizontalCenter
-                            //     anchors.bottom: parent.bottom
-                            //     anchors.bottomMargin: parent.height * 0.05
-                            //     width: parent.width * 0.9
-                            //     height: parent.height * 0.75
-                            //     radius: 16
-                            //     clip: true
-                                
-                            //     ScrollView{
-                            //         anchors.fill: parent
-                            //             Text{
-                            //                 id: textConsole
-                            //                 height: 500
-                            //                 anchors.left: parent.left
-                            //                 anchors.leftMargin: 10
-                            //                 anchors.rightMargin: 10
-                            //             }
-                            //     }
-                            //     Button{
-                            //         anchors.bottom: parent.bottom
-                            //         text: "Limpar tela"
-                            //         onClicked: {
-                            //             textConsole.text = "";
-                            //             bridge.clearSerialString();
-                            //         }
-                            //     }
-                            // }
                         
                     }
                     

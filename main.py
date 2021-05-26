@@ -34,20 +34,20 @@
 
 #region Python Imports
 import sys
-import time
 import signal
-import threading
+import array
+import struct
 #endregion
 
 #region qt imports
 from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
 from PyQt5.QtQml import QQmlApplicationEngine
-from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
+from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot
 #endregion
 
 #region py-backend imports
 import beacon as beacon
-from formulaThread import *
+import formulaThread as formulaThread
 import csvInterpreter as csvInterpreter
 #endregion
 
@@ -56,6 +56,11 @@ import serial
 import serial.tools.list_ports
 #endregion
 
+def highLow(high:int, low:int) -> int:
+    value = high
+    value <<= 8
+    value |= low
+    return value
 
 class Bridge(QObject):
     def __init__(self, app, engine):
@@ -70,7 +75,42 @@ class Bridge(QObject):
     callComponentCreation = pyqtSignal("QVariant")
     setComboBoxModel = pyqtSignal(list)
     setConsoleText = pyqtSignal(str, str)
+    setComponentValue = pyqtSignal(int, list)
+    
+    @pyqtSlot(str)
+    def updateComponents(self, msg:bytearray):
+        #USP 20 8 1 4 1 5 1 6 1 7
+        #5553501408010401080110011F
+        #0x55 0x53 0x50 0x14 0x08 0x01 0x04 0x01 0x08 0x01 0x10 0x01 0x1F
+        #apenas mensagens pares por enquanto
 
+        # if msg[0:3] == b"USP":
+        #     msgSize = int(msg[4])
+        #     readableMsg = array.array('I', int(msgSize/2) * [0])
+
+        #     for i in range(0, int(msgSize/2)):
+        #         readableMsg[i] = highLow(msg[5+2*i],msg[6+2*i])
+
+        #     print(readableMsg)
+        #     self.setComponentValue.emit(int(msg[3]), readableMsg)
+        #     # print(int.from_bytes(msg[4], "big"))
+        #     print(msg)
+        # print(msg)
+        if msg[0:3] == "USP":
+
+            # for m in msg[0:3]:
+            #     readableMsg.append(ord(m))
+            
+            msgSize = ord(msg[4])
+            readableMsg = []
+
+            for i in range(0, int(msgSize/2)):
+                high = ord(msg[5+2*i])
+                low = ord(msg[6+2*i])
+                readableMsg.append(highLow(high,low))
+
+            self.setComponentValue.emit(ord(msg[3]), readableMsg)
+            # print(readableMsg)
 
     @pyqtSlot(str)
     def clearSerialString(self, port:str):
@@ -82,13 +122,13 @@ class Bridge(QObject):
 
     @pyqtSlot()
     def getSerialPorts(self):
-        list = []
+        serialList = []
         try:
             for t in serial.tools.list_ports.comports():
-                list += [str(t)]
-        except:
-            list = []
-        self.setComboBoxModel.emit(list)
+                serialList += [str(t)]
+        except Exception:
+            serialList = []
+        self.setComboBoxModel.emit(serialList)
 
     @pyqtSlot(str)
     def connectSerial(self, port:str):
@@ -97,9 +137,9 @@ class Bridge(QObject):
             if port in self.threadsDict:
                 pass
             ##caso contrário, cria novo thread e o conecta à porta
-            self.threadsDict[port] = SerialThread(self)
+            self.threadsDict[port] = formulaThread.SerialThread(self)
             self.serialStringsDict[port] = ""
-            self.threadsDict[port].startSerial(self, port, 115200)
+            self.threadsDict[port].startSerial(port, 115200)
         except serial.SerialException:
             self.callExceptionDialog.emit("Erro de permissão: a porta provavelmente já está sendo usada")
         except Exception as e:
@@ -140,9 +180,11 @@ class App():
         listDicts = csvInterpreter.readCSV("components.csv")
         for d in listDicts:
             self.bridge.createComponent(d)
+
+        # self.bridge.updateComponents(bytearray.fromhex('5553501408010401080110011F'))
+
         self.engine.quit.connect(self.app.quit)
         self.app.exec()
-
 
 if __name__ == "__main__":
     b = beacon.Functions()
