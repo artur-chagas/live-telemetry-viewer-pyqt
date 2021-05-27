@@ -8,11 +8,11 @@ Page{
     Connections{
         target: bridge
         function onSetConsoleText(text, port) {
-            if (port == beaconSCC.port){
-                beaconSCC.textConsole.text += qsTr(text);
+            if (port == beaconSRC.port){
+                beaconSRC.textConsole.text += qsTr(text);
             }
-            else if (port == receptorSCC.port){
-                receptorSCC.textConsole.text += qsTr(text);
+            else if (port == receptorSRC.port){
+                receptorSRC.textConsole.text += qsTr(text);
                 print(text);
                 bridge.updateComponents(text);
             }
@@ -52,8 +52,8 @@ Page{
                         text: "Console"
                             
                             
-                            SerialConnectComponent{
-                                id: beaconSCC
+                            SerialRecieveComponent{
+                                id: beaconSRC
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 anchors.verticalCenter: parent.verticalCenter
                             }
@@ -67,8 +67,8 @@ Page{
                         iconHeight: 36
                         text: "Debug"
 
-                        SerialConnectComponent{
-                            id: receptorSCC
+                        SerialRecieveComponent{
+                            id: receptorSRC
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                         }

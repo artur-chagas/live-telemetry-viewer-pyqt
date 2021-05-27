@@ -35,8 +35,6 @@
 #region Python Imports
 import sys
 import signal
-import array
-import struct
 #endregion
 
 #region qt imports
@@ -127,6 +125,7 @@ class Bridge(QObject):
             for t in serial.tools.list_ports.comports():
                 serialList += [str(t)]
         except Exception:
+            self.callExceptionDialog.emit("Erro ao procurar portas serial")
             serialList = []
         self.setComboBoxModel.emit(serialList)
 
