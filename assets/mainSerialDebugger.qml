@@ -28,7 +28,7 @@ ApplicationWindow{
         id:exoExtraBold
     }
 
-    SerialConnectComponent{
+    SerialSendComponent{
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
     }

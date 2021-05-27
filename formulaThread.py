@@ -23,7 +23,7 @@ class SerialThread():
             readLength = self.ser.in_waiting
             s = self.ser.read(readLength)
             if (s):
-                bridge.serialStringsDict[self.ser.port] = s.decode("utf-8")
+                bridge.serialStringsDict[self.ser.port] = s.decode("ISO-8859-1")
                 bridge.setConsoleText.emit(bridge.serialStringsDict[self.ser.port], str(self.ser.port))
         # self.data_stream = property("text")
 
