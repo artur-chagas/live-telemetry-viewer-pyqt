@@ -6,7 +6,7 @@
 # 4 - Beacon + Debug
 
 #MSG teste 0x55 0x53 0x50 0x28 0x08 0x65 0x66 0x67 0x68 0x69 0x6A 0x6B 0x6C
-
+#pré teste
 PAGINA,COMPONENTE,TITULO,MINVALUE,MAXVALUE,CODIGO,POS,TAM
 # 0,HorizontalGauge,MAP,0,120,27,0,2
 # 0,HorizontalGauge,Pressão Combustível,0,10,
