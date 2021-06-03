@@ -6,6 +6,7 @@ import QtQuick.Dialogs 1.3
 Popup{
         id:popup
         property alias text: popupText.text
+        property alias pointSize: popupText.font.pointSize
         property alias iconSource: icon.source
         property alias color: rect.color
 

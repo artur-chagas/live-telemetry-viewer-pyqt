@@ -4,10 +4,13 @@ import serial
 
 class SerialThread():
 
-    def __init__(self, bridge):
+    def __init__(self, bridge, isReader:bool):
         self.ser = serial.Serial(timeout=0)
-        self.thr = threading.Thread(target=self.loopRead, args=(bridge,), daemon=True)
-
+        if isReader:
+            self.thr = threading.Thread(target=self.loopRead, daemon=True)
+        else:
+            self.thr = threading.Thread(target=self.send, daemon=True)
+        self.bridge = bridge
     def startSerial(self, serial_port, baudrate):
         self.ser.port = serial_port
         self.ser.baudrate = baudrate
@@ -16,16 +19,25 @@ class SerialThread():
             self.thr.stop_condition = False
             self.thr.start()
 
-    def loopRead(self, bridge):
+    def loopRead(self):
         while(self.ser.is_open and not self.thr.stop_condition):
             #Delay para acumular mais dados no buffer de recepção
             time.sleep(0.05)
             readLength = self.ser.in_waiting
             s = self.ser.read(readLength)
             if (s):
-                bridge.serialStringsDict[self.ser.port] = s.decode("ISO-8859-1")
-                bridge.setConsoleText.emit(bridge.serialStringsDict[self.ser.port], str(self.ser.port))
+                self.bridge.serialStringsDict[self.ser.port] = s.decode("ISO-8859-1")
+                self.bridge.setConsoleText.emit(self.bridge.serialStringsDict[self.ser.port], str(self.ser.port))
         # self.data_stream = property("text")
+
+    def send(self, msg:str):
+        if msg.isascii():
+            print("ascii")
+            self.ser.write(bytes(msg, "UTF-8"))
+            print("Sent: "+msg)
+        else:
+            self.bridge.callExceptionDialog.emit("A mensagem não é ASCII")
+
 
     def closeSerial(self):
         try:

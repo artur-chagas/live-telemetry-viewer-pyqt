@@ -15,7 +15,7 @@
     O desenvolvedor deve instalar **Python >=3.9**, e em seguida,
     rodar
     ```
-    pip install PyQt5 Nuitka pyserial dill pathos pdoc3
+    pip install PyQt5 Nuitka pyserial pdoc3
     ```
 
     * **PyQt5**: proporciona interface de usuário, desenvolvida em QtQuick/QML
@@ -136,7 +136,7 @@ class Bridge(QObject):
             if port in self.threadsDict:
                 pass
             ##caso contrário, cria novo thread e o conecta à porta
-            self.threadsDict[port] = formulaThread.SerialThread(self)
+            self.threadsDict[port] = formulaThread.SerialThread(self, isReader = True)
             self.serialStringsDict[port] = ""
             self.threadsDict[port].startSerial(port, 115200)
         except serial.SerialException:

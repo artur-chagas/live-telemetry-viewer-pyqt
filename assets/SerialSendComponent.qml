@@ -3,7 +3,6 @@ import QtQuick.Controls 2.14
 
 Column{
     property string port: ""
-    property alias textConsole: textConsole
     // width: parent.width * 0.9
     // height: parent.height * 0.3
     
@@ -24,6 +23,20 @@ Column{
             color: "#000000"
         }
     }
+
+    FormulaDialog{
+        id: exceptionDialog
+        color: "#962726"
+        iconSource: "images/icon_error.svg"
+        pointSize: 8
+    }
+    FormulaDialog{
+        id: sucessDialog
+        color: "#252525"
+        iconSource: "images/icon_success.svg"
+        pointSize: 8
+    }
+
 
     Row{
         Connections{
@@ -64,7 +77,7 @@ Column{
             ComboBox{
                 Component.onCompleted: bridge.getSerialPorts()
                 id:combobox
-                width: parent.width * 0.4
+                width: parent.width * 0.3
             }
             Button{
                 id:searchButton
@@ -91,6 +104,7 @@ Column{
                 onClicked: {
                     port = combobox.currentText.split(" ")[0];
                     bridge.connectSerial(port);
+                    sendButton.enabled = true;
                 }
             }
             Button{
@@ -101,6 +115,22 @@ Column{
                     port = combobox.currentText.split(" ")[0];
                     bridge.disconnectSerial(port);
                     port = ""
+                    sendButton.enabled = false;
+                }
+            }
+            Button{
+                id: sendButton
+                anchors.bottom: parent.bottom
+                text:"Enviar"
+                onClicked: {
+                    if (port != "" && textArea.length > 0){
+                        bridge.sendSerial(port, textArea.text);
+                    }
+                }
+                Component.onCompleted: {
+                    if (port == "" || textArea.length == 0){
+                        sendButton.enabled = false;
+                    }
                 }
             }
     }
@@ -117,25 +147,20 @@ Column{
         
         ScrollView{
             anchors.fill: parent
-            contentWidth: textConsole.width
-                Text{
-                    id: textConsole
+            contentWidth: textArea.width
+                TextArea{
+                    id: textArea
                     width: consoleRect.width*0.9
                     height: consoleRect.height*0.9
                     anchors.left: parent.left
                     anchors.leftMargin: consoleRect.width*0.05
                     anchors.rightMargin: consoleRect.width*0.05
                     wrapMode: Text.WrapAnywhere
+                    color: "#000000"
                 }
         }
-        Button{
-            anchors.bottom: parent.bottom
-            text: "Limpar tela"
-            onClicked: {
-                textConsole.text = "";
-                bridge.clearSerialString(port);
-            }
-        }
+        
+        
     }
     
 }

@@ -53,7 +53,7 @@ class Bridge(QObject):
             if port in self.threadsDict:
                 pass
             ##caso contrário, cria novo thread e o conecta à porta
-            self.threadsDict[port] = formulaThread.SerialThread(self)
+            self.threadsDict[port] = formulaThread.SerialThread(self, isReader = False)
             self.serialStringsDict[port] = ""
             self.threadsDict[port].startSerial(port, 115200)
         except serial.SerialException:
@@ -74,6 +74,11 @@ class Bridge(QObject):
         except Exception as e:
             print(e) 
             self.callExceptionDialog.emit(str(e))
+    
+    @pyqtSlot(str, str)
+    def sendSerial(self, port:str, msg:str):
+        if self.threadsDict[port].ser.is_open and not self.threadsDict[port].thr.stop_condition:
+            self.threadsDict[port].send(msg)
 
 class App():
     def __init__(self):

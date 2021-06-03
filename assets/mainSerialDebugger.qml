@@ -11,8 +11,10 @@ import QtQuick.Controls.Material 2.14
 ApplicationWindow{
     id:window
     visible: true
-    width: 500
-    height: 281
+    minimumWidth: 600
+    minimumHeight: 400
+    maximumWidth: 600
+    maximumHeight: 400
     title: qsTr("Live Telemetry Viewer")
     color: "#181818"
 
