@@ -1,0 +1,18 @@
+# Páginas:
+# 0 - Tela Principal
+# 1 - Sensores Auxiliares
+# 2 - SDDF
+# 3 - Envio de Mensagens
+# 4 - Beacon + Debug
+
+#MSG teste 0x55 0x53 0x50 0x28 0x08 0x65 0x66 0x67 0x68 0x69 0x6A 0x6B 0x6C
+#pré teste
+PAGINA,COMPONENTE,TITULO,MINVALUE,MAXVALUE,CODIGO,POS,TAM
+0,HorizontalGauge,MAP,0,120,27,0,2
+0,HorizontalGauge,Pressão Combustível,0,10,
+0,HorizontalGauge,TPS(%),0,100,
+0,HorizontalGauge,T. Ar(°C),0,70,
+0,HorizontalGauge,T. Água(°C),0,120,
+0,HorizontalGauge,P. Óleo(bar),0,5,
+0,HorizontalGauge,Tensão da Bateria,0,20,
+0,HorizontalGauge,Lambda,0,2,

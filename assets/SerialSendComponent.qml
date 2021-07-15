@@ -124,7 +124,11 @@ Column{
                 text:"Enviar"
                 onClicked: {
                     if (port != "" && textArea.length > 0){
-                        bridge.sendSerial(port, textArea.text);
+                        var stringList = textArea.text.split('\n');
+
+                        for (var i = 0; i < stringList.length; i++){
+                            bridge.sendSerialHex(port, stringList[i]);
+                        }
                     }
                 }
                 Component.onCompleted: {
@@ -148,7 +152,7 @@ Column{
         ScrollView{
             anchors.fill: parent
             contentWidth: textArea.width
-                TextArea{
+                TextEdit{
                     id: textArea
                     width: consoleRect.width*0.9
                     height: consoleRect.height*0.9

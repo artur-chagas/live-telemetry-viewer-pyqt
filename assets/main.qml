@@ -87,7 +87,7 @@ ApplicationWindow{
                 }
             }
             RowLayout{
-                spacing:(parent.width-800)/7;
+                spacing:(parent.width-800)/8;
                 Image{
                     width: 150
                     height: 52
@@ -120,6 +120,11 @@ ApplicationWindow{
                     text: "Beacon + Debug"
                     index:4
                 }
+                LinkButton{
+                    id: button5
+                    text: "Salvar"
+                    index:5
+                }
                 
             }
             
@@ -146,6 +151,7 @@ ApplicationWindow{
             text:"Envio de Mensagens"
             
         }
+        PageBeacon{}
         PageBeacon{}
     }
 

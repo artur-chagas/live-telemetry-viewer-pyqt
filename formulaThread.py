@@ -30,14 +30,10 @@ class SerialThread():
                 self.bridge.setConsoleText.emit(self.bridge.serialStringsDict[self.ser.port], str(self.ser.port))
         # self.data_stream = property("text")
 
-    def send(self, msg:str):
-        if msg.isascii():
-            print("ascii")
-            self.ser.write(bytes(msg, "UTF-8"))
-            print("Sent: "+msg)
-        else:
-            self.bridge.callExceptionDialog.emit("A mensagem não é ASCII")
-
+    def send(self, msg:bytes):
+        msgHex = bytes.fromhex(msg)
+        self.ser.write(bytes.fromhex(msg))
+        print("Enviado (bytes) " + str(msgHex) )
 
     def closeSerial(self):
         try:

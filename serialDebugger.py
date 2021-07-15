@@ -1,6 +1,7 @@
 #region Python Imports
 import sys
 import signal
+import binascii
 #endregion
 
 #region qt imports
@@ -76,9 +77,12 @@ class Bridge(QObject):
             self.callExceptionDialog.emit(str(e))
     
     @pyqtSlot(str, str)
-    def sendSerial(self, port:str, msg:str):
+    def sendSerialHex(self, port:str, msg:str):
         if self.threadsDict[port].ser.is_open and not self.threadsDict[port].thr.stop_condition:
-            self.threadsDict[port].send(msg)
+            if msg.isdigit():
+                self.threadsDict[port].send(msg)
+            else:
+                self.callExceptionDialog.emit("A mensagem deve ser digitos hexadecimais")
 
 class App():
     def __init__(self):

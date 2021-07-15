@@ -17,6 +17,7 @@ Text{
             button2.bold = false
             button3.bold = false
             button4.bold = false
+            button5.bold = false
             bold = true
         }
     }

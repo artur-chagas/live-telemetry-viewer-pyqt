@@ -65,7 +65,7 @@ Page{
                         iconSource:"images/icon_debug.svg"
                         iconWidth: 36
                         iconHeight: 36
-                        text: "Debug"
+                        text: "Receptor"
 
                         SerialRecieveComponent{
                             id: receptorSRC
