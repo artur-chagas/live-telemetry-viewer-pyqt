@@ -1,0 +1,603 @@
+[2021-07-16T00:15:34.733096 5520 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) base_dir = 
+[2021-07-16T00:15:34.733096 5520 ] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) compiler = 
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) compression = false
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) compression_level = 6
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) cpp_extension = 
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) debug = false
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) depend_mode = false
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) direct_mode = true
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) disable = false
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) hard_link = false
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) hash_dir = true
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:34.733096 5520 ] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) max_files = 0
+[2021-07-16T00:15:34.733096 5520 ] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) path = 
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) prefix_command = 
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) read_only = false
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) read_only_direct = false
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) recache = false
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) sloppiness = 
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) stats = true
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) temporary_dir = 
+[2021-07-16T00:15:34.733096 5520 ] Config: (default) umask = 
+[2021-07-16T00:15:34.733096 5520 ] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o __constants.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src __constants.c
+[2021-07-16T00:15:34.734114 5520 ] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:34.734114 5520 ] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:34.734114 5520 ] Source file: __constants.c
+[2021-07-16T00:15:34.734114 5520 ] Object file: __constants.o
+[2021-07-16T00:15:34.734114 5520 ] Trying direct lookup
+[2021-07-16T00:15:34.734114 5520 ] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/d/c307129c591c278cf5caa250c44ded-4766.manifest
+[2021-07-16T00:15:34.750086 7840 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) base_dir = 
+[2021-07-16T00:15:34.750086 7840 ] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) compiler = 
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) compression = false
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) compression_level = 6
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) cpp_extension = 
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) debug = false
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) depend_mode = false
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) direct_mode = true
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) disable = false
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) hard_link = false
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) hash_dir = true
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:34.750086 7840 ] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) max_files = 0
+[2021-07-16T00:15:34.750086 7840 ] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) path = 
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) prefix_command = 
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) read_only = false
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) read_only_direct = false
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) recache = false
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) sloppiness = 
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) stats = true
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) temporary_dir = 
+[2021-07-16T00:15:34.750086 7840 ] Config: (default) umask = 
+[2021-07-16T00:15:34.750086 7840 ] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o __helpers.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src __helpers.c
+[2021-07-16T00:15:34.751085 7840 ] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:34.751085 7840 ] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:34.751085 7840 ] Source file: __helpers.c
+[2021-07-16T00:15:34.751085 7840 ] Object file: __helpers.o
+[2021-07-16T00:15:34.751085 7840 ] Trying direct lookup
+[2021-07-16T00:15:34.751085 7840 ] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/1/3d39230db209b856ee88fbc76d39f0-61943.manifest
+[2021-07-16T00:15:34.777824 6936 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) base_dir = 
+[2021-07-16T00:15:34.777824 6936 ] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) compiler = 
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) compression = false
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) compression_level = 6
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) cpp_extension = 
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) debug = false
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) depend_mode = false
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) direct_mode = true
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) disable = false
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) hard_link = false
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) hash_dir = true
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:34.777824 6936 ] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) max_files = 0
+[2021-07-16T00:15:34.777824 6936 ] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) path = 
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) prefix_command = 
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) read_only = false
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) read_only_direct = false
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) recache = false
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) sloppiness = 
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) stats = true
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) temporary_dir = 
+[2021-07-16T00:15:34.777824 6936 ] Config: (default) umask = 
+[2021-07-16T00:15:34.777824 6936 ] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o __loader.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src __loader.c
+[2021-07-16T00:15:34.777824 6936 ] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:34.777824 6936 ] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:34.778824 6936 ] Source file: __loader.c
+[2021-07-16T00:15:34.778824 6936 ] Object file: __loader.o
+[2021-07-16T00:15:34.778824 6936 ] Trying direct lookup
+[2021-07-16T00:15:34.778824 6936 ] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/f/fc7f2d14e605525fc645f6d9ada25c-3323.manifest
+[2021-07-16T00:15:34.778824 6936 ] No such manifest file
+[2021-07-16T00:15:34.778824 6936 ] Did not find object file hash in manifest
+[2021-07-16T00:15:34.779823 6936 ] Running preprocessor
+[2021-07-16T00:15:34.783821 5520 ] Got object file hash from manifest
+[2021-07-16T00:15:34.784820 5520 ] Copying C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/4/0359959e8a473b3a23b856702893b1-626463.o to __constants.o (uncompressed)
+[2021-07-16T00:15:34.784820 5520 ] Created from cache: C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/4/0359959e8a473b3a23b856702893b1-626463.o -> __constants.o
+[2021-07-16T00:15:34.785820 5520 ] Succeeded getting cached result
+[2021-07-16T00:15:34.785820 5520 ] Result: cache hit (direct)
+[2021-07-16T00:15:34.785820 5520 ] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/stats.lock
+[2021-07-16T00:15:34.786819 5520 ] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/stats.lock
+[2021-07-16T00:15:34.802810 7840 ] Got object file hash from manifest
+[2021-07-16T00:15:34.802810 7840 ] Copying C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/0/a34b84b54e38191e7d8fa60b516e36-663209.o to __helpers.o (uncompressed)
+[2021-07-16T00:15:34.803810 7840 ] Created from cache: C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/0/a34b84b54e38191e7d8fa60b516e36-663209.o -> __helpers.o
+[2021-07-16T00:15:34.803810 7840 ] Succeeded getting cached result
+[2021-07-16T00:15:34.803810 7840 ] Result: cache hit (direct)
+[2021-07-16T00:15:34.803810 7840 ] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/stats.lock
+[2021-07-16T00:15:34.806201 7840 ] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/d/stats.lock
+[2021-07-16T00:15:34.806201 10728] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:34.806201 10728] Config: (default) base_dir = 
+[2021-07-16T00:15:34.806201 10728] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:34.806201 10728] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:34.806201 10728] Config: (default) compiler = 
+[2021-07-16T00:15:34.806201 10728] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:34.806201 10728] Config: (default) compression = false
+[2021-07-16T00:15:34.806201 10728] Config: (default) compression_level = 6
+[2021-07-16T00:15:34.806201 10728] Config: (default) cpp_extension = 
+[2021-07-16T00:15:34.806201 10728] Config: (default) debug = false
+[2021-07-16T00:15:34.806201 10728] Config: (default) depend_mode = false
+[2021-07-16T00:15:34.806201 10728] Config: (default) direct_mode = true
+[2021-07-16T00:15:34.806201 10728] Config: (default) disable = false
+[2021-07-16T00:15:34.806201 10728] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:34.806201 10728] Config: (default) hard_link = false
+[2021-07-16T00:15:34.806201 10728] Config: (default) hash_dir = true
+[2021-07-16T00:15:34.806201 10728] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:34.806201 10728] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:34.806201 10728] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:34.806201 10728] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:34.806201 10728] Config: (default) max_files = 0
+[2021-07-16T00:15:34.806201 10728] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:34.806201 10728] Config: (default) path = 
+[2021-07-16T00:15:34.806201 10728] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:34.806201 10728] Config: (default) prefix_command = 
+[2021-07-16T00:15:34.806201 10728] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:34.806201 10728] Config: (default) read_only = false
+[2021-07-16T00:15:34.806201 10728] Config: (default) read_only_direct = false
+[2021-07-16T00:15:34.806201 10728] Config: (default) recache = false
+[2021-07-16T00:15:34.806201 10728] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:34.806201 10728] Config: (default) sloppiness = 
+[2021-07-16T00:15:34.806201 10728] Config: (default) stats = true
+[2021-07-16T00:15:34.806201 10728] Config: (default) temporary_dir = 
+[2021-07-16T00:15:34.806201 10728] Config: (default) umask = 
+[2021-07-16T00:15:34.806201 10728] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.__main__.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.__main__.c
+[2021-07-16T00:15:34.806201 10728] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:34.806201 10728] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:34.806201 10728] Source file: module.__main__.c
+[2021-07-16T00:15:34.806201 10728] Object file: module.__main__.o
+[2021-07-16T00:15:34.806201 10728] Trying direct lookup
+[2021-07-16T00:15:34.806201 10728] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/4/5b1ba0a0fab541ca217ac3027b5fdd-299518.manifest
+[2021-07-16T00:15:34.806201 10728] No such manifest file
+[2021-07-16T00:15:34.806201 10728] Did not find object file hash in manifest
+[2021-07-16T00:15:34.806201 10728] Running preprocessor
+[2021-07-16T00:15:34.867166 10400] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:34.867166 10400] Config: (default) base_dir = 
+[2021-07-16T00:15:34.867166 10400] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:34.867166 10400] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:34.867166 10400] Config: (default) compiler = 
+[2021-07-16T00:15:34.867166 10400] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:34.867166 10400] Config: (default) compression = false
+[2021-07-16T00:15:34.867166 10400] Config: (default) compression_level = 6
+[2021-07-16T00:15:34.867166 10400] Config: (default) cpp_extension = 
+[2021-07-16T00:15:34.867166 10400] Config: (default) debug = false
+[2021-07-16T00:15:34.867166 10400] Config: (default) depend_mode = false
+[2021-07-16T00:15:34.867166 10400] Config: (default) direct_mode = true
+[2021-07-16T00:15:34.867166 10400] Config: (default) disable = false
+[2021-07-16T00:15:34.867166 10400] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:34.867166 10400] Config: (default) hard_link = false
+[2021-07-16T00:15:34.867166 10400] Config: (default) hash_dir = true
+[2021-07-16T00:15:34.867166 10400] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:34.867166 10400] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:34.867166 10400] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:34.867166 10400] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:34.867166 10400] Config: (default) max_files = 0
+[2021-07-16T00:15:34.867166 10400] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:34.867166 10400] Config: (default) path = 
+[2021-07-16T00:15:34.867166 10400] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:34.867166 10400] Config: (default) prefix_command = 
+[2021-07-16T00:15:34.867166 10400] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:34.867166 10400] Config: (default) read_only = false
+[2021-07-16T00:15:34.867166 10400] Config: (default) read_only_direct = false
+[2021-07-16T00:15:34.867166 10400] Config: (default) recache = false
+[2021-07-16T00:15:34.867166 10400] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:34.867166 10400] Config: (default) sloppiness = 
+[2021-07-16T00:15:34.867166 10400] Config: (default) stats = true
+[2021-07-16T00:15:34.867166 10400] Config: (default) temporary_dir = 
+[2021-07-16T00:15:34.867166 10400] Config: (default) umask = 
+[2021-07-16T00:15:34.868165 10400] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o module.csvInterpreter.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src module.csvInterpreter.c
+[2021-07-16T00:15:34.868165 10400] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:34.868165 10400] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:34.869165 10400] Source file: module.csvInterpreter.c
+[2021-07-16T00:15:34.869165 10400] Object file: module.csvInterpreter.o
+[2021-07-16T00:15:34.869165 10400] Trying direct lookup
+[2021-07-16T00:15:34.869165 10400] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/1/f747f17ca2ce81a0a407277e5f5ced-71422.manifest
+[2021-07-16T00:15:34.874202 12192] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:34.874202 12192] Config: (default) base_dir = 
+[2021-07-16T00:15:34.874202 12192] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:34.874202 12192] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:34.874202 12192] Config: (default) compiler = 
+[2021-07-16T00:15:34.874202 12192] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:34.874202 12192] Config: (default) compression = false
+[2021-07-16T00:15:34.874202 12192] Config: (default) compression_level = 6
+[2021-07-16T00:15:34.874202 12192] Config: (default) cpp_extension = 
+[2021-07-16T00:15:34.874202 12192] Config: (default) debug = false
+[2021-07-16T00:15:34.874202 12192] Config: (default) depend_mode = false
+[2021-07-16T00:15:34.874202 12192] Config: (default) direct_mode = true
+[2021-07-16T00:15:34.874202 12192] Config: (default) disable = false
+[2021-07-16T00:15:34.874202 12192] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:34.874202 12192] Config: (default) hard_link = false
+[2021-07-16T00:15:34.874202 12192] Config: (default) hash_dir = true
+[2021-07-16T00:15:34.874202 12192] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:34.874202 12192] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:34.874202 12192] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:34.874202 12192] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:34.874202 12192] Config: (default) max_files = 0
+[2021-07-16T00:15:34.874202 12192] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:34.874202 12192] Config: (default) path = 
+[2021-07-16T00:15:34.874202 12192] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:34.874202 12192] Config: (default) prefix_command = 
+[2021-07-16T00:15:34.874202 12192] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:34.874202 12192] Config: (default) read_only = false
+[2021-07-16T00:15:34.874202 12192] Config: (default) read_only_direct = false
+[2021-07-16T00:15:34.874202 12192] Config: (default) recache = false
+[2021-07-16T00:15:34.874202 12192] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:34.874202 12192] Config: (default) sloppiness = 
+[2021-07-16T00:15:34.874202 12192] Config: (default) stats = true
+[2021-07-16T00:15:34.874202 12192] Config: (default) temporary_dir = 
+[2021-07-16T00:15:34.874202 12192] Config: (default) umask = 
+[2021-07-16T00:15:34.874202 12192] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\MainProgram.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\MainProgram.c
+[2021-07-16T00:15:34.874202 12192] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:34.874202 12192] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:34.874202 12192] Source file: static_src\MainProgram.c
+[2021-07-16T00:15:34.874202 12192] Object file: static_src\MainProgram.o
+[2021-07-16T00:15:34.874202 12192] Trying direct lookup
+[2021-07-16T00:15:34.874202 12192] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/9/7/7ae03bfa6c46f5aa9ed7a596d100d8-26288.manifest
+[2021-07-16T00:15:34.889827 10400] No such manifest file
+[2021-07-16T00:15:34.889827 10400] Did not find object file hash in manifest
+[2021-07-16T00:15:34.889827 10400] Running preprocessor
+[2021-07-16T00:15:34.994405 12192] Got object file hash from manifest
+[2021-07-16T00:15:34.994405 12192] Copying C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/c/f0519d640f8da16834921b0dff0e4d-4113265.o to static_src\MainProgram.o (uncompressed)
+[2021-07-16T00:15:34.994405 12192] Created from cache: C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/c/f0519d640f8da16834921b0dff0e4d-4113265.o -> static_src\MainProgram.o
+[2021-07-16T00:15:34.994405 12192] Succeeded getting cached result
+[2021-07-16T00:15:34.994405 12192] Result: cache hit (direct)
+[2021-07-16T00:15:34.994405 12192] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/stats.lock
+[2021-07-16T00:15:34.994405 12192] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/stats.lock
+[2021-07-16T00:15:35.004462 6936 ] Got object file hash from preprocessor
+[2021-07-16T00:15:35.004462 6936 ] Object file C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/f/5d2afb69654406ed5a262cfdbd0f8a-440267.o not in cache
+[2021-07-16T00:15:35.004462 6936 ] Running real compiler
+[2021-07-16T00:15:35.046967 7196 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) base_dir = 
+[2021-07-16T00:15:35.046967 7196 ] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) compiler = 
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) compression = false
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) compression_level = 6
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) cpp_extension = 
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) debug = false
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) depend_mode = false
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) direct_mode = true
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) disable = false
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) hard_link = false
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) hash_dir = true
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:35.046967 7196 ] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) max_files = 0
+[2021-07-16T00:15:35.046967 7196 ] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) path = 
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) prefix_command = 
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) read_only = false
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) read_only_direct = false
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) recache = false
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) sloppiness = 
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) stats = true
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) temporary_dir = 
+[2021-07-16T00:15:35.046967 7196 ] Config: (default) umask = 
+[2021-07-16T00:15:35.047966 7196 ] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledCellType.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\CompiledCellType.c
+[2021-07-16T00:15:35.047966 7196 ] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:35.047966 7196 ] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:35.048966 7196 ] Source file: static_src\CompiledCellType.c
+[2021-07-16T00:15:35.048966 7196 ] Object file: static_src\CompiledCellType.o
+[2021-07-16T00:15:35.048966 7196 ] Trying direct lookup
+[2021-07-16T00:15:35.048966 7196 ] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/b/d7068c399045210b68a5c7970dd698-8038.manifest
+[2021-07-16T00:15:35.095029 7196 ] Got object file hash from manifest
+[2021-07-16T00:15:35.095029 7196 ] Copying C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/d/1036ebc34ecad9096b3804a4cd02d8-630140.o to static_src\CompiledCellType.o (uncompressed)
+[2021-07-16T00:15:35.105063 7196 ] Created from cache: C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/d/1036ebc34ecad9096b3804a4cd02d8-630140.o -> static_src\CompiledCellType.o
+[2021-07-16T00:15:35.105063 7196 ] Succeeded getting cached result
+[2021-07-16T00:15:35.105063 7196 ] Result: cache hit (direct)
+[2021-07-16T00:15:35.105063 7196 ] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/stats.lock
+[2021-07-16T00:15:35.105063 7196 ] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/stats.lock
+[2021-07-16T00:15:35.150712 10728] Got object file hash from preprocessor
+[2021-07-16T00:15:35.150712 10728] Object file C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/a/a100ec56f0c042897befadced3b9a9-918489.o not in cache
+[2021-07-16T00:15:35.150712 10728] Running real compiler
+[2021-07-16T00:15:35.158708 204  ] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:35.158708 204  ] Config: (default) base_dir = 
+[2021-07-16T00:15:35.158708 204  ] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:35.158708 204  ] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:35.158708 204  ] Config: (default) compiler = 
+[2021-07-16T00:15:35.158708 204  ] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:35.158708 204  ] Config: (default) compression = false
+[2021-07-16T00:15:35.158708 204  ] Config: (default) compression_level = 6
+[2021-07-16T00:15:35.158708 204  ] Config: (default) cpp_extension = 
+[2021-07-16T00:15:35.158708 204  ] Config: (default) debug = false
+[2021-07-16T00:15:35.158708 204  ] Config: (default) depend_mode = false
+[2021-07-16T00:15:35.158708 204  ] Config: (default) direct_mode = true
+[2021-07-16T00:15:35.158708 204  ] Config: (default) disable = false
+[2021-07-16T00:15:35.158708 204  ] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:35.158708 204  ] Config: (default) hard_link = false
+[2021-07-16T00:15:35.158708 204  ] Config: (default) hash_dir = true
+[2021-07-16T00:15:35.158708 204  ] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:35.158708 204  ] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:35.158708 204  ] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:35.158708 204  ] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:35.158708 204  ] Config: (default) max_files = 0
+[2021-07-16T00:15:35.158708 204  ] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:35.158708 204  ] Config: (default) path = 
+[2021-07-16T00:15:35.158708 204  ] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:35.158708 204  ] Config: (default) prefix_command = 
+[2021-07-16T00:15:35.158708 204  ] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:35.158708 204  ] Config: (default) read_only = false
+[2021-07-16T00:15:35.158708 204  ] Config: (default) read_only_direct = false
+[2021-07-16T00:15:35.158708 204  ] Config: (default) recache = false
+[2021-07-16T00:15:35.158708 204  ] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:35.158708 204  ] Config: (default) sloppiness = 
+[2021-07-16T00:15:35.158708 204  ] Config: (default) stats = true
+[2021-07-16T00:15:35.158708 204  ] Config: (default) temporary_dir = 
+[2021-07-16T00:15:35.158708 204  ] Config: (default) umask = 
+[2021-07-16T00:15:35.159707 204  ] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledFunctionType.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\CompiledFunctionType.c
+[2021-07-16T00:15:35.159707 204  ] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:35.159707 204  ] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:35.160706 204  ] Source file: static_src\CompiledFunctionType.c
+[2021-07-16T00:15:35.160706 204  ] Object file: static_src\CompiledFunctionType.o
+[2021-07-16T00:15:35.160706 204  ] Trying direct lookup
+[2021-07-16T00:15:35.160706 204  ] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/5/1/53be7a016d850ea8f2a51c3366516e-79019.manifest
+[2021-07-16T00:15:35.175759 10400] Got object file hash from preprocessor
+[2021-07-16T00:15:35.175759 10400] Object file C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/2/4e80e5e94650d09e02241c04746854-683821.o not in cache
+[2021-07-16T00:15:35.175759 10400] Running real compiler
+[2021-07-16T00:15:35.193863 6936 ] Unlink C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/f/5d2afb69654406ed5a262cfdbd0f8a-440267.o.tmp.stdout.DESKTOP-K2RDTCV.6936.1QBI6D
+[2021-07-16T00:15:35.193863 6936 ] Unlink C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/f/5d2afb69654406ed5a262cfdbd0f8a-440267.o.tmp.stderr.DESKTOP-K2RDTCV.6936.SS92c3
+[2021-07-16T00:15:35.195877 6936 ] Copying __loader.o to C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/f/5d2afb69654406ed5a262cfdbd0f8a-440267.o via C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/f/5d2afb69654406ed5a262cfdbd0f8a-440267.o.DESKTOP-K2RDTCV.6936.1Apgjk (uncompressed)
+[2021-07-16T00:15:35.195877 6936 ] Stored in cache: __loader.o -> C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/f/5d2afb69654406ed5a262cfdbd0f8a-440267.o (copied)
+[2021-07-16T00:15:35.195877 6936 ] Added object file hash to C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/f/fc7f2d14e605525fc645f6d9ada25c-3323.manifest
+[2021-07-16T00:15:35.195877 6936 ] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/stats.lock
+[2021-07-16T00:15:35.195877 6936 ] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/f/stats.lock
+[2021-07-16T00:15:35.195877 6936 ] Result: cache miss
+[2021-07-16T00:15:35.195877 6936 ] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/stats.lock
+[2021-07-16T00:15:35.205909 204  ] Got object file hash from manifest
+[2021-07-16T00:15:35.205909 6936 ] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/stats.lock
+[2021-07-16T00:15:35.205909 204  ] Copying C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/c/5081e24cb60b71c0388f3611a2a68a-710576.o to static_src\CompiledFunctionType.o (uncompressed)
+[2021-07-16T00:15:35.205909 204  ] Created from cache: C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/c/5081e24cb60b71c0388f3611a2a68a-710576.o -> static_src\CompiledFunctionType.o
+[2021-07-16T00:15:35.205909 204  ] Succeeded getting cached result
+[2021-07-16T00:15:35.205909 204  ] Result: cache hit (direct)
+[2021-07-16T00:15:35.205909 204  ] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/stats.lock
+[2021-07-16T00:15:35.205909 204  ] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/stats.lock
+[2021-07-16T00:15:35.284796 1612 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) base_dir = 
+[2021-07-16T00:15:35.284796 1612 ] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) compiler = 
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) compression = false
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) compression_level = 6
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) cpp_extension = 
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) debug = false
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) depend_mode = false
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) direct_mode = true
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) disable = false
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) hard_link = false
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) hash_dir = true
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:35.284796 1612 ] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) max_files = 0
+[2021-07-16T00:15:35.284796 1612 ] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) path = 
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) prefix_command = 
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) read_only = false
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) read_only_direct = false
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) recache = false
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) sloppiness = 
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) stats = true
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) temporary_dir = 
+[2021-07-16T00:15:35.284796 1612 ] Config: (default) umask = 
+[2021-07-16T00:15:35.285795 1612 ] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledGeneratorType.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\CompiledGeneratorType.c
+[2021-07-16T00:15:35.285795 1612 ] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:35.285795 1612 ] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:35.285795 1612 ] Source file: static_src\CompiledGeneratorType.c
+[2021-07-16T00:15:35.285795 1612 ] Object file: static_src\CompiledGeneratorType.o
+[2021-07-16T00:15:35.285795 1612 ] Trying direct lookup
+[2021-07-16T00:15:35.286795 1612 ] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/5/2/f0bfaa7da39106101b53d58f63adfc-57468.manifest
+[2021-07-16T00:15:35.334187 1612 ] Got object file hash from manifest
+[2021-07-16T00:15:35.334187 1612 ] Copying C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/e/2/53e8d4ec235afe3b7a1b9b468624c9-805260.o to static_src\CompiledGeneratorType.o (uncompressed)
+[2021-07-16T00:15:35.335187 1612 ] Created from cache: C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/e/2/53e8d4ec235afe3b7a1b9b468624c9-805260.o -> static_src\CompiledGeneratorType.o
+[2021-07-16T00:15:35.335187 1612 ] Succeeded getting cached result
+[2021-07-16T00:15:35.335187 1612 ] Result: cache hit (direct)
+[2021-07-16T00:15:35.335187 1612 ] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/e/stats.lock
+[2021-07-16T00:15:35.336186 1612 ] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/e/stats.lock
+[2021-07-16T00:15:35.434484 8336 ] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) base_dir = 
+[2021-07-16T00:15:35.434484 8336 ] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) compiler = 
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) compression = false
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) compression_level = 6
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) cpp_extension = 
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) debug = false
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) depend_mode = false
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) direct_mode = true
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) disable = false
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) hard_link = false
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) hash_dir = true
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:35.434484 8336 ] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) max_files = 0
+[2021-07-16T00:15:35.434484 8336 ] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) path = 
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) prefix_command = 
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) read_only = false
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) read_only_direct = false
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) recache = false
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) sloppiness = 
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) stats = true
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) temporary_dir = 
+[2021-07-16T00:15:35.434484 8336 ] Config: (default) umask = 
+[2021-07-16T00:15:35.434484 8336 ] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\CompiledCodeHelpers.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\CompiledCodeHelpers.c
+[2021-07-16T00:15:35.434484 8336 ] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:35.434484 8336 ] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:35.436502 8336 ] Source file: static_src\CompiledCodeHelpers.c
+[2021-07-16T00:15:35.436502 8336 ] Object file: static_src\CompiledCodeHelpers.o
+[2021-07-16T00:15:35.436502 8336 ] Trying direct lookup
+[2021-07-16T00:15:35.436502 8336 ] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/4/d/6449e39acb16bb3dc9bc7e1c511b99-55543.manifest
+[2021-07-16T00:15:35.446540 11200] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:35.446540 11200] Config: (default) base_dir = 
+[2021-07-16T00:15:35.446540 11200] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:35.446540 11200] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:35.446540 11200] Config: (default) compiler = 
+[2021-07-16T00:15:35.446540 11200] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:35.446540 11200] Config: (default) compression = false
+[2021-07-16T00:15:35.446540 11200] Config: (default) compression_level = 6
+[2021-07-16T00:15:35.446540 11200] Config: (default) cpp_extension = 
+[2021-07-16T00:15:35.446540 11200] Config: (default) debug = false
+[2021-07-16T00:15:35.446540 11200] Config: (default) depend_mode = false
+[2021-07-16T00:15:35.446540 11200] Config: (default) direct_mode = true
+[2021-07-16T00:15:35.446540 11200] Config: (default) disable = false
+[2021-07-16T00:15:35.446540 11200] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:35.446540 11200] Config: (default) hard_link = false
+[2021-07-16T00:15:35.446540 11200] Config: (default) hash_dir = true
+[2021-07-16T00:15:35.446540 11200] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:35.446540 11200] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:35.446540 11200] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:35.446540 11200] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:35.446540 11200] Config: (default) max_files = 0
+[2021-07-16T00:15:35.446540 11200] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:35.446540 11200] Config: (default) path = 
+[2021-07-16T00:15:35.446540 11200] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:35.446540 11200] Config: (default) prefix_command = 
+[2021-07-16T00:15:35.446540 11200] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:35.446540 11200] Config: (default) read_only = false
+[2021-07-16T00:15:35.446540 11200] Config: (default) read_only_direct = false
+[2021-07-16T00:15:35.446540 11200] Config: (default) recache = false
+[2021-07-16T00:15:35.446540 11200] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:35.446540 11200] Config: (default) sloppiness = 
+[2021-07-16T00:15:35.446540 11200] Config: (default) stats = true
+[2021-07-16T00:15:35.446540 11200] Config: (default) temporary_dir = 
+[2021-07-16T00:15:35.446540 11200] Config: (default) umask = 
+[2021-07-16T00:15:35.446540 11200] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\InspectPatcher.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\InspectPatcher.c
+[2021-07-16T00:15:35.446540 11200] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:35.446540 11200] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:35.446540 11200] Source file: static_src\InspectPatcher.c
+[2021-07-16T00:15:35.446540 11200] Object file: static_src\InspectPatcher.o
+[2021-07-16T00:15:35.446540 11200] Trying direct lookup
+[2021-07-16T00:15:35.446540 11200] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/d/dcc0f5afa1ba9085ec494074a5b704-13702.manifest
+[2021-07-16T00:15:35.496866 11200] Got object file hash from manifest
+[2021-07-16T00:15:35.496866 11200] Copying C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/3/078fe8e1e9ddcad5152465487efb02-635825.o to static_src\InspectPatcher.o (uncompressed)
+[2021-07-16T00:15:35.496866 11200] Created from cache: C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/3/078fe8e1e9ddcad5152465487efb02-635825.o -> static_src\InspectPatcher.o
+[2021-07-16T00:15:35.496866 11200] Succeeded getting cached result
+[2021-07-16T00:15:35.496866 11200] Result: cache hit (direct)
+[2021-07-16T00:15:35.496866 11200] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-07-16T00:15:35.496866 11200] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-07-16T00:15:35.562372 12276] === CCACHE 3.7.12 STARTED =========================================
+[2021-07-16T00:15:35.562372 12276] Config: (default) base_dir = 
+[2021-07-16T00:15:35.562372 12276] Config: (environment) cache_dir = C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2021-07-16T00:15:35.562372 12276] Config: (default) cache_dir_levels = 2
+[2021-07-16T00:15:35.562372 12276] Config: (default) compiler = 
+[2021-07-16T00:15:35.562372 12276] Config: (default) compiler_check = mtime
+[2021-07-16T00:15:35.562372 12276] Config: (default) compression = false
+[2021-07-16T00:15:35.562372 12276] Config: (default) compression_level = 6
+[2021-07-16T00:15:35.562372 12276] Config: (default) cpp_extension = 
+[2021-07-16T00:15:35.562372 12276] Config: (default) debug = false
+[2021-07-16T00:15:35.562372 12276] Config: (default) depend_mode = false
+[2021-07-16T00:15:35.562372 12276] Config: (default) direct_mode = true
+[2021-07-16T00:15:35.562372 12276] Config: (default) disable = false
+[2021-07-16T00:15:35.562372 12276] Config: (default) extra_files_to_hash = 
+[2021-07-16T00:15:35.562372 12276] Config: (default) hard_link = false
+[2021-07-16T00:15:35.562372 12276] Config: (default) hash_dir = true
+[2021-07-16T00:15:35.562372 12276] Config: (default) ignore_headers_in_manifest = 
+[2021-07-16T00:15:35.562372 12276] Config: (default) keep_comments_cpp = false
+[2021-07-16T00:15:35.562372 12276] Config: (default) limit_multiple = 0.8
+[2021-07-16T00:15:35.562372 12276] Config: (environment) log_file = C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build\ccache-4072.txt
+[2021-07-16T00:15:35.562372 12276] Config: (default) max_files = 0
+[2021-07-16T00:15:35.562372 12276] Config: (C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/ccache.conf) max_size = 5.0G
+[2021-07-16T00:15:35.562372 12276] Config: (default) path = 
+[2021-07-16T00:15:35.562372 12276] Config: (default) pch_external_checksum = false
+[2021-07-16T00:15:35.562372 12276] Config: (default) prefix_command = 
+[2021-07-16T00:15:35.562372 12276] Config: (default) prefix_command_cpp = 
+[2021-07-16T00:15:35.562372 12276] Config: (default) read_only = false
+[2021-07-16T00:15:35.562372 12276] Config: (default) read_only_direct = false
+[2021-07-16T00:15:35.562372 12276] Config: (default) recache = false
+[2021-07-16T00:15:35.562372 12276] Config: (default) run_second_cpp = true
+[2021-07-16T00:15:35.562372 12276] Config: (default) sloppiness = 
+[2021-07-16T00:15:35.562372 12276] Config: (default) stats = true
+[2021-07-16T00:15:35.562372 12276] Config: (default) temporary_dir = 
+[2021-07-16T00:15:35.562372 12276] Config: (default) umask = 
+[2021-07-16T00:15:35.563372 12276] Command line: C:\Users\artur\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe C:\Users\artur\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe -o static_src\MetaPathBasedLoader.o -c -std=c11 -fvisibility=hidden -fwrapv -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -fcompare-debug-second -O3 -pipe -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -DMS_WIN64 -D_NUITKA_CONSTANTS_FROM_RESOURCE -D_NUITKA_FROZEN=0 -D_NUITKA_EXE -IC:\Users\artur\AppData\Local\Programs\Python\Python39\include -I. -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\include -IC:\Users\artur\AppData\Local\Programs\Python\Python39\lib\SITE-P~1\nuitka\build\static_src static_src\MetaPathBasedLoader.c
+[2021-07-16T00:15:35.563372 12276] Hostname: DESKTOP-K2RDTCV
+[2021-07-16T00:15:35.563372 12276] Working directory: C:\Users\artur\Documents\ltv-pyqt\SDtoXML.build
+[2021-07-16T00:15:35.563372 12276] Source file: static_src\MetaPathBasedLoader.c
+[2021-07-16T00:15:35.563372 12276] Object file: static_src\MetaPathBasedLoader.o
+[2021-07-16T00:15:35.563372 12276] Trying direct lookup
+[2021-07-16T00:15:35.564371 12276] Looking for object file hash in C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/a/677f89fc82e51a06a966d322ee2619-52337.manifest
+[2021-07-16T00:15:35.573411 8336 ] Got object file hash from manifest
+[2021-07-16T00:15:35.573411 8336 ] Copying C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/3/0bbc25d1d80bca3c934dd39bca3485-5650499.o to static_src\CompiledCodeHelpers.o (uncompressed)
+[2021-07-16T00:15:35.575431 8336 ] Created from cache: C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/3/0bbc25d1d80bca3c934dd39bca3485-5650499.o -> static_src\CompiledCodeHelpers.o
+[2021-07-16T00:15:35.575431 8336 ] Succeeded getting cached result
+[2021-07-16T00:15:35.575431 8336 ] Result: cache hit (direct)
+[2021-07-16T00:15:35.575431 8336 ] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/stats.lock
+[2021-07-16T00:15:35.577488 8336 ] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/b/stats.lock
+[2021-07-16T00:15:35.647830 12276] Got object file hash from manifest
+[2021-07-16T00:15:35.647830 12276] Copying C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/3/4dec299514a5efbc777b55eb41acba-2985483.o to static_src\MetaPathBasedLoader.o (uncompressed)
+[2021-07-16T00:15:35.647830 12276] Created from cache: C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/3/4dec299514a5efbc777b55eb41acba-2985483.o -> static_src\MetaPathBasedLoader.o
+[2021-07-16T00:15:35.647830 12276] Succeeded getting cached result
+[2021-07-16T00:15:35.647830 12276] Result: cache hit (direct)
+[2021-07-16T00:15:35.647830 12276] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-07-16T00:15:35.647830 12276] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/a/stats.lock
+[2021-07-16T00:15:35.869254 10400] Unlink C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/2/4e80e5e94650d09e02241c04746854-683821.o.tmp.stdout.DESKTOP-K2RDTCV.10400.1QBI6D
+[2021-07-16T00:15:35.869254 10400] Unlink C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/2/4e80e5e94650d09e02241c04746854-683821.o.tmp.stderr.DESKTOP-K2RDTCV.10400.SS92c3
+[2021-07-16T00:15:35.879317 10400] Copying module.csvInterpreter.o to C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/2/4e80e5e94650d09e02241c04746854-683821.o via C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/2/4e80e5e94650d09e02241c04746854-683821.o.DESKTOP-K2RDTCV.10400.1Apgjk (uncompressed)
+[2021-07-16T00:15:35.879317 10400] Stored in cache: module.csvInterpreter.o -> C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/2/4e80e5e94650d09e02241c04746854-683821.o (copied)
+[2021-07-16T00:15:35.887344 10400] Added object file hash to C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/1/f747f17ca2ce81a0a407277e5f5ced-71422.manifest
+[2021-07-16T00:15:35.887344 10400] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/stats.lock
+[2021-07-16T00:15:35.887344 10400] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/stats.lock
+[2021-07-16T00:15:35.887344 10400] Result: cache miss
+[2021-07-16T00:15:35.889362 10400] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/stats.lock
+[2021-07-16T00:15:35.889362 10400] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/3/stats.lock
+[2021-07-16T00:15:37.946085 10728] Unlink C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/a/a100ec56f0c042897befadced3b9a9-918489.o.tmp.stdout.DESKTOP-K2RDTCV.10728.1QBI6D
+[2021-07-16T00:15:37.946085 10728] Unlink C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/a/a100ec56f0c042897befadced3b9a9-918489.o.tmp.stderr.DESKTOP-K2RDTCV.10728.SS92c3
+[2021-07-16T00:15:37.946085 10728] Copying module.__main__.o to C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/a/a100ec56f0c042897befadced3b9a9-918489.o via C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/a/a100ec56f0c042897befadced3b9a9-918489.o.DESKTOP-K2RDTCV.10728.1Apgjk (uncompressed)
+[2021-07-16T00:15:37.946085 10728] Stored in cache: module.__main__.o -> C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/a/a100ec56f0c042897befadced3b9a9-918489.o (copied)
+[2021-07-16T00:15:37.946085 10728] Added object file hash to C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/4/5b1ba0a0fab541ca217ac3027b5fdd-299518.manifest
+[2021-07-16T00:15:37.946085 10728] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/stats.lock
+[2021-07-16T00:15:37.946085 10728] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/1/stats.lock
+[2021-07-16T00:15:37.946085 10728] Result: cache miss
+[2021-07-16T00:15:37.961713 10728] Acquired lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/stats.lock
+[2021-07-16T00:15:37.961713 10728] Releasing lock C:\Users\artur\AppData\Local\Nuitka\Nuitka\Cache\ccache/2/stats.lock

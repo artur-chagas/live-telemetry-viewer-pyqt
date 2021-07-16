@@ -117,12 +117,12 @@ ApplicationWindow{
                 }
                 LinkButton{
                     id: button4
-                    text: "Beacon + Debug"
+                    text: "Salvar + Debug"
                     index:4
                 }
                 LinkButton{
                     id: button5
-                    text: "Salvar"
+                    text: "Beacon"
                     index:5
                 }
                 
@@ -151,7 +151,7 @@ ApplicationWindow{
             text:"Envio de Mensagens"
             
         }
-        PageBeacon{}
+        PageSave{}
         PageBeacon{}
     }
 

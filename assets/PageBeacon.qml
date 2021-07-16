@@ -11,11 +11,6 @@ Page{
             if (port == beaconSRC.port){
                 beaconSRC.textConsole.text += qsTr(text);
             }
-            else if (port == receptorSRC.port){
-                receptorSRC.textConsole.text += qsTr(text);
-                print(text);
-                bridge.updateComponents(text);
-            }
         }
     }
     FormulaDialog{
@@ -44,34 +39,21 @@ Page{
                 Row{
                     spacing: parent.width * 0.02
                     anchors.fill: parent
+
+                    
                     RoundComponent{
                         boxWidth: parent.width * 0.49
                         iconSource:"images/icon_console.svg"
                         iconWidth: 36
                         iconHeight: 32.4
                         text: "Console"
-                            
-                            
-                            SerialRecieveComponent{
-                                id: beaconSRC
-                                anchors.horizontalCenter: parent.horizontalCenter
-                                anchors.verticalCenter: parent.verticalCenter
-                            }
-                        
-                    }
-                    
-                    RoundComponent{
-                        boxWidth: parent.width * 0.49
-                        iconSource:"images/icon_debug.svg"
-                        iconWidth: 36
-                        iconHeight: 36
-                        text: "Receptor"
 
                         SerialRecieveComponent{
-                            id: receptorSRC
+                            id: beaconSRC
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                         }
+                        
                     }
                 }
             

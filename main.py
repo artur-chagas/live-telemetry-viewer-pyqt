@@ -44,7 +44,6 @@ from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot
 #endregion
 
 #region py-backend imports
-import beacon as beacon
 import formulaThread as formulaThread
 import csvInterpreter as csvInterpreter
 #endregion
@@ -186,6 +185,5 @@ class App():
         self.app.exec()
 
 if __name__ == "__main__":
-    b = beacon.Functions()
     LTV_Application = App()
     sys.exit(LTV_Application)

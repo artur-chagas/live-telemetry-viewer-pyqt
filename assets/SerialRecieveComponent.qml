@@ -24,8 +24,6 @@ Column{
             color: "#000000"
         }
     }
-
-    Row{
         Connections{
             target: bridge
             function onSetComboBoxModel(model) {
@@ -59,6 +57,9 @@ Column{
                 }
             }
         }
+
+    Row{
+        anchors.horizontalCenter: parent.horizontalCenter
 
             spacing: width * 0.025
             ComboBox{
