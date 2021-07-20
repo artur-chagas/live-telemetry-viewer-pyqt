@@ -1,184 +1,184 @@
-PAGINA,COMPONENTE,CODIGO,POS,TAM,TITULO,TITULO_MOTEC,EQUACAO,EQ-A,EQ-B,EQ-C
-0,HorizontalGauge,10,0,2,Acelerômetro X,G Force Lat,x * 0.0204 - 31.35,0,0.0204,-31.35
-0,HorizontalGauge,10,2,2,Acelerômetro Y,G Force Long,x * (-0.0206) + 32.36,0,-0.0206,32.36
-0,HorizontalGauge,10,4,2,Acelerômetro Z,G Force Vert,x * (-0.0202) + 30.9,0,-0.0202,30.9
-0,HorizontalGauge,10,6,2,Giroscópio Z,Gyro Yaw Angle,x * 0.1433 - 296.48,0,0.1433,-296.48
-,,11,0,2,Ângulo de esterço,Steered Angle,x * (-0.0746) + 132.,,,
-,,11,2,2,Pressão de freio dianteiro,Brake Pres Front,x * 0.0001,,,
-,,11,4,2,Pressão de freio traseiro,Brake Pres Rear,x * 0.025 - 5.0) / 3.0,,,
-,,11,6,2,Posição de pedal de freio,Brake Position,x ,,,
-,,32,0,1,setor_sd,,,,,
-,,32,1,1,setor_sd >> 8,,,,,
-,,32,2,1,setor_sd >> 16,,,,,
-,,32,3,1,setor_sd >> 24,,,,,
-,,32,4,1,Verify datalogger,,,,,
-,,14,0,1,Verify acelerômetro,,,,,
-,,14,0,1,Verify giroscópio,,,,,
-,,14,0,1,Verify esterço,,,,,
-,,14,0,1,Verify pressão dianteiro,,,,,
-,,14,0,1,Verify traseiro,,,,,
-,,14,0,1,Verify bomba,,,,,
-,,14,0,1,Verify ventoinha,,,,,
-,,14,1,1,Frequêcia da mensagem 1,,,,,
-,,14,2,1,Frequêcia da mensagem 2,,,,,
-,,15,0,2,Curso de suspensão dianteiro esquerdo,,x * 0.01831,,,
-,,15,2,2,Curso de suspensão dianteiro direito,,x * 0.01831,,,
-,,15,4,2,Strain gauge diantero esquerdo,,x ,,,
-,,15,6,2,Strain gauge dianteiro direito,,x ,,,
-,,16,0,1,Altura Dianteira Esquerda,,x ,,,
-,,16,1,1,Altura Dianteira Direita,,x ,,,
-,,16,2,2,Tubo de Pitot Dianteiro,,x * 1.24 - 2600,,,
-,,16,4,2,Posição de pedal de freio,,x ,,,
-,,17,0,2,Temperatura de pneu dianteiro 1,,x * 0.02 - 343.15,,,
-,,17,2,2,Temperatura de pneu dianteiro 2,,x * 0.02 - 343.15,,,
-,,17,4,2,Temperatura de pneu dianteiro 3,,x * 0.02 - 343.15,,,
-,,18,0,2,Temperatura de pneu dianteiro 4,,x * 0.02 - 343.15,,,
-,,18,2,2,Temperatura de pneu dianteiro 5,,x * 0.02 - 343.15,,,
-,,18,4,2,Temperatura de pneu dianteiro 6,,x * 0.02 - 343.15,,,
-,,40,0,2,Temperatura de disco dianteiro esquerdo,,x * 0.159 + 6.041,,,
-,,40,2,2,Temperatura de disco dianteiro direito,,x * 0.159 + 6.041,,,
-,,40,4,2,Temperatura de pinça dianteira esquerda,,x * 0.159 + 6.041,,,
-,,40,6,2,Temperatura de pinça dianteira direita,,x * 0.159 + 6.041,,,
-,,19,0,1,Verify curso de suspensão dianteiro esquerdo,,,,,
-,,19,0,1,Verify curso de suspensão dianteiro direito,,,,,
-,,19,0,1,Verify strain gauge diantero esquerdo,,,,,
-,,19,0,1,Verify strain gauge dianteiro direito,,,,,
-,,19,0,1,Verify temperatura de pinça dianteria esquerda,,,,,
-,,19,0,1,Verify temperatura de pinça dianteira direita,,,,,
-,,19,0,1,Verify tubo de pitot dianteiro,,,,,
-,,19,0,1,Verify altura posição de pedal de freio,,,,,
-,,19,1,1,Verify altura dianteira esquerda,,,,,
-,,19,1,1,Verify altura dianteira direita,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 1,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 2,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 3,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 4,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 5,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 6,,,,,
-,,19,2,1,Verify temperatura de disco dianteiro esquerdo,,,,,
-,,19,2,1,Verify temperatura de disco dianteiro direito,,,,,
-,,19,3,1,Frequência da mensagem 1,,,,,
-,,19,4,1,Frequência da mensagem 2,,,,,
-,,19,5,1,Frequência da mensagem 3,,,,,
-,,19,6,1,Frequência da mensagem 4,,,,,
-,,20,0,2,Curso de suspensão traseiro esquerdo,,x * 0.01831,,,
-,,20,2,2,Curso de suspensão traseiro direito,,x * 0.01831,,,
-,,20,4,2,Strain gauge traseiro esquerdo,,x ,,,
-,,20,6,2,Strain gauge traseiro direito,,x ,,,
-,,21,0,1,Altura traseira esquerda,,x ,,,
-,,21,1,1,Altura traseira direita,,x ,,,
-,,21,2,2,Tubo de Pitot Traseiro,,x * 1.24 - 2600,,,
-,,21,4,2,Sensor de Corrente,,x ,,,
-,,22,0,2,Temperatura de pneu traseiro 1,,x * 0.02 - 343.15,,,
-,,22,2,2,Temperatura de pneu traseiro 2,,x * 0.02 - 343.15,,,
-,,22,4,2,Temperatura de pneu traseiro 3,,x * 0.02 - 343.15,,,
-,,23,0,2,Temperatura de pneu traseiro 4,,x ,,,
-,,23,2,2,Temperatura de pneu traseiro 5,,x ,,,
-,,23,4,2,Temperatura de pneu traseiro 6,,x ,,,
-,,45,0,2,Temperatura de disco traseiro esquerdo,,x ,,,
-,,45,2,2,Temperatura de disco traseiro direito,,x ,,,
-,,45,4,2,Temperatura de pinça traseira esquerda,,x * 0.159 + 6.041,,,
-,,45,6,2,Temperatura de pinça traseira direita,,x * 0.159 + 6.041,,,
-,,24,0,1,Verify curso de suspensão traseiro esquerdo,,,,,
-,,24,0,1,Verify curso de suspensão traseiro direito,,,,,
-,,24,0,1,Verify strain gauge traseiro esquerdo,,,,,
-,,24,0,1,Verify strain gauge traseiro direito,,,,,
-,,24,0,1,Verify temperatura de pinça traseira esquerda,,,,,
-,,24,0,1,Verify temperatura de pinça traseira direita,,,,,
-,,24,0,1,Verify tubo de pitot traseiro,,,,,
-,,24,0,1,Verify sensor de corrente,,,,,
-,,24,1,1,Verify altura traseira esquerda,,,,,
-,,24,1,1,Verify altura traseira direita,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 1,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 2,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 3,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 4,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 5,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 6,,,,,
-,,24,2,1,Verify temperatura de disco traseiro esquerdo,,,,,
-,,24,2,1,Verify temperatura de disco dianteiro direito,,,,,
-,,24,3,1,Frequência da mensagem 1,,,,,
-,,24,4,1,Frequência da mensagem 2,,,,,
-,,24,5,1,Frequência da mensagem 3,,,,,
-,,24,6,1,Frequência da mensagem 4,,,,,
-,,25,0,1,Marcha,,x ,,,
-,,25,1,1,num_upshift,,x ,,,
-,,25,2,1,num_downshift,,x ,,,
-,,25,3,1,tempo_corte,,x ,,,
-,,25,4,1,tempo_upshift,,x ,,,
-,,25,5,1,tempo_downshift,,x ,,,
-,,25,6,1,tempo_embreagem,,x ,,,
-,,25,7,1,Embreagem,,x ,,,
-,,26,0,2,Rotação,,x ,,,
-,,26,2,1,TPS / 10,,x ,,,
-,,26,3,1,IAT / 10,,x ,,,
-,,26,4,2,Tensão da bateria,,x * 0.01,,,
-,,26,6,2,ECT,,x * 0.1,,,
-,,27,0,2,MAP,,x * 0.001,,,
-,,27,2,2,Pressão de combustível,,x * 0.001,,,
-,,27,4,2,Pressão de óleo,,x * 0.001,,,
-,,27,6,2,Lambda,,x * 0.001,,,
-,,28,0,1,Velocidade de roda dianteira esquerda,,x ,,,
-,,28,1,1,Velocidade de roda dianteira direita,,x ,,,
-,,28,2,1,Velocidade de roda traseira esquerda,,x ,,,
-,,28,3,1,Velocidade de roda traseira direita,,x ,,,
-,,28,4,2,Temperatura de óleo,,x * 0.1,,,
-,,28,6,2,Pressão de arrefecimento,,,,,
-,,29,0,1,Posição servo,,x ,,,
-,,29,1,1,Ângulo on - 1000,,x ,,,
-,,29,2,1,Ângulo off - 1000,,x ,,,
-,,29,3,1,drs_count,,x ,,,
-,,1,0,1,tempo_upshift,,,,,
-,,1,1,1,tempo_downshift,,,,,
-,,1,2,1,tempo_corte,,,,,
-,,1,3,1,angulo_off,,,,,
-,,1,4,1,angulo_on,,,,,
-,,1,5,1,tempo_embreagem,,,,,
-,,3,0,1,Frequência DAq Principal 1,,,,,
-,,3,1,1,Frequência DAq Principal 2,,,,,
-,,3,2,1,Frequência DAq Modular dianteira 1,,,,,
-,,3,3,1,Frequência DAq Modular dianteira 2,,,,,
-,,3,4,1,Frequência DAq Modular dianteira 3 e 4,,,,,
-,,3,5,1,Frequência DAq Modular traseira 1,,,,,
-,,3,6,1,Frequência DAq Modular traseira 2,,,,,
-,,3,7,1,Frequência DAq Modular traseira 3 e 4,,,,,
-,,30,0,1,Latitude grau,,x ,,,
-,,30,1,1,Latitude minuto,,x ,,,
-,,30,2,2,Latitude minuto decimal,,0.006 * (x * 100 + x),,,0.006 * (x * 100 + x)
-,,30,4,1,Longitude grau,,x ,,,
-,,30,5,1,Longitude minuto,,x ,,,
-,,30,6,2,Longitude minuto decimal,,0.006 * (x * 100 + x),,,0.006 * (x * 100 + x)
-,,31,0,1,Hora,,x ,,,
-,,31,1,1,Minuto,,x ,,,
-,,31,2,1,Segundo,,x ,,,
-,,31,3,1,Dia,,x ,,,
-,,31,4,1,Mês,,x ,,,
-,,31,5,1,Ano,,x ,,,
-,,31,6,2,Velocidade GPS,,x ,,,
-,,254,0,1,Verify LoRa,,,,,
-,,254,0,1,Verify GPS,,,,,
-,,254,0,1,Verify Posição GPS,,,,,
-,,34,0,2,Corrente da ventoinha 1,,x ,,,
-,,34,2,2,Corrente da DAq,,x ,,,
-,,34,4,2,Corrente da bomba de combustível,,x ,,,
-,,34,6,2,Corrente dos sensores principais,,x ,,,
-,,35,0,2,Corrente da ventoinha 2,,x ,,,
-,,35,2,2,Corrente da ECU,,x ,,,
-,,35,4,2,Tensão GND VND,,x ,,,
-,,36,0,1,verify_ic1,,,,,
-,,36,0,1,verify_ic2,,,,,
-,,36,0,1,verify_ic3,,,,,
-,,36,0,1,verify_ic4,,,,,
-,,36,1,1,Frequência da mensagem de corrente,,,,,
-,,36,2,2,Período do PWM,,,,,
-,,36,4,2,Capture Compare do PWM,,,,,
-,,36,6,2,Temperatura do STM,,,,,
-,,38,0,2,Acelerômetro X,,x * (2 / 32768),,,
-,,38,2,2,Acelerômetro Y,,x * (2 / 32768),,,
-,,38,4,2,Acelerômetro Z,,x * (2 / 32768),,,
-,,38,6,2,Giroscópio Z,,x * (250 / 32768),,,
-,,39,0,1,verify_mpu,,,,,
-,,39,1,1,Frequência da mensagem do MPU,,,,,
-,,50,0,2,Período do PWM,,,,,
-,,50,2,2,Capture Compare do PWM,,,,,
-,,50,4,2,Temperatura do STM,,,,,
+PAGINA,COMPONENTE,CODIGO,POS,TAM,TITULO,INCLUIR_MOTEC,TITULO_MOTEC,EQUACAO,EQ-A,EQ-B,EQ-C
+0,HorizontalGauge,10,0,2,AcelerÃ´metro X,1,G Force Lat,x * 0.0204 - 31.35,0,0.0204,-31.35
+0,HorizontalGauge,10,2,2,AcelerÃ´metro Y,1,G Force Long,x * (-0.0206) + 32.36,0,-0.0206,32.36
+0,HorizontalGauge,10,4,2,AcelerÃ´metro Z,1,G Force Vert,x * (-0.0202) + 30.9,0,-0.0202,30.9
+0,HorizontalGauge,10,6,2,GiroscÃ³pio Z,1,Gyro Yaw Angle,x * 0.1433 - 296.48,0,0.1433,-296.48
+,,11,0,2,Ã‚ngulo de esterÃ§o,1,Steered Angle,x * (-0.0746) + 132.,0,-0.0746,132
+,,11,2,2,PressÃ£o de freio dianteiro,1,Brake Pres Front,x * 0.0001,0,0.0001,0
+,,11,4,2,PressÃ£o de freio traseiro,1,Brake Pres Rear,x * 0.025 - 5.0) / 3.0,0,0.0083,1.67
+,,11,6,2,PosiÃ§Ã£o de pedal de freio,1,Brake Position,x ,0,1,0
+,,32,0,1,setor_sd,0,,,,,
+,,32,1,1,setor_sd >> 8,0,,,,,
+,,32,2,1,setor_sd >> 16,0,,,,,
+,,32,3,1,setor_sd >> 24,0,,,,,
+,,32,4,1,Verify datalogger,0,,,,,
+,,14,0,1,Verify acelerÃ´metro,0,,,,,
+,,14,0,1,Verify giroscÃ³pio,0,,,,,
+,,14,0,1,Verify esterÃ§o,0,,,,,
+,,14,0,1,Verify pressÃ£o dianteiro,0,,,,,
+,,14,0,1,Verify traseiro,0,,,,,
+,,14,0,1,Verify bomba,1,Verify bomba,,0,1,0
+,,14,0,1,Verify ventoinha,1,Verify ventoinha,,0,1,0
+,,14,1,1,FrequÃªcia da mensagem 1,0,,,,,
+,,14,2,1,FrequÃªcia da mensagem 2,0,,,,,
+,,15,0,2,Curso de suspensÃ£o dianteiro esquerdo,1,Susp Pos FL,x * 0.01831,0,0.01831,0
+,,15,2,2,Curso de suspensÃ£o dianteiro direito,1,Susp Pos FR,x * 0.01831,0,0.01831,0
+,,15,4,2,Strain gauge diantero esquerdo,1,Strain Gauge FL,x ,0,1,0
+,,15,6,2,Strain gauge dianteiro direito,1,Strain Gauge FR,x ,0,1,0
+,,16,0,1,Altura Dianteira Esquerda,1,Ride Height FL,x ,0,1,0
+,,16,1,1,Altura Dianteira Direita,1,Ride Height FR,x ,0,1,0
+,,16,2,2,Tubo de Pitot Dianteiro,1,Pitot Front,x * 1.24 - 2600,0,1.24,-2600
+,,16,4,2,PosiÃ§Ã£o de pedal de freio 2,1,Brake Position 2,x ,0,1,0
+,,17,0,2,Temperatura de pneu dianteiro 1,1,Tyre Temp Front 1,x * 0.02 - 343.15,0,1,-343.15
+,,17,2,2,Temperatura de pneu dianteiro 2,1,Tyre Temp Front 2,x * 0.02 - 343.15,0,1,-343.15
+,,17,4,2,Temperatura de pneu dianteiro 3,1,Tyre Temp Front 3,x * 0.02 - 343.15,0,1,-343.15
+,,18,0,2,Temperatura de pneu dianteiro 4,1,Tyre Temp Front 4,x * 0.02 - 343.15,0,1,-343.15
+,,18,2,2,Temperatura de pneu dianteiro 5,1,Tyre Temp Front 5,x * 0.02 - 343.15,0,1,-343.15
+,,18,4,2,Temperatura de pneu dianteiro 6,1,Tyre Temp Front 6,x * 0.02 - 343.15,0,1,-343.15
+,,40,0,2,Temperatura de disco dianteiro esquerdo,1,Brake Temp FL,x * 0.159 + 6.041,0,1,6041
+,,40,2,2,Temperatura de disco dianteiro direito,1,Brake Temp FR,x * 0.159 + 6.041,0,1,6041
+,,40,4,2,Temperatura de pinÃ§a dianteira esquerda,1,Brake Caliper Temp FL,x * 0.159 + 6.041,0,1,6041
+,,40,6,2,Temperatura de pinÃ§a dianteira direita,1,Brake Caliper Temp FR,x * 0.159 + 6.041,0,1,6041
+,,19,0,1,Verify curso de suspensÃ£o dianteiro esquerdo,0,,,,,
+,,19,0,1,Verify curso de suspensÃ£o dianteiro direito,0,,,,,
+,,19,0,1,Verify strain gauge diantero esquerdo,0,,,,,
+,,19,0,1,Verify strain gauge dianteiro direito,0,,,,,
+,,19,0,1,Verify temperatura de pinÃ§a dianteria esquerda,0,,,,,
+,,19,0,1,Verify temperatura de pinÃ§a dianteira direita,0,,,,,
+,,19,0,1,Verify tubo de pitot dianteiro,0,,,,,
+,,19,0,1,Verify altura posiÃ§Ã£o de pedal de freio,0,,,,,
+,,19,1,1,Verify altura dianteira esquerda,0,,,,,
+,,19,1,1,Verify altura dianteira direita,0,,,,,
+,,19,1,1,Verify temperatura de pneu dianteiro 1,0,,,,,
+,,19,1,1,Verify temperatura de pneu dianteiro 2,0,,,,,
+,,19,1,1,Verify temperatura de pneu dianteiro 3,0,,,,,
+,,19,1,1,Verify temperatura de pneu dianteiro 4,0,,,,,
+,,19,1,1,Verify temperatura de pneu dianteiro 5,0,,,,,
+,,19,1,1,Verify temperatura de pneu dianteiro 6,0,,,,,
+,,19,2,1,Verify temperatura de disco dianteiro esquerdo,0,,,,,
+,,19,2,1,Verify temperatura de disco dianteiro direito,0,,,,,
+,,19,3,1,FrequÃªncia da mensagem 1,0,,,,,
+,,19,4,1,FrequÃªncia da mensagem 2,0,,,,,
+,,19,5,1,FrequÃªncia da mensagem 3,0,,,,,
+,,19,6,1,FrequÃªncia da mensagem 4,0,,,,,
+,,20,0,2,Curso de suspensÃ£o traseiro esquerdo,1,Susp Pos RL,x * 0.01831,0,0.01831,0
+,,20,2,2,Curso de suspensÃ£o traseiro direito,1,Susp Pos RR,x * 0.01831,0,0.01831,0
+,,20,4,2,Strain gauge traseiro esquerdo,1,Strain Gauge RL,x ,0,1,0
+,,20,6,2,Strain gauge traseiro direito,1,Strain Gauge RR,x ,0,1,0
+,,21,0,1,Altura traseira esquerda,1,Ride Height RL,x ,0,1,0
+,,21,1,1,Altura traseira direita,1,Ride Height RR,x ,0,1,0
+,,21,2,2,Tubo de Pitot Traseiro,1,Pitot Rear,x * 1.24 - 2600,0,1.24,-2600
+,,21,4,2,Sensor de Corrente,1,Battery Current,x ,0,1,0
+,,22,0,2,Temperatura de pneu traseiro 1,1,Tyre Temp Rear 1,x * 0.02 - 343.15,0,0.02,-343.15
+,,22,2,2,Temperatura de pneu traseiro 2,1,Tyre Temp Rear 2,x * 0.02 - 343.15,0,0.02,-343.15
+,,22,4,2,Temperatura de pneu traseiro 3,1,Tyre Temp Rear 3,x * 0.02 - 343.15,0,0.02,-343.15
+,,23,0,2,Temperatura de pneu traseiro 4,1,Tyre Temp Rear 4,x ,0,1,0
+,,23,2,2,Temperatura de pneu traseiro 5,1,Tyre Temp Rear 5,x ,0,1,0
+,,23,4,2,Temperatura de pneu traseiro 6,1,Tyre Temp Rear 6,x ,0,1,0
+,,45,0,2,Temperatura de disco traseiro esquerdo,1,Brake Temp RL,x ,0,1,0
+,,45,2,2,Temperatura de disco traseiro direito,1,Brake Temp RR,x ,0,1,0
+,,45,4,2,Temperatura de pinÃ§a traseira esquerda,1,Brake Caliper Temp RL,x * 0.159 + 6.041,0,159,6041
+,,45,6,2,Temperatura de pinÃ§a traseira direita,1,Brake Caliper Temp RR,x * 0.159 + 6.041,0,159,6041
+,,24,0,1,Verify curso de suspensÃ£o traseiro esquerdo,0,,,,,
+,,24,0,1,Verify curso de suspensÃ£o traseiro direito,0,,,,,
+,,24,0,1,Verify strain gauge traseiro esquerdo,0,,,,,
+,,24,0,1,Verify strain gauge traseiro direito,0,,,,,
+,,24,0,1,Verify temperatura de pinÃ§a traseira esquerda,0,,,,,
+,,24,0,1,Verify temperatura de pinÃ§a traseira direita,0,,,,,
+,,24,0,1,Verify tubo de pitot traseiro,0,,,,,
+,,24,0,1,Verify sensor de corrente,0,,,,,
+,,24,1,1,Verify altura traseira esquerda,0,,,,,
+,,24,1,1,Verify altura traseira direita,0,,,,,
+,,24,1,1,Verify temperatura de pneu traseiro 1,0,,,,,
+,,24,1,1,Verify temperatura de pneu traseiro 2,0,,,,,
+,,24,1,1,Verify temperatura de pneu traseiro 3,0,,,,,
+,,24,1,1,Verify temperatura de pneu traseiro 4,0,,,,,
+,,24,1,1,Verify temperatura de pneu traseiro 5,0,,,,,
+,,24,1,1,Verify temperatura de pneu traseiro 6,0,,,,,
+,,24,2,1,Verify temperatura de disco traseiro esquerdo,0,,,,,
+,,24,2,1,Verify temperatura de disco dianteiro direito,0,,,,,
+,,24,3,1,FrequÃªncia da mensagem 1,0,,,,,
+,,24,4,1,FrequÃªncia da mensagem 2,0,,,,,
+,,24,5,1,FrequÃªncia da mensagem 3,0,,,,,
+,,24,6,1,FrequÃªncia da mensagem 4,0,,,,,
+,,25,0,1,Marcha,1,Gear,x ,0,1,0
+,,25,1,1,num_upshift,1,Upshift Count,x ,0,1,0
+,,25,2,1,num_downshift,1,Downshift Count,x ,0,1,0
+,,25,3,1,tempo_corte,1,Spark Cut,x ,0,1,0
+,,25,4,1,tempo_upshift,1,Upshift Time,x ,0,1,0
+,,25,5,1,tempo_downshift,1,Downshift Time,x ,0,1,0
+,,25,6,1,tempo_embreagem,1,Clutch Time,x ,0,1,0
+,,25,7,1,Embreagem,1,Clutch Time,x ,0,1,0
+,,26,0,2,RotaÃ§Ã£o,1,Engine RPM,x ,0,1,0
+,,26,2,1,TPS / 10,1,Throttle Pos,x ,0,1,0
+,,26,3,1,IAT / 10,1,Air Temp Inlet,x ,0,1,0
+,,26,4,2,TensÃ£o da bateria,1,Battery Voltage,x * 0.01,0,0.01,0
+,,26,6,2,ECT,1,ECT,x * 0.1,0,0.1,0
+,,27,0,2,MAP,1,MAP,x * 0.001,0,1,0
+,,27,2,2,PressÃ£o de combustÃ­vel,1,Fuel Pres,x * 0.001,0,1,0
+,,27,4,2,PressÃ£o de Ã³leo,1,Oil Pres,x * 0.001,0,1,0
+,,27,6,2,Lambda,1,Lambda,x * 0.001,0,1,0
+,,28,0,1,Velocidade de roda dianteira esquerda,1,Wheel Speed FL,x ,0,1,0
+,,28,1,1,Velocidade de roda dianteira direita,1,Wheel Speed FR,x ,0,1,0
+,,28,2,1,Velocidade de roda traseira esquerda,1,Wheel Speed RL,x ,0,1,0
+,,28,3,1,Velocidade de roda traseira direita,1,Wheel Speed RR,x ,0,1,0
+,,28,4,2,Temperatura de Ã³leo,1,Eng Oil Temp,x * 0.1,0,0.1,0
+,,28,6,2,PressÃ£o de arrefecimento,0,,,,,
+,,29,0,1,PosiÃ§Ã£o servo,1,Servo Pos,x ,0,1,0
+,,29,1,1,Ã‚ngulo on - 1000,1,Angle On,x ,0,1,0
+,,29,2,1,Ã‚ngulo off - 1000,1,Angle Off,x ,0,1,0
+,,29,3,1,drs_count,1,DRS Count,x ,0,1,0
+,,1,0,1,tempo_upshift,0,,,,,
+,,1,1,1,tempo_downshift,0,,,,,
+,,1,2,1,tempo_corte,0,,,,,
+,,1,3,1,angulo_off,0,,,,,
+,,1,4,1,angulo_on,0,,,,,
+,,1,5,1,tempo_embreagem,0,,,,,
+,,3,0,1,FrequÃªncia DAq Principal 1,0,,,,,
+,,3,1,1,FrequÃªncia DAq Principal 2,0,,,,,
+,,3,2,1,FrequÃªncia DAq Modular dianteira 1,0,,,,,
+,,3,3,1,FrequÃªncia DAq Modular dianteira 2,0,,,,,
+,,3,4,1,FrequÃªncia DAq Modular dianteira 3 e 4,0,,,,,
+,,3,5,1,FrequÃªncia DAq Modular traseira 1,0,,,,,
+,,3,6,1,FrequÃªncia DAq Modular traseira 2,0,,,,,
+,,3,7,1,FrequÃªncia DAq Modular traseira 3 e 4,0,,,,,
+,,30,0,1,Latitude grau,0,,x ,0,1,0
+,,30,1,1,Latitude minuto,0,,x ,0,1,0
+,,30,2,2,Latitude minuto decimal,0,,0.006 * (x * 100 + x),0,606,0
+,,30,4,1,Longitude grau,0,,x ,0,1,0
+,,30,5,1,Longitude minuto,0,,x ,0,1,0
+,,30,6,2,Longitude minuto decimal,0,,0.006 * (x * 100 + x),0,606,0
+,,31,0,1,Hora,0,,x ,0,1,0
+,,31,1,1,Minuto,0,,x ,0,1,0
+,,31,2,1,Segundo,0,,x ,0,1,0
+,,31,3,1,Dia,0,,x ,0,1,0
+,,31,4,1,MÃªs,0,,x ,0,1,0
+,,31,5,1,Ano,0,,x ,0,1,0
+,,31,6,2,Velocidade GPS,0,,x ,0,1,0
+,,254,0,1,Verify LoRa,0,,,,,
+,,254,0,1,Verify GPS,0,,,,,
+,,254,0,1,Verify PosiÃ§Ã£o GPS,0,,,,,
+,,34,0,2,Corrente da ventoinha 1,0,,x ,0,1,0
+,,34,2,2,Corrente da DAq,0,,x ,0,1,0
+,,34,4,2,Corrente da bomba de combustÃ­vel,0,,x ,0,1,0
+,,34,6,2,Corrente dos sensores principais,0,,x ,0,1,0
+,,35,0,2,Corrente da ventoinha 2,0,,x ,0,1,0
+,,35,2,2,Corrente da ECU,0,,x ,0,1,0
+,,35,4,2,TensÃ£o GND VND,0,,x ,0,1,0
+,,36,0,1,verify_ic1,0,,,,,
+,,36,0,1,verify_ic2,0,,,,,
+,,36,0,1,verify_ic3,0,,,,,
+,,36,0,1,verify_ic4,0,,,,,
+,,36,1,1,FrequÃªncia da mensagem de corrente,0,,,,,
+,,36,2,2,PerÃ­odo do PWM,0,,,,,
+,,36,4,2,Capture Compare do PWM,0,,,,,
+,,36,6,2,Temperatura do STM,0,,,,,
+,,38,0,2,AcelerÃ´metro X,0,,x * (2 / 32768),0,0.000061,0
+,,38,2,2,AcelerÃ´metro Y,0,,x * (2 / 32768),0,0.000061,0
+,,38,4,2,AcelerÃ´metro Z,0,,x * (2 / 32768),0,0.000061,0
+,,38,6,2,GiroscÃ³pio Z,0,,x * (250 / 32768),0,0.00763,0
+,,39,0,1,verify_mpu,0,,,,,
+,,39,1,1,FrequÃªncia da mensagem do MPU,0,,,,,
+,,50,0,2,PerÃ­odo do PWM,0,,,,,
+,,50,2,2,Capture Compare do PWM,0,,,,,
+,,50,4,2,Temperatura do STM,0,,,,,
