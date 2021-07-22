@@ -141,7 +141,7 @@ channels = et.SubElement(root, "channels")
 counter = 0
 for key, value in infoDict.items():
     if len(value) != 0:
-        et.SubElement(channels, "ch", channel_code=str(9000+counter), long_name=key, short_name=str(counter), units="s", sample_rate="100", data=tostr(linearInterpolate(value)))
+        et.SubElement(channels, "ch", channel_code=str(9000+counter), long_name=key, short_name=str(counter), units="s", sample_rate="100", data=tostr(value))
         counter += 1
 
 

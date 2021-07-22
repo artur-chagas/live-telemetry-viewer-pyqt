@@ -1,0 +1,73 @@
+CODIGO,TAM,TITULO_MOTEC,EQ-A,EQ-B,EQ-C
+10,2,G Force Lat,0,0.0204,-31.35
+10,2,G Force Long,0,-0.0206,32.36
+10,2,G Force Vert,0,-0.0202,30.9
+10,2,Gyro Yaw Angle,0,0.1433,-296.48
+11,2,Steered Angle,0,-0.0746,132
+11,2,Brake Pres Front,0,0.0001,0
+11,2,Brake Pres Rear,0,0.0083,1.67
+11,2,Brake Position,0,1,0
+14,1,Verify bomba,0,1,0
+14,1,Verify ventoinha,0,1,0
+15,2,Susp Pos FL,0,0.01831,0
+15,2,Susp Pos FR,0,0.01831,0
+15,2,Strain Gauge FL,0,1,0
+15,2,Strain Gauge FR,0,1,0
+16,1,Ride Height FL,0,1,0
+16,1,Ride Height FR,0,1,0
+16,2,Pitot Front,0,1.24,-2600
+16,2,Brake Position 2,0,1,0
+17,2,Tyre Temp Front 1,0,1,-343.15
+17,2,Tyre Temp Front 2,0,1,-343.15
+17,2,Tyre Temp Front 3,0,1,-343.15
+18,2,Tyre Temp Front 4,0,1,-343.15
+18,2,Tyre Temp Front 5,0,1,-343.15
+18,2,Tyre Temp Front 6,0,1,-343.15
+40,2,Brake Temp FL,0,1,6041
+40,2,Brake Temp FR,0,1,6041
+40,2,Brake Caliper Temp FL,0,1,6041
+40,2,Brake Caliper Temp FR,0,1,6041
+20,2,Susp Pos RL,0,0.01831,0
+20,2,Susp Pos RR,0,0.01831,0
+20,2,Strain Gauge RL,0,1,0
+20,2,Strain Gauge RR,0,1,0
+21,1,Ride Height RL,0,1,0
+21,1,Ride Height RR,0,1,0
+21,2,Pitot Rear,0,1.24,-2600
+21,2,Battery Current,0,1,0
+22,2,Tyre Temp Rear 1,0,0.02,-343.15
+22,2,Tyre Temp Rear 2,0,0.02,-343.15
+22,2,Tyre Temp Rear 3,0,0.02,-343.15
+23,2,Tyre Temp Rear 4,0,1,0
+23,2,Tyre Temp Rear 5,0,1,0
+23,2,Tyre Temp Rear 6,0,1,0
+45,2,Brake Temp RL,0,1,0
+45,2,Brake Temp RR,0,1,0
+45,2,Brake Caliper Temp RL,0,159,6041
+45,2,Brake Caliper Temp RR,0,159,6041
+25,1,Gear,0,1,0
+25,1,Upshift Count,0,1,0
+25,1,Downshift Count,0,1,0
+25,1,Spark Cut,0,1,0
+25,1,Upshift Time,0,1,0
+25,1,Downshift Time,0,1,0
+25,1,Clutch Time,0,1,0
+25,1,Clutch Time,0,1,0
+26,2,Engine RPM,0,1,0
+26,1,Throttle Pos,0,1,0
+26,1,Air Temp Inlet,0,1,0
+26,2,Battery Voltage,0,0.01,0
+26,2,ECT,0,0.1,0
+27,2,MAP,0,1,0
+27,2,Fuel Pres,0,1,0
+27,2,Oil Pres,0,1,0
+27,2,Lambda,0,1,0
+28,1,Wheel Speed FL,0,1,0
+28,1,Wheel Speed FR,0,1,0
+28,1,Wheel Speed RL,0,1,0
+28,1,Wheel Speed RR,0,1,0
+28,2,Eng Oil Temp,0,0.1,0
+29,1,Servo Pos,0,1,0
+29,1,Angle On,0,1,0
+29,1,Angle Off,0,1,0
+29,1,DRS Count,0,1,0
