@@ -52,6 +52,7 @@ Page{
                             id: beaconSRC
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
+                            switchVisible: false
                         }
                         
                     }
