@@ -35,12 +35,13 @@
 #region Python Imports
 import sys
 import signal
+from os import environ
 #endregion
 
 #region qt imports
 from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
 from PyQt5.QtQml import QQmlApplicationEngine
-from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot
+from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, Qt
 #endregion
 
 #region py-backend imports
@@ -159,7 +160,11 @@ class Bridge(QObject):
 
 class App():
     def __init__(self):
+        # environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
+        # QGuiApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
+        QGuiApplication.setAttribute(Qt.AA_Use96Dpi)
         self.app = QGuiApplication(sys.argv + ['--style', 'material'])
+        # self.app.setAttribute(Qt.)
 
         fontdatabase = QFontDatabase()
         fontdatabase.addApplicationFont("fonts/Exo2-Regular.ttf")

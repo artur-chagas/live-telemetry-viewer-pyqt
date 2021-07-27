@@ -1,4 +1,5 @@
 import QtQuick 2.14
+import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.14
 import QtQuick.Controls 1.4 as QQC1
 import QtQuick.Controls.Styles 1.3
@@ -69,46 +70,153 @@ Page{
                         Rectangle{
                             color: "#181818"
                             width: parent.width*0.95
-                            height: 100
+                            height: parent.height*0.95
                             anchors.top: parent.top
                             anchors.topMargin: parent.height * 0.04
                             anchors.horizontalCenter: parent.horizontalCenter
                             Column{
+                                width: parent.width
                                 anchors.horizontalCenter: parent.horizontalCenter
-                                
-                                Row{
-                                    spacing: 10
-                                    Text{
-                                        anchors.verticalCenter: parent.verticalCenter
-                                        font.pointSize: 15
-                                        color: "#ffffff"
-                                        id: fileIndicator
-                                        text: "Nenhum arquivo selecionado"
-                                    }
-                                    Button{
-                                        icon.source: "images/icon_folder.svg"
-                                        icon.color: "#fed700"
-                                        onClicked: fileDialog.open()
-                                    }
-                                }
-                                QQC1.ProgressBar{
-                                    anchors.horizontalCenter: parent.horizontalCenter
+                                spacing: 20
+                                Column{
                                     width: parent.width
-                                    value: 0.0
-                                    style: ProgressBarStyle{
-                                        background: Rectangle{
-                                            color: "#505050"
-                                            implicitWidth: 200
-                                            implicitHeight: 24
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    Rectangle{
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        width: parent.width*0.8
+                                        height: childrenRect.height
+                                        color: "#181818"
+                                        Rectangle{
+                                            id:fileIndicatorRect
+                                            width: parent.width*0.8
+                                            height:childrenRect.height*1.2
+                                            radius:8
+                                            anchors.left: parent.left
+                                            anchors.verticalCenter: parent.verticalCenter
+                                            color: "#202020"
+                                            Text{
+                                                id:fileIndicator
+                                                width: parent.width
+                                                horizontalAlignment: Text.AlignHCenter
+                                                font.pointSize: 15
+                                                color: "#ffffff"
+                                                text: "Nenhum arquivo selecionado"
+                                            }
                                         }
-                                        progress: Rectangle{
-                                            color: "#fed700"
+                                        Button{
+                                            anchors.left: fileIndicatorRect.right
+                                            width: parent.width*0.1
+                                            icon.source: "images/icon_folder.svg"
+                                            icon.color: "#fed700"
+                                            onClicked: fileDialog.open()
+                                        }
+                                        Button{
+                                            enabled: false
+                                            anchors.right: parent.right
+                                            width: parent.width*0.1
+                                            icon.source: "images/icon_save.svg"
+                                            icon.color: enabled ? "#fed700" : "#505050"
+                                        }
+                                    }
+                                    QQC1.ProgressBar{
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        width: parent.width*0.8
+                                        value: 0.0
+                                        style: ProgressBarStyle{
+                                            background: Rectangle{
+                                                radius: 8
+                                                color: "#505050"
+                                                implicitWidth: 200
+                                                implicitHeight: 24
+                                            }
+                                            progress: Rectangle{
+                                                radius: 8
+                                                color: "#fed700"
+                                            }
                                         }
                                     }
                                 }
-                                Row{
+                                
+                                GridLayout{
+                                    id: paramsGrid
+                                    width: parent.width*0.8
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    columns:3
+                                    // spacing:parent.width*0.05
+                                    // class XMLparams():
+                                    //     base_sample_rate: float = 1.000000
+                                    //     date: str = "14/07/2021"
+                                    //     time: str = "22:15"
+                                    //     driver_name: str = "aa"
+                                    //     vehicle_id: str = "E18"
+                                    //     venue: str = "USP"
+                                    //     short_comment: str = "xx (SD)"
+                                    //     long_comment: 
+                                    Column{
+                                        Layout.alignment: Qt.AlignHCenter
+                                        Text{
+                                            font.pointSize: 12
+                                            text: "Período (ms)"
+                                            color: "#ffffff"
+                                        }
+                                        TextField{
+                                        }
+                                    }   
+                                    Column{
+                                        Layout.alignment: Qt.AlignHCenter
+                                        Text{
+                                            font.pointSize: 12
+                                            text: "Data"
+                                            color: "#ffffff"
+                                        }
+                                        TextField{
+                                        }
+                                    }
+                                    Column{
+                                        Layout.alignment: Qt.AlignHCenter
+                                        Text{
+                                            font.pointSize: 12
+                                            text: "Piloto"
+                                            color: "#ffffff"
+                                        }
+                                        TextField{
+                                        }
+                                    }   
+                                    Column{
+                                        Layout.alignment: Qt.AlignHCenter
+                                        Text{
+                                            font.pointSize: 12
+                                            text: "Carro"
+                                            color: "#ffffff"
+                                        }
+                                        TextField{
+                                        }
+                                    } 
+                                    Column{
+                                        Layout.alignment: Qt.AlignHCenter
+                                        Text{
+                                            font.pointSize: 12
+                                            text: "Lugar"
+                                            color: "#ffffff"
+                                        }
+                                        TextField{
+                                        }
+                                    }
+                                    Column{
+                                        Layout.alignment: Qt.AlignHCenter
+                                        Text{
+                                            font.pointSize: 12
+                                            text: "Comentário curto"
+                                            color: "#ffffff"
+                                        }
+                                        TextField{
+                                        }
+                                    } 
+
+
                                     
                                 }
+                                
 
                             }
                         }
