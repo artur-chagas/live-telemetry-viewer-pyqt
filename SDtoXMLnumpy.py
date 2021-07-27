@@ -1,14 +1,14 @@
 #SDtoXMLnumpy.pyx
 import csvInterpreter
 import numpy as np
+import time as stopwatch
 from scipy.interpolate import interp1d
 import lxml.etree as et
 from pandas import read_excel
-import time as stopwatch
 stopwatch1 = stopwatch.monotonic()
 
 
-filename="tiny2.sd"
+filename="Enduro ECPA Manhã 11-13.sd"
 
 
 
@@ -21,7 +21,6 @@ class XMLparams():
     venue: str = "USP"
     short_comment: str = "xx (SD)"
     long_comment: str = "EESC USP Formula SAE"
-
 
 def highLow(high:int,low:int):
     return high*256 + low
@@ -90,7 +89,6 @@ valuesDict['Time'] = np.around(np.cumsum(timeDelta/1000),2) #soma todos os time 
 
 
 for key, dictValue in LTVDict.items():
-    print(key,dictValue)
     where = np.where(codesArray == key)
     for i, t in enumerate(dictValue):
         if t[0] == 1:

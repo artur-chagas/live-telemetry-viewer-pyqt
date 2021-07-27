@@ -106,6 +106,10 @@ Page{
                                         }
                                     }
                                 }
+                                Row{
+                                    
+                                }
+
                             }
                         }
                     }
@@ -116,9 +120,10 @@ Page{
                         iconWidth: 36
                         iconHeight: 36
                         text: "Receptor"
-
-                        SerialRecieveComponent{
+                        
+                       SerialRecieveComponent{
                             id: receptorSRC
+                            switchVisible: true
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                         }

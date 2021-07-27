@@ -4,25 +4,50 @@ import QtQuick.Controls 2.14
 Column{
     property string port: ""
     property alias textConsole: textConsole
+    property alias switchVisible: salvarLogSwitch.visible
     // width: parent.width * 0.9
     // height: parent.height * 0.3
     
     // anchors.horizontalCenter: parent.horizontalCenter
-    anchors.top: parent.top
+    // anchors.top: parent.top
     anchors.topMargin: parent.height * 0.04
     Rectangle{
         id: connectionIndicator
         height:childrenRect.height
         width:parent.width
         visible:false
-        color:"#fed700"
-        radius: 2
+        border.color: "#505050"
+        border.width: 1
+        gradient: Gradient{
+                orientation: Gradient.Horizontal
+                stops:
+                GradientStop{
+                    color: "#80fed700"
+                    position: 0.2
+                }
+                GradientStop{
+                    color: "#00000000"
+                    position: 1
+                }
+            }
+        radius: 5
         Text{
-            width: parent.width
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.right: parent.right
+            anchors.rightMargin: 10
+            anchors.verticalCenter: salvarLogSwitch.verticalCenter
             font.pointSize: 12
-            color: "#000000"
+            font.bold: true
+            color: "#ffffff"
         }
+        Switch{
+            visible: false
+            anchors.left: parent.left
+            id: salvarLogSwitch
+            text: "Salvar log da Telemetria"
+            font.bold: true
+        }
+        
+
     }
         Connections{
             target: bridge
@@ -72,16 +97,15 @@ Column{
                 text:"Buscar"
                 onClicked: {
                     searchButton.enabled = false;
-                    searchTimer.start()
-                    
+                    searchTimer.start();
                 }
 
                 Timer{
                     id: searchTimer
                     interval: 500
                     onTriggered: {
-                        bridge.getSerialPorts()
-                        searchButton.enabled = true
+                        bridge.getSerialPorts();
+                        searchButton.enabled = true;
                     }
                 }
 
@@ -108,7 +132,7 @@ Column{
 
     Rectangle{
         id: consoleRect
-        anchors.horizontalCenter: parent.parent.horizontalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.parent.bottom
         anchors.bottomMargin: parent.parent.height * 0.05
         width: parent.parent.width * 0.9
