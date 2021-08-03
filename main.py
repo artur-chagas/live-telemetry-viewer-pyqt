@@ -35,21 +35,22 @@
 #region Python Imports
 import sys
 import signal
-from os import environ
+import threading
 #endregion
 
 #region qt imports
 from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
 from PyQt5.QtQml import QQmlApplicationEngine
-from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, Qt
+from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, Qt, QThread
 #endregion
 
-#region py-backend imports
+#region LTV modules imports
 import formulaThread as formulaThread
 import csvInterpreter as csvInterpreter
+import SDtoXML as SDtoXML
 #endregion
 
-#region other imports
+#region other library imports
 import serial
 import serial.tools.list_ports
 #endregion
@@ -157,6 +158,10 @@ class Bridge(QObject):
         except Exception as e:
             print(e) 
             self.callExceptionDialog.emit(str(e))
+    @pyqtSlot(list)
+    def startLogConversion(self, params:list):
+        SDtoXML.convertLogThreaded()
+        # SDtoXMLthread.start()
 
 class App():
     def __init__(self):

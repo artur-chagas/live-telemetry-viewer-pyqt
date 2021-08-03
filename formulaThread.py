@@ -42,3 +42,4 @@ class SerialThread():
                 self.ser.close()
         except Exception:
             pass
+

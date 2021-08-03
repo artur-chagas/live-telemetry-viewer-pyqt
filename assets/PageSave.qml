@@ -45,6 +45,7 @@ Page{
             var name = fileUrl.toString();
             name = name.slice(name.lastIndexOf("/")+1);
             fileIndicator.text = name;
+            fieldComment.text = name;
         }
     }
 
@@ -111,11 +112,15 @@ Page{
                                             onClicked: fileDialog.open()
                                         }
                                         Button{
-                                            enabled: false
+                                            enabled: fieldSampleRate.acceptableInput && fieldDate.acceptableInput &&
+                                            (fileDialog.fileUrl != "") && fieldDriver.acceptableInput
                                             anchors.right: parent.right
                                             width: parent.width*0.1
                                             icon.source: "images/icon_save.svg"
                                             icon.color: enabled ? "#fed700" : "#505050"
+                                            onClicked: {
+                                                bridge.startLogConversion([fileDialog.fileUrl, fieldSampleRate.text, fieldDate.text, fieldDriver.text, fieldVehicle.text, fieldVenue.text, fieldComment.text])
+                                            }
                                         }
                                     }
                                     QQC1.ProgressBar{
@@ -142,16 +147,6 @@ Page{
                                     width: parent.width*0.8
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     columns:3
-                                    // spacing:parent.width*0.05
-                                    // class XMLparams():
-                                    //     base_sample_rate: float = 1.000000
-                                    //     date: str = "14/07/2021"
-                                    //     time: str = "22:15"
-                                    //     driver_name: str = "aa"
-                                    //     vehicle_id: str = "E18"
-                                    //     venue: str = "USP"
-                                    //     short_comment: str = "xx (SD)"
-                                    //     long_comment: 
                                     Column{
                                         Layout.alignment: Qt.AlignHCenter
                                         Text{
@@ -160,6 +155,10 @@ Page{
                                             color: "#ffffff"
                                         }
                                         TextField{
+                                            placeholderText: qsTr("1-5000 ms")
+                                            text: "10"
+                                            id: fieldSampleRate
+                                            validator: IntValidator {bottom: 1; top: 5000;}
                                         }
                                     }   
                                     Column{
@@ -170,6 +169,12 @@ Page{
                                             color: "#ffffff"
                                         }
                                         TextField{
+                                            id: fieldDate
+                                            validator: RegExpValidator {regExp: /^(0?[1-9]|[12][0-9]|3[01])[\/](0?[1-9]|1[012])[\/\-]\d{4}$/}
+                                            Component.onCompleted: {
+                                                var data = Qt.formatDateTime(new Date(),"dd/MM/yyyy")
+                                                text = data
+                                            }
                                         }
                                     }
                                     Column{
@@ -180,6 +185,9 @@ Page{
                                             color: "#ffffff"
                                         }
                                         TextField{
+                                            id: fieldDriver
+                                            validator: RegExpValidator{regExp: /^[\w]+$/}
+                                            text: "Piloto"
                                         }
                                     }   
                                     Column{
@@ -190,6 +198,9 @@ Page{
                                             color: "#ffffff"
                                         }
                                         TextField{
+                                            id: fieldVehicle
+                                            validator: RegExpValidator{regExp: /^[\w]+$/}
+                                            text: "E18"
                                         }
                                     } 
                                     Column{
@@ -200,6 +211,9 @@ Page{
                                             color: "#ffffff"
                                         }
                                         TextField{
+                                            id: fieldVenue
+                                            validator: RegExpValidator{regExp: /^[\w]+$/}
+                                            text: "USP"
                                         }
                                     }
                                     Column{
@@ -210,6 +224,7 @@ Page{
                                             color: "#ffffff"
                                         }
                                         TextField{
+                                            id: fieldComment
                                         }
                                     } 
 
