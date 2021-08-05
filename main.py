@@ -160,7 +160,9 @@ class Bridge(QObject):
             self.callExceptionDialog.emit(str(e))
     @pyqtSlot(list)
     def startLogConversion(self, params:list):
-        SDtoXML.convertLogThreaded()
+        XMLparams = SDtoXML.XMLparams(
+            base_sample_rate=
+        )
         # SDtoXMLthread.start()
 
 class App():
