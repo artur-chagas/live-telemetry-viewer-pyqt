@@ -1,8 +1,10 @@
 #region Python Imports
+from functools import cache
 import multiprocessing
 import time as stopwatch #nome diferente pra não confundir com a variável
 import subprocess
 import threading
+import numba as nb
 #endregion
 
 #region LTV modules imports
@@ -11,11 +13,11 @@ import threading
 #region other libraries imports
 import numpy as np
 import lxml.etree as et
-from scipy.interpolate import interp1d
-from pandas import read_excel
+from pandas import read_excel, DataFrame
 #endregion
 
 class XMLparams():
+    file: str = ""
     base_sample_rate: float = 1.000000
     date: str = "14/07/2021"
     time: str = "22:15"
@@ -24,69 +26,44 @@ class XMLparams():
     venue: str = "USP"
     short_comment: str = "xx (SD)"
     long_comment: str = "EESC USP Formula SAE"
+    def __init__(self, file, base_sample_rate, date, time, driver_name, vehicle_id, venue, short_comment) -> None:
+        self.file = file
+        self.base_sample_rate = base_sample_rate
+        self.date = date
+        self.time = time
+        self.driver_name = driver_name
+        self.vehicle_id = vehicle_id
+        self.venue = venue
+        self.short_comment = short_comment
+        
 
 
 filename="C:/Users/artur/repos/ltv-pyqt/Enduro ECPA Manhã 11-13.sd"
 
-def highLow(high:int,low:int):
+def highLow(high,low):
+    """Retorna o número formado por dois bytes (um MSB/high, um LSB/low), pode ser dois int, dois arrays de int."""
     return high*256 + low
 
-"""retorna uma string separada por ", " a partir de uma lista
-exemplo
-"""
-
-def tostr(l:list) -> str:
-    if l is not None:
-        return ", ".join(map(str,l))
-    else:
-        return None
-
-"""maneira mais rápida de preencher um array"""
-def emptyFill(size:int, number:int):
+def emptyFill(size:int, number:int) -> np.ndarray:
+    """Maneira mais rápida de preencher um ndarray com um valor específico."""
     arr = np.empty(size)
     arr.fill(number)
     return arr
 
-def linearInterpolate(ls:list):
-    y = np.array(ls)
-    idx = np.where(y != -1) #encontrar onde não é -1
-    
-    for arr in idx:
-        if np.shape(arr) == (0,) or np.shape(arr) == (1,):
-            return None #se o array for todo -1, retorna nada
-        # elif np.shape(arr) == (1,):
-        #     y[arr[0]+1] = y[arr[0]]
-        #     idx = np.array([arr[0],arr[0]])
+def npLerp(a: np.ndarray) -> np.ndarray:
+    """Substitui os -1 de um array pela interpolação linear dos valores mais próximos diferentes de -1.
+        ex: [2 -1 -1 -1 3] vira [2 2.25 2.5 2.75 3] """
+    whereNot = np.where(a != -1)[0]
 
-    x = np.arange(len(y))
-    interp = interp1d(x[idx],y[idx], fill_value="extrapolate")
-    return np.around(interp(x), 2)
+    if len(whereNot) == 0 or len(whereNot) == 1:
+        return None
 
-params = XMLparams()
+    indicator = np.arange(len(a))
+    interpolated = np.interp(indicator, whereNot, a[whereNot])
+    return np.around(interpolated, 2)
 
-root = et.Element("telemetry")
-tree = et.ElementTree(root)
-
-et.SubElement(root, "device", serial_number="12007", name="ADL", version="4.2", base_sample_rate="1.000000")
-outing = et.SubElement(root, "outing", date=params.date, time=params.time, driver_name=params.driver_name, vehicle_id=params.vehicle_id, venue=params.venue, event="", session = "", short_comment=params.short_comment, long_comment=params.long_comment)
-channels = et.SubElement(root, "channels")
-
-def XMLwrite(valuesDict):
-    counter = 0
-    for key, val in valuesDict.items():
-        if len(val) != 0:
-            if key == 'Time':
-                value = tostr(val)
-            else:
-                value = tostr(linearInterpolate(val))
-            if value is not None:
-                et.SubElement(channels, "ch", channel_code=str(9000+counter), long_name=key, short_name=str(counter), units="s", sample_rate="100", data=value)
-                counter += 1
-
-
-def convertLog():
-    stopwatch1 = stopwatch.monotonic()
-
+def convertLog(params: XMLparams) -> None:
+    """converte """
     #region criando dict
     LTVData = read_excel('LTVData.ods', sheet_name='motec').set_index('CODIGO')
     LTVDict = {}
@@ -114,6 +91,7 @@ def convertLog():
     dataLength = SDData[indicesMsg+3]
     timeDelta = SDData[indicesMsg+4]
 
+
     valuesDict['Time'] = np.around(np.cumsum(timeDelta/1000),2) #soma todos os time delta em ordem, retornando um array de tempos
 
     for key, dictValue in LTVDict.items():
@@ -136,21 +114,42 @@ def convertLog():
                         value += t[4]
                 valuesDict[t[1]][where] = value
 
+    # valuesarr = np.apply_along_axis(npLerp, 0, valuesarr)
+    # valuesDFi = np.vectorize(npLerp)(valuesarr.to_numpy(dtype=np.uint8))
+    # valuesDFv = np.vectorize(npLerp)(valuesDF)
 
+        
+    root = et.Element("telemetry")
+    tree = et.ElementTree(root)
+
+    et.SubElement(root, "device", serial_number="12007", name="ADL", version="4.2", base_sample_rate="1.000000")
+    outing = et.SubElement(root, "outing", date=params.date, time=params.time, driver_name=params.driver_name, vehicle_id=params.vehicle_id, venue=params.venue, event="", session = "", short_comment=params.short_comment, long_comment=params.long_comment)
+    channels = et.SubElement(root, "channels")
+
+    
+    channelCounter = 0
+    for key, value in valuesDict.items():
+        # if key == "Time":
+        # with np.printoptions(threshold=np.inf):
+        if key != "Time":
+            value = npLerp(value)
+        # else:
+            # value = tostr(linearInterpolate(value))
+        if type(value) == np.ndarray:
+            value = str(list(value))[1:-1]
+            et.SubElement(channels, "ch", channel_code=str(9000+channelCounter), long_name=key, short_name=str(channelCounter), units="s", sample_rate="100", data=value)
+            channelCounter += 1
+
+
+
+    tree.write('outnp.xml', pretty_print=True, xml_declaration=True, encoding="UTF-8")
+    
+    # return valuesDict
     #region criando XML
     
     # pool = multiprocessing.Pool()
-    # poolInput = list(zip(list(valuesDict.keys()),list(valuesDict.values())))
-    # pool.starmap(XMLwrite, poolInput)
-    # pool.start()
-    # pool.join()
-    XMLwrite(valuesDict)
-    tree.write('outnp.xml', pretty_print=True, xml_declaration=True, encoding="UTF-8")
-    stopwatch.sleep(20)
-    # subprocess.run(["ascii_to_motec.exe", "outnp.xml", "outnp.ld", "outnp.log", "3"])
+    subprocess.run(["ascii_to_motec.exe", "outnp.xml", "outnp.ld", "outnp.log", "3"], creationflags=0x00000100)
 
-    stopwatch2 = stopwatch.monotonic()
-    print(stopwatch2-stopwatch1)
 
 def convertLogThreaded():
     thread = threading.Thread(target=convertLog(), args=())
@@ -158,4 +157,23 @@ def convertLogThreaded():
     thread.start()
 
 if __name__ == '__main__':
-    convertLogThreaded()
+    stopwatch1 = stopwatch.monotonic()
+
+    convertLog()
+
+    # print(valuesDict["G Force Lat"])
+
+    # poolInput = list(zip(list(valuesDict.keys()),list(valuesDict.values())))
+    
+    # # valueList = []
+
+    # with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    #     # valuesDict = dict(pool.starmap(stringifyInterpolate, poolInput))
+    #     pool.starmap(stringifyInterpolate, poolInput)
+
+    # # for value in valueList:
+    # #     if value != None:
+    # #         et.SubElement(channels, "ch", units="s", sample_rate="100", data=value)
+    
+    stopwatch2 = stopwatch.monotonic()
+    print(stopwatch2-stopwatch1)
