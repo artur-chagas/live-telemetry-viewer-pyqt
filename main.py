@@ -75,6 +75,7 @@ class Bridge(QObject):
     setComboBoxModel = pyqtSignal(list)
     setConsoleText = pyqtSignal(str, str)
     setComponentValue = pyqtSignal(int, list)
+    setProgress = pyqtSignal(float)
     
     @pyqtSlot(str)
     def updateComponents(self, msg:bytearray):
@@ -158,12 +159,25 @@ class Bridge(QObject):
         except Exception as e:
             print(e) 
             self.callExceptionDialog.emit(str(e))
+
+    
     @pyqtSlot(list)
-    def startLogConversion(self, params:list):
-        XMLparams = SDtoXML.XMLparams(
-            base_sample_rate=
+    def startLogConversion(self, p:list):
+        """função chamada pelo botão de salvar em PageSave.qml"""
+        XMLparams = SDtoXML.XMLParams(
+            path=p[0].split("file:///")[1],
+            base_sample_rate=p[1],
+            date=p[2].replace("/","-"),
+            time=p[3].replace(":","-"),
+            driver_name=p[4],
+            vehicle_id=p[5],
+            venue=p[6],
+            short_comment=p[7].replace(" ", "-").replace(".sd", "(SD)").replace(".SD", "(SD)")
         )
-        # SDtoXMLthread.start()
+        thread = formulaThread.LogConversionThread(self, XMLparams)
+        thread.start()
+
+        # SDtoXML.convertLogThreaded(XMLparams)
 
 class App():
     def __init__(self):

@@ -15,6 +15,9 @@ Page{
                 bridge.updateComponents(text);
             }
         }
+        function onSetProgress(progress){
+            progressBar.value = progress;
+        }
     }
     FormulaDialog{
         id: exceptionDialog
@@ -119,11 +122,13 @@ Page{
                                             icon.source: "images/icon_save.svg"
                                             icon.color: enabled ? "#fed700" : "#505050"
                                             onClicked: {
-                                                bridge.startLogConversion([fileDialog.fileUrl, fieldSampleRate.text, fieldDate.text, fieldDriver.text, fieldVehicle.text, fieldVenue.text, fieldComment.text])
+                                                var timeStr = Qt.formatDateTime(new Date(), "hh:mm").replace(":", "-");
+                                                bridge.startLogConversion([fileDialog.fileUrl.toString(), fieldSampleRate.text, fieldDate.text, timeStr, fieldDriver.text, fieldVehicle.text, fieldVenue.text, fieldComment.text]);
                                             }
                                         }
                                     }
                                     QQC1.ProgressBar{
+                                        id:progressBar
                                         anchors.horizontalCenter: parent.horizontalCenter
                                         width: parent.width*0.8
                                         value: 0.0
@@ -135,10 +140,31 @@ Page{
                                                 implicitHeight: 24
                                             }
                                             progress: Rectangle{
+                                                id: progressBarRect
                                                 radius: 8
                                                 color: "#fed700"
+                                                SequentialAnimation on color{
+                                                    loops: Animation.Infinite
+                                                    ColorAnimation { from: "#fed700"; to: "#ffee8f"; duration: 500 }
+                                                    ColorAnimation { from: "#ffee8f"; to: "#fed700"; duration: 500 }
+                                                }
                                             }
                                         }
+                                        Behavior on value{
+                                            NumberAnimation{
+                                                duration:250
+                                            }
+                                        }
+                                        // onProgressChanged:{
+                                        //     progressAnimation.to = progress
+                                        //     progressAnimation.duration = (progress - myProgressBar.value) * 100
+                                        //     progressAnimation.restart()
+                                        // }
+                                        // NumberAnimation {
+                                        //     id: progressAnimation
+                                        //     target: myProgressBar
+                                        //     property: "value"
+                                        // }
                                     }
                                 }
                                 

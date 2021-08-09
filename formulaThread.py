@@ -1,6 +1,7 @@
 import threading
 import time
 import serial
+import SDtoXML
 
 class SerialThread():
 
@@ -43,3 +44,8 @@ class SerialThread():
         except Exception:
             pass
 
+class LogConversionThread():
+    def __init__(self, bridge, params:SDtoXML.XMLParams):
+        self.thr = threading.Thread(target=SDtoXML.convertLog, args=(bridge,params), daemon=True)
+    def start(self):
+        self.thr.start()

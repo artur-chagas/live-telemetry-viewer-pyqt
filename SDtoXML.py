@@ -1,33 +1,33 @@
 #region Python Imports
-from functools import cache
-import multiprocessing
 import time as stopwatch #nome diferente pra não confundir com a variável
 import subprocess
 import threading
-import numba as nb
+import tempfile
+import os
 #endregion
 
 #region LTV modules imports
 #endregion 
 
 #region other libraries imports
+import numba as nb
 import numpy as np
 import lxml.etree as et
 from pandas import read_excel, DataFrame
 #endregion
 
-class XMLparams():
-    file: str = ""
+class XMLParams():
+    path: str = ""
     base_sample_rate: float = 1.000000
-    date: str = "14/07/2021"
-    time: str = "22:15"
+    date: str = "semData"
+    time: str = "semHora"
     driver_name: str = "Piloto"
     vehicle_id: str = "E18"
     venue: str = "USP"
     short_comment: str = "xx (SD)"
     long_comment: str = "EESC USP Formula SAE"
-    def __init__(self, file, base_sample_rate, date, time, driver_name, vehicle_id, venue, short_comment) -> None:
-        self.file = file
+    def __init__(self, path, base_sample_rate, date, time, driver_name, vehicle_id, venue, short_comment) -> None:
+        self.path = path
         self.base_sample_rate = base_sample_rate
         self.date = date
         self.time = time
@@ -38,7 +38,6 @@ class XMLparams():
         
 
 
-filename="C:/Users/artur/repos/ltv-pyqt/Enduro ECPA Manhã 11-13.sd"
 
 def highLow(high,low):
     """Retorna o número formado por dois bytes (um MSB/high, um LSB/low), pode ser dois int, dois arrays de int."""
@@ -62,16 +61,19 @@ def npLerp(a: np.ndarray) -> np.ndarray:
     interpolated = np.interp(indicator, whereNot, a[whereNot])
     return np.around(interpolated, 2)
 
-def convertLog(params: XMLparams) -> None:
-    """converte """
+def convertLog(bridge, params: XMLParams) -> None:
+    """Converte um log .SD em XML em .ld (Motec) indicado com os parâmetros indicados. Consultar classe XMLparams para saber quais são os parâmetros."""
+    bridge.setProgress.emit(0.1)
+    
+    
     #region criando dict
     LTVData = read_excel('LTVData.ods', sheet_name='motec').set_index('CODIGO')
     LTVDict = {}
     valuesDict = {'Time':[]}
     #endregion
 
-    SDData = np.fromfile(filename, dtype=np.uint8)
-    indicesMsg = np.where((SDData == 68) & (np.roll(SDData,-1) == 76))[0][:-1] #retorna indice de D (68), quando encontra DL (68 76)
+    SDData = np.fromfile(params.path, dtype=np.uint8)
+    indicesMsg = np.where((SDData == 68) & (np.roll(SDData,-1) == 76))[0][:-1] #retorna array de indices de onde foi encontrado D (68), quando encontra a sequência DL (68 76)
     dataLength = SDData[indicesMsg+3]
     
     # possibilidade de implementar checagem das mensagens, mas o código abaixo não funcionou
@@ -141,39 +143,21 @@ def convertLog(params: XMLparams) -> None:
             channelCounter += 1
 
 
+    filename = params.venue + params.date + params.short_comment
 
-    tree.write('outnp.xml', pretty_print=True, xml_declaration=True, encoding="UTF-8")
-    
-    # return valuesDict
+    print(filename)
+    logTempFile = tempfile.NamedTemporaryFile(mode='r+')
+    tree.write(logTempFile.name + ".xml", pretty_print=True, xml_declaration=True, encoding="UTF-8")
+    bridge.setProgress.emit(0.2)
     #region criando XML
+    logsDir = os.path.expanduser("~\Documents\LTV2-Logs")
+    print(logsDir)
+    if not os.path.exists(logsDir):
+        os.makedirs(logsDir)
     
-    # pool = multiprocessing.Pool()
-    subprocess.run(["ascii_to_motec.exe", "outnp.xml", "outnp.ld", "outnp.log", "3"], creationflags=0x00000100)
-
-
-def convertLogThreaded():
-    thread = threading.Thread(target=convertLog(), args=())
-    thread.daemon = True
-    thread.start()
-
-if __name__ == '__main__':
-    stopwatch1 = stopwatch.monotonic()
-
-    convertLog()
-
-    # print(valuesDict["G Force Lat"])
-
-    # poolInput = list(zip(list(valuesDict.keys()),list(valuesDict.values())))
-    
-    # # valueList = []
-
-    # with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
-    #     # valuesDict = dict(pool.starmap(stringifyInterpolate, poolInput))
-    #     pool.starmap(stringifyInterpolate, poolInput)
-
-    # # for value in valueList:
-    # #     if value != None:
-    # #         et.SubElement(channels, "ch", units="s", sample_rate="100", data=value)
-    
-    stopwatch2 = stopwatch.monotonic()
-    print(stopwatch2-stopwatch1)
+    print(logTempFile.name)
+    subprocess.run(["ascii_to_motec.exe", logTempFile.name + ".xml", logsDir + "\\" + filename + ".ld", logTempFile.name + ".log", "3"], creationflags=0x00000100)
+    bridge.setProgress.emit(1.0)
+    bridge.callSuccessDialog.emit("Documento salvo em " + str(logsDir) )
+    stopwatch.sleep(1)
+    bridge.setProgress.emit(0.0)
