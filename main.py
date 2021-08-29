@@ -15,7 +15,7 @@
     O desenvolvedor deve instalar **Python >=3.9**, e em seguida,
     rodar
     ```
-    pip install PyQt5 Nuitka pyserial pdoc3
+    pip install PyQt5 Nuitka pyserial pdoc3 lxml PyQtChart
     ```
 
     * **PyQt5**: proporciona interface de usuário, desenvolvida em QtQuick/QML
@@ -35,13 +35,14 @@
 #region Python Imports
 import sys
 import signal
-import threading
+import math
 #endregion
 
 #region qt imports
 from PyQt5.QtGui import QGuiApplication, QFontDatabase, QFont
 from PyQt5.QtQml import QQmlApplicationEngine
 from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, Qt, QThread
+from PyQt5.QtWidgets import QApplication
 #endregion
 
 #region LTV modules imports
@@ -56,10 +57,7 @@ import serial.tools.list_ports
 #endregion
 
 def highLow(high:int, low:int) -> int:
-    value = high
-    value <<= 8
-    value |= low
-    return value
+    return 256*high + low
 
 class Bridge(QObject):
     def __init__(self, app, engine):
@@ -68,6 +66,8 @@ class Bridge(QObject):
         self.engine = engine
         self.serialStringsDict = {}
         self.threadsDict = {}
+        self.componentsDict = {}
+        self.currentValue = 0
 
     callSuccessDialog = pyqtSignal(str) 
     callExceptionDialog = pyqtSignal(str)
@@ -77,48 +77,53 @@ class Bridge(QObject):
     setComponentValue = pyqtSignal(int, list)
     setProgress = pyqtSignal(float)
     
+    @pyqtSlot(result="QVariant")
+    def createComponent(self, params:dict):
+        self.callComponentCreation.emit(params)
+
+    @pyqtSlot(QObject,int,int)
+    def registerComponent(self, sprite:QObject, code:int, position:int):
+        print(code,position,sprite.property("labelText"))
+        self.componentsDict[(code,position)] = sprite
+
     @pyqtSlot(str)
     def updateComponents(self, msg:bytearray):
         #USP 20 8 1 4 1 5 1 6 1 7
         #5553501408010401080110011F
         #0x55 0x53 0x50 0x14 0x08 0x01 0x04 0x01 0x08 0x01 0x10 0x01 0x1F
         #apenas mensagens pares por enquanto
-
-        # if msg[0:3] == b"USP":
-        #     msgSize = int(msg[4])
-        #     readableMsg = array.array('I', int(msgSize/2) * [0])
-
-        #     for i in range(0, int(msgSize/2)):
-        #         readableMsg[i] = highLow(msg[5+2*i],msg[6+2*i])
-
-        #     print(readableMsg)
-        #     self.setComponentValue.emit(int(msg[3]), readableMsg)
-        #     # print(int.from_bytes(msg[4], "big"))
-        #     print(msg)
-        # print(msg)
-        if msg[0:3] == "USP":
-
+        ints = list(msg)
+        # if ints[3] % 2 == 0:
+        readableMsg = []
+        for i in range(0, int(ints[4]/2)):
+            high = ints[5+2*i]
+            low = ints[6+2*i]
+            readableMsg.append(highLow(high,low))
+        for i in range(0, len(readableMsg)):
+            if self.componentsDict.get((ints[3], i*2)) != None:
+                self.componentsDict[(ints[3], i*2)].setProperty("currentValue", readableMsg[i])
+                print("sel:" + str(ints))
+            
+        
+        print(list(msg))
             # for m in msg[0:3]:
             #     readableMsg.append(ord(m))
-            
-            msgSize = ord(msg[4])
-            readableMsg = []
+            # print(msg)
+            # msgSize = ord(msg[4])
+            # readableMsg = []
 
-            for i in range(0, int(msgSize/2)):
-                high = ord(msg[5+2*i])
-                low = ord(msg[6+2*i])
-                readableMsg.append(highLow(high,low))
+            # for i in range(0, int(msgSize/2)):
+            #     high = ord(msg[5+2*i])
+            #     low = ord(msg[6+2*i])
+            #     readableMsg.append(highLow(high,low))
 
-            self.setComponentValue.emit(ord(msg[3]), readableMsg)
+            # self.setComponentValue.emit(ord(msg[3]), readableMsg)
             # print(readableMsg)
 
     @pyqtSlot(str)
     def clearSerialString(self, port:str):
         self.serialStringsDict[port] = ""
         
-    @pyqtSlot(result="QVariant")
-    def createComponent(self, params:dict):
-        self.callComponentCreation.emit(params)
 
     @pyqtSlot()
     def getSerialPorts(self):
@@ -131,14 +136,15 @@ class Bridge(QObject):
             serialList = []
         self.setComboBoxModel.emit(serialList)
 
-    @pyqtSlot(str)
-    def connectSerial(self, port:str):
+    @pyqtSlot(str, bool)
+    def connectSerial(self, port:str, isReceptor:bool):
+        self.componentsDict.get((10,2)).setProperty("maxValue",1475)
         try:
             ##se a porta já possui um thread, não cria um novo
             if port in self.threadsDict:
                 pass
             ##caso contrário, cria novo thread e o conecta à porta
-            self.threadsDict[port] = formulaThread.SerialThread(self, isReader = True)
+            self.threadsDict[port] = formulaThread.SerialThread(self, isReader = True, isReceptor = isReceptor)
             self.serialStringsDict[port] = ""
             self.threadsDict[port].startSerial(port, 115200)
         except serial.SerialException:
@@ -160,7 +166,6 @@ class Bridge(QObject):
             print(e) 
             self.callExceptionDialog.emit(str(e))
 
-    
     @pyqtSlot(list)
     def startLogConversion(self, p:list):
         """função chamada pelo botão de salvar em PageSave.qml"""
@@ -178,13 +183,16 @@ class Bridge(QObject):
         thread.start()
 
         # SDtoXML.convertLogThreaded(XMLparams)
+    @pyqtSlot(float, QObject)
+    def updateChart(self, iteration, series):
+        series.append(iteration, self.currentValue)
 
 class App():
     def __init__(self):
         # environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
         # QGuiApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
-        QGuiApplication.setAttribute(Qt.AA_Use96Dpi)
-        self.app = QGuiApplication(sys.argv + ['--style', 'material'])
+        QApplication.setAttribute(Qt.AA_Use96Dpi)
+        self.app = QApplication(sys.argv + ['--style', 'material'])
         # self.app.setAttribute(Qt.)
 
         fontdatabase = QFontDatabase()

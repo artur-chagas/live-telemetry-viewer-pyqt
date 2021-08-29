@@ -6,21 +6,13 @@ Rectangle{
     property alias labelText: label.text
     property alias minValue: minValue.text
     property alias maxValue: maxValue.text
+    property alias currentValue: currentValue.text
     property int code
     property int position
 
-    Connections{
-        target: bridge
-        function onSetComponentValue(code, array){
-            currentValue.text = array[position];
-        }
-    }
-
-
-
     color: "#505050"
     width: parent.width
-    height: Overlay.overlay.height * 0.1
+    height: 50
     // a altura do gauge é proporcional à janela (Overlay) pois o
     // scrollview impede overflow
     anchors.horizontalCenter: parent.horizontalCenter

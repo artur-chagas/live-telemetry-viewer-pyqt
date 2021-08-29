@@ -3,6 +3,7 @@ import QtQuick.Controls 2.14
 
 Column{
     property string port: ""
+    property bool isReceptor: false
     property alias textConsole: textConsole
     property alias switchVisible: salvarLogSwitch.visible
     // width: parent.width * 0.9
@@ -115,7 +116,7 @@ Column{
                 text:"Conectar"
                 onClicked: {
                     port = combobox.currentText.split(" ")[0];
-                    bridge.connectSerial(port);
+                    bridge.connectSerial(port, isReceptor);
                 }
             }
             Button{

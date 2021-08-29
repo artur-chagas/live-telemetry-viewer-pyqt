@@ -1,7 +1,6 @@
 #region Python Imports
 import time as stopwatch #nome diferente pra não confundir com a variável
 import subprocess
-import threading
 import tempfile
 import os
 #endregion
@@ -10,7 +9,6 @@ import os
 #endregion 
 
 #region other libraries imports
-import numba as nb
 import numpy as np
 import lxml.etree as et
 from pandas import read_excel, DataFrame
@@ -74,9 +72,9 @@ def convertLog(bridge, params: XMLParams) -> None:
 
     SDData = np.fromfile(params.path, dtype=np.uint8)
     indicesMsg = np.where((SDData == 68) & (np.roll(SDData,-1) == 76))[0][:-1] #retorna array de indices de onde foi encontrado D (68), quando encontra a sequência DL (68 76)
-    dataLength = SDData[indicesMsg+3]
     
     # possibilidade de implementar checagem das mensagens, mas o código abaixo não funcionou
+    # dataLength = SDData[indicesMsg+3]
     # indicesMsgErradas = np.where(SDData[indicesMsg+dataLength+7] != 68)
     # indicesMsg = np.delete(indicesMsg, indicesMsgErradas)
 

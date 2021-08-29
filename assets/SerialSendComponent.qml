@@ -1,5 +1,8 @@
 import QtQuick 2.14
+import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.14
+import QtQuick.Dialogs 1.0
+
 
 Column{
     property string port: ""
@@ -36,7 +39,59 @@ Column{
         iconSource: "images/icon_success.svg"
         pointSize: 8
     }
+    FileDialog{
+        id: fileDialog
+        title: "Escolha um arquivo .SD"
+        defaultSuffix: ".SD"
+        nameFilters: ["LOG (*.SD *.sd)"]
+        selectFolder: false
+        selectMultiple: false
+        onAccepted: {
+            var name = fileUrl.toString();
+            name = name.slice(name.lastIndexOf("/")+1);
+            fileIndicator.text = name;
+            fieldComment.text = name;
+        }
+    }
 
+    Rectangle{
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        height: childrenRect.height
+        color: "#181818"
+        Rectangle{
+            id:fileIndicatorRect
+            width: parent.width*0.8
+            height:childrenRect.height*1.2
+            radius:8
+            anchors.left: parent.left
+            anchors.verticalCenter: parent.verticalCenter
+            color: "#202020"
+            Text{
+                id:fileIndicator
+                width: parent.width
+                horizontalAlignment: Text.AlignHCenter
+                font.pointSize: 15
+                color: "#ffffff"
+                text: "Nenhum arquivo selecionado"
+            }
+        }
+        Button{
+            anchors.left: fileIndicatorRect.right
+            width: parent.width*0.1
+            icon.source: "images/icon_folder.svg"
+            icon.color: "#fed700"
+            onClicked: fileDialog.open()
+        }
+        Button{
+            anchors.right: parent.right
+            width: parent.width*0.1
+            icon.source: "images/icon_play.svg"
+            icon.color: enabled ? "#fed700" : "#505050"
+            enabled: fileDialog.fileUrl != "" && port != ""
+            onClicked: bridge.startPlayLog(port, fileDialog.fileUrl.toString(), fieldPeriod.text)
+        }
+    }
 
     Row{
         Connections{
@@ -104,7 +159,6 @@ Column{
                 onClicked: {
                     port = combobox.currentText.split(" ")[0];
                     bridge.connectSerial(port);
-                    sendButton.enabled = true;
                 }
             }
             Button{
@@ -115,56 +169,51 @@ Column{
                     port = combobox.currentText.split(" ")[0];
                     bridge.disconnectSerial(port);
                     port = ""
-                    sendButton.enabled = false;
                 }
             }
-            Button{
-                id: sendButton
-                anchors.bottom: parent.bottom
-                text:"Enviar"
-                onClicked: {
-                    if (port != "" && textArea.length > 0){
-                        var stringList = textArea.text.split('\n');
+            Column{
+                Layout.alignment: Qt.AlignHCenter
+                Text{
+                    font.pointSize: 8
+                    text: "Período (ms)"
+                    color: "#ffffff"
+                }
+                TextField{
+                    id: fieldPeriod
+                    validator: IntValidator {bottom: 1; top: 5000;}
+                    text: "10"
+                }
+            } 
+            
+}
 
-                        for (var i = 0; i < stringList.length; i++){
-                            bridge.sendSerialHex(port, stringList[i]);
-                        }
-                    }
-                }
-                Component.onCompleted: {
-                    if (port == "" || textArea.length == 0){
-                        sendButton.enabled = false;
-                    }
-                }
-            }
-    }
-
-    Rectangle{
-        id: consoleRect
-        anchors.horizontalCenter: parent.parent.horizontalCenter
-        anchors.bottom: parent.parent.bottom
-        anchors.bottomMargin: parent.parent.height * 0.05
-        width: parent.parent.width * 0.9
-        height: parent.parent.height * 0.75
-        radius: 16
-        clip: true
+    
+    // Rectangle{
+    //     id: consoleRect
+    //     anchors.horizontalCenter: parent.parent.horizontalCenter
+    //     anchors.bottom: parent.parent.bottom
+    //     anchors.bottomMargin: parent.parent.height * 0.05
+    //     width: parent.parent.width * 0.9
+    //     height: parent.parent.height * 0.75
+    //     radius: 16
+    //     clip: true
         
-        ScrollView{
-            anchors.fill: parent
-            contentWidth: textArea.width
-                TextEdit{
-                    id: textArea
-                    width: consoleRect.width*0.9
-                    height: consoleRect.height*0.9
-                    anchors.left: parent.left
-                    anchors.leftMargin: consoleRect.width*0.05
-                    anchors.rightMargin: consoleRect.width*0.05
-                    wrapMode: Text.WrapAnywhere
-                    color: "#000000"
-                }
-        }
+    //     ScrollView{
+    //         anchors.fill: parent
+    //         contentWidth: textArea.width
+    //             TextEdit{
+    //                 id: textArea
+    //                 width: consoleRect.width*0.9
+    //                 height: consoleRect.height*0.9
+    //                 anchors.left: parent.left
+    //                 anchors.leftMargin: consoleRect.width*0.05
+    //                 anchors.rightMargin: consoleRect.width*0.05
+    //                 wrapMode: Text.WrapAnywhere
+    //                 color: "#000000"
+    //             }
+    //     }
         
         
-    }
+    
     
 }

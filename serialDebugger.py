@@ -1,7 +1,7 @@
 #region Python Imports
 import sys
 import signal
-import binascii
+import time
 #endregion
 
 #region qt imports
@@ -17,6 +17,7 @@ import formulaThread as formulaThread
 #region other imports
 import serial
 import serial.tools.list_ports
+import numpy as np
 #endregion
 
 class Bridge(QObject):
@@ -54,9 +55,9 @@ class Bridge(QObject):
             if port in self.threadsDict:
                 pass
             ##caso contrário, cria novo thread e o conecta à porta
-            self.threadsDict[port] = formulaThread.SerialThread(self, isReader = False)
-            self.serialStringsDict[port] = ""
-            self.threadsDict[port].startSerial(port, 115200)
+            self.threadsDict[port] = formulaThread.SerialThread(self, isReader = False, isReceptor = False)
+            # self.serialStringsDict[port] = ""
+            # self.threadsDict[port].startSerial(port, 115200)
         except serial.SerialException:
             self.callExceptionDialog.emit("Erro de permissão: a porta provavelmente já está sendo usada")
         except Exception as e:
@@ -79,11 +80,17 @@ class Bridge(QObject):
     @pyqtSlot(str, str)
     def sendSerialHex(self, port:str, msg:str):
         if self.threadsDict[port].ser.is_open and not self.threadsDict[port].thr.stop_condition:
-            if msg.isdigit():
-                self.threadsDict[port].send(msg)
-            else:
-                self.callExceptionDialog.emit("A mensagem deve ser digitos hexadecimais")
+            self.threadsDict[port].send(msg)
 
+    @pyqtSlot(str, str, int)
+    def startPlayLog(self, port:str, file:str, period:int):
+        file = file.split("file:///")[1]
+        SDData = np.fromfile(file, dtype=np.uint8)
+        indicesMsg = np.where((SDData == 68) & (np.roll(SDData,-1) == 76))[0][:-1] #retorna array de indices de onde foi encontrado D (68), quando encontra a sequência DL (68 76)
+        SDDataSplit = np.split(SDData, indicesMsg)
+        self.threadsDict[port].period = period
+        self.threadsDict[port].splitMessages = SDDataSplit
+        self.threadsDict[port].startSerial(port, 115200)
 class App():
     def __init__(self):
         self.app = QGuiApplication(sys.argv + ['--style', 'material'])
@@ -105,6 +112,8 @@ class App():
         self.engine.quit.connect(self.app.quit)
         self.app.exec()
 
+
 if __name__ == "__main__":
     SerialDebugger = App()
     sys.exit(SerialDebugger)
+

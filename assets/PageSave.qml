@@ -10,9 +10,8 @@ Page{
         target: bridge
         function onSetConsoleText(text, port) {
             if (port == receptorSRC.port){
-                receptorSRC.textConsole.text += qsTr(text);
-                print(text);
-                bridge.updateComponents(text);
+                // receptorSRC.textConsole.text += qsTr(text) + "\n";
+                // bridge.updateComponents(text);
             }
         }
         function onSetProgress(progress){
@@ -33,17 +32,9 @@ Page{
         id: fileDialog
         title: "Escolha um arquivo .SD"
         defaultSuffix: ".SD"
-        //fileUrl: url
-        //fileUrls: list<url>
-        //modality: Qt: : WindowModality
         nameFilters: ["LOG (*.SD *.sd)"]
-        //selectExisting: bool
         selectFolder: false
         selectMultiple: false
-        //selectedNameFilter: string
-        //shortcuts: Object
-        //sidebarVisible: bool
-        //visible: bool
         onAccepted: {
             var name = fileUrl.toString();
             name = name.slice(name.lastIndexOf("/")+1);
@@ -155,16 +146,6 @@ Page{
                                                 duration:250
                                             }
                                         }
-                                        // onProgressChanged:{
-                                        //     progressAnimation.to = progress
-                                        //     progressAnimation.duration = (progress - myProgressBar.value) * 100
-                                        //     progressAnimation.restart()
-                                        // }
-                                        // NumberAnimation {
-                                        //     id: progressAnimation
-                                        //     target: myProgressBar
-                                        //     property: "value"
-                                        // }
                                     }
                                 }
                                 
@@ -273,6 +254,7 @@ Page{
                        SerialRecieveComponent{
                             id: receptorSRC
                             switchVisible: true
+                            isReceptor: true
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                         }

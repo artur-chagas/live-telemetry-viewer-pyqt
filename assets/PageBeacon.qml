@@ -53,6 +53,7 @@ Page{
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                             switchVisible: false
+                            isReceptor: false
                         }
                         
                     }

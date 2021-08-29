@@ -1,9 +1,11 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
+import QtCharts 2.14
 
 
 Page{
-    property alias column: sensoresColumn 
+    property alias column: sensoresColumn
+    property double timerIterations: 0
     Rectangle{
         color: "#181818"
         anchors.fill: parent
@@ -37,7 +39,49 @@ Page{
                                     width: parent.width
                                     height: Overlay.overlay.height * 0.05
                                     anchors.horizontalCenter: parent.horizontalCenter
+                                    
+                                
                                 }
+                            //     ChartView {
+                            //         id:chart
+                            //         antialiasing: true
+                            //         theme: ChartView.ChartThemeDark
+                            //         anchors.fill:parent
+
+                            //         ValueAxis{
+                            //             id:axisX
+                            //             min:0
+                            //         }
+                            //         ValueAxis{
+                            //             id:axisY
+                            //             min:0.3
+                            //             max:-0.10
+                            //         }
+                            //         LineSeries {
+                            //             id:lineSeries
+                            //             axisX:axisX
+                            //             axisY:axisY
+                            //             useOpenGL: true
+                            //             // XYPoint { x: 0; y: 0.0 }
+                            //         }
+                            //         Timer{
+                            //             interval: 1
+                            //             running: true
+                            //             repeat: true
+                            //             onTriggered: {
+                            //                 timerIterations += 0.01
+                            //                 bridge.updateChart(timerIterations, lineSeries)
+                            //                 if(timerIterations > axisX.max){
+                            //                     axisX.max = timerIterations
+                            //                     axisX.min += 0.01
+                            //                 }
+                            //             }
+                            //         }
+                            //     }
+                            //     Text{
+                            //         id:chartText
+                            //         text:"a"
+                            //     }
                             }
                             
                         }

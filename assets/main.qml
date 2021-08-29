@@ -37,13 +37,15 @@ ApplicationWindow{
             var sprite;
             var pagesParent;
             pagesParent = view.children[0].children[0]
-            component = Qt.createComponent(params["COMPONENTE"]+".qml");
+            var componentObj;
 
             if (pagesParent.children[params["PAGINA"]] != null){
+                component = Qt.createComponent(params["COMPONENTE"]+".qml");
                 switch(params["COMPONENTE"]){
                     case("HorizontalGauge"):
                         sprite = component.createObject(pagesParent.children[params["PAGINA"]].column, {labelText: params["TITULO"],
                         minValue: params["MINVALUE"], maxValue: params["MAXVALUE"], code: params["CODIGO"], position: params["POS"]});
+                        bridge.registerComponent(sprite, params["CODIGO"], params["POS"])
                         break;
                     default:
                         break;

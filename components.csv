@@ -1,184 +1,73 @@
-PAGINA,COMPONENTE,CODIGO,POS,TAM,TITULO,INCLUIR_MOTEC,TITULO_MOTEC,EQUACAO,EQ-A,EQ-B,EQ-C
-0,HorizontalGauge,10,0,2,Acelerômetro X,1,G Force Lat,x * 0.0204 - 31.35,0,0.0204,-31.35
-0,HorizontalGauge,10,2,2,Acelerômetro Y,1,G Force Long,x * (-0.0206) + 32.36,0,-0.0206,32.36
-0,HorizontalGauge,10,4,2,Acelerômetro Z,1,G Force Vert,x * (-0.0202) + 30.9,0,-0.0202,30.9
-0,HorizontalGauge,10,6,2,Giroscópio Z,1,Gyro Yaw Angle,x * 0.1433 - 296.48,0,0.1433,-296.48
-,,11,0,2,Ângulo de esterço,1,Steered Angle,x * (-0.0746) + 132.,0,-0.0746,132
-,,11,2,2,Pressão de freio dianteiro,1,Brake Pres Front,x * 0.0001,0,0.0001,0
-,,11,4,2,Pressão de freio traseiro,1,Brake Pres Rear,x * 0.025 - 5.0) / 3.0,0,0.0083,1.67
-,,11,6,2,Posição de pedal de freio,1,Brake Position,x ,0,1,0
-,,32,0,1,setor_sd,0,,,,,
-,,32,1,1,setor_sd >> 8,0,,,,,
-,,32,2,1,setor_sd >> 16,0,,,,,
-,,32,3,1,setor_sd >> 24,0,,,,,
-,,32,4,1,Verify datalogger,0,,,,,
-,,14,0,1,Verify acelerômetro,0,,,,,
-,,14,0,1,Verify giroscópio,0,,,,,
-,,14,0,1,Verify esterço,0,,,,,
-,,14,0,1,Verify pressão dianteiro,0,,,,,
-,,14,0,1,Verify traseiro,0,,,,,
-,,14,0,1,Verify bomba,1,Verify bomba,,0,1,0
-,,14,0,1,Verify ventoinha,1,Verify ventoinha,,0,1,0
-,,14,1,1,Frequêcia da mensagem 1,0,,,,,
-,,14,2,1,Frequêcia da mensagem 2,0,,,,,
-,,15,0,2,Curso de suspensão dianteiro esquerdo,1,Susp Pos FL,x * 0.01831,0,0.01831,0
-,,15,2,2,Curso de suspensão dianteiro direito,1,Susp Pos FR,x * 0.01831,0,0.01831,0
-,,15,4,2,Strain gauge diantero esquerdo,1,Strain Gauge FL,x ,0,1,0
-,,15,6,2,Strain gauge dianteiro direito,1,Strain Gauge FR,x ,0,1,0
-,,16,0,1,Altura Dianteira Esquerda,1,Ride Height FL,x ,0,1,0
-,,16,1,1,Altura Dianteira Direita,1,Ride Height FR,x ,0,1,0
-,,16,2,2,Tubo de Pitot Dianteiro,1,Pitot Front,x * 1.24 - 2600,0,1.24,-2600
-,,16,4,2,Posição de pedal de freio 2,1,Brake Position 2,x ,0,1,0
-,,17,0,2,Temperatura de pneu dianteiro 1,1,Tyre Temp Front 1,x * 0.02 - 343.15,0,1,-343.15
-,,17,2,2,Temperatura de pneu dianteiro 2,1,Tyre Temp Front 2,x * 0.02 - 343.15,0,1,-343.15
-,,17,4,2,Temperatura de pneu dianteiro 3,1,Tyre Temp Front 3,x * 0.02 - 343.15,0,1,-343.15
-,,18,0,2,Temperatura de pneu dianteiro 4,1,Tyre Temp Front 4,x * 0.02 - 343.15,0,1,-343.15
-,,18,2,2,Temperatura de pneu dianteiro 5,1,Tyre Temp Front 5,x * 0.02 - 343.15,0,1,-343.15
-,,18,4,2,Temperatura de pneu dianteiro 6,1,Tyre Temp Front 6,x * 0.02 - 343.15,0,1,-343.15
-,,40,0,2,Temperatura de disco dianteiro esquerdo,1,Brake Temp FL,x * 0.159 + 6.041,0,1,6041
-,,40,2,2,Temperatura de disco dianteiro direito,1,Brake Temp FR,x * 0.159 + 6.041,0,1,6041
-,,40,4,2,Temperatura de pinça dianteira esquerda,1,Brake Caliper Temp FL,x * 0.159 + 6.041,0,1,6041
-,,40,6,2,Temperatura de pinça dianteira direita,1,Brake Caliper Temp FR,x * 0.159 + 6.041,0,1,6041
-,,19,0,1,Verify curso de suspensão dianteiro esquerdo,0,,,,,
-,,19,0,1,Verify curso de suspensão dianteiro direito,0,,,,,
-,,19,0,1,Verify strain gauge diantero esquerdo,0,,,,,
-,,19,0,1,Verify strain gauge dianteiro direito,0,,,,,
-,,19,0,1,Verify temperatura de pinça dianteria esquerda,0,,,,,
-,,19,0,1,Verify temperatura de pinça dianteira direita,0,,,,,
-,,19,0,1,Verify tubo de pitot dianteiro,0,,,,,
-,,19,0,1,Verify altura posição de pedal de freio,0,,,,,
-,,19,1,1,Verify altura dianteira esquerda,0,,,,,
-,,19,1,1,Verify altura dianteira direita,0,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 1,0,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 2,0,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 3,0,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 4,0,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 5,0,,,,,
-,,19,1,1,Verify temperatura de pneu dianteiro 6,0,,,,,
-,,19,2,1,Verify temperatura de disco dianteiro esquerdo,0,,,,,
-,,19,2,1,Verify temperatura de disco dianteiro direito,0,,,,,
-,,19,3,1,Frequência da mensagem 1,0,,,,,
-,,19,4,1,Frequência da mensagem 2,0,,,,,
-,,19,5,1,Frequência da mensagem 3,0,,,,,
-,,19,6,1,Frequência da mensagem 4,0,,,,,
-,,20,0,2,Curso de suspensão traseiro esquerdo,1,Susp Pos RL,x * 0.01831,0,0.01831,0
-,,20,2,2,Curso de suspensão traseiro direito,1,Susp Pos RR,x * 0.01831,0,0.01831,0
-,,20,4,2,Strain gauge traseiro esquerdo,1,Strain Gauge RL,x ,0,1,0
-,,20,6,2,Strain gauge traseiro direito,1,Strain Gauge RR,x ,0,1,0
-,,21,0,1,Altura traseira esquerda,1,Ride Height RL,x ,0,1,0
-,,21,1,1,Altura traseira direita,1,Ride Height RR,x ,0,1,0
-,,21,2,2,Tubo de Pitot Traseiro,1,Pitot Rear,x * 1.24 - 2600,0,1.24,-2600
-,,21,4,2,Sensor de Corrente,1,Battery Current,x ,0,1,0
-,,22,0,2,Temperatura de pneu traseiro 1,1,Tyre Temp Rear 1,x * 0.02 - 343.15,0,0.02,-343.15
-,,22,2,2,Temperatura de pneu traseiro 2,1,Tyre Temp Rear 2,x * 0.02 - 343.15,0,0.02,-343.15
-,,22,4,2,Temperatura de pneu traseiro 3,1,Tyre Temp Rear 3,x * 0.02 - 343.15,0,0.02,-343.15
-,,23,0,2,Temperatura de pneu traseiro 4,1,Tyre Temp Rear 4,x ,0,1,0
-,,23,2,2,Temperatura de pneu traseiro 5,1,Tyre Temp Rear 5,x ,0,1,0
-,,23,4,2,Temperatura de pneu traseiro 6,1,Tyre Temp Rear 6,x ,0,1,0
-,,45,0,2,Temperatura de disco traseiro esquerdo,1,Brake Temp RL,x ,0,1,0
-,,45,2,2,Temperatura de disco traseiro direito,1,Brake Temp RR,x ,0,1,0
-,,45,4,2,Temperatura de pinça traseira esquerda,1,Brake Caliper Temp RL,x * 0.159 + 6.041,0,159,6041
-,,45,6,2,Temperatura de pinça traseira direita,1,Brake Caliper Temp RR,x * 0.159 + 6.041,0,159,6041
-,,24,0,1,Verify curso de suspensão traseiro esquerdo,0,,,,,
-,,24,0,1,Verify curso de suspensão traseiro direito,0,,,,,
-,,24,0,1,Verify strain gauge traseiro esquerdo,0,,,,,
-,,24,0,1,Verify strain gauge traseiro direito,0,,,,,
-,,24,0,1,Verify temperatura de pinça traseira esquerda,0,,,,,
-,,24,0,1,Verify temperatura de pinça traseira direita,0,,,,,
-,,24,0,1,Verify tubo de pitot traseiro,0,,,,,
-,,24,0,1,Verify sensor de corrente,0,,,,,
-,,24,1,1,Verify altura traseira esquerda,0,,,,,
-,,24,1,1,Verify altura traseira direita,0,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 1,0,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 2,0,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 3,0,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 4,0,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 5,0,,,,,
-,,24,1,1,Verify temperatura de pneu traseiro 6,0,,,,,
-,,24,2,1,Verify temperatura de disco traseiro esquerdo,0,,,,,
-,,24,2,1,Verify temperatura de disco dianteiro direito,0,,,,,
-,,24,3,1,Frequência da mensagem 1,0,,,,,
-,,24,4,1,Frequência da mensagem 2,0,,,,,
-,,24,5,1,Frequência da mensagem 3,0,,,,,
-,,24,6,1,Frequência da mensagem 4,0,,,,,
-,,25,0,1,Marcha,1,Gear,x ,0,1,0
-,,25,1,1,num_upshift,1,Upshift Count,x ,0,1,0
-,,25,2,1,num_downshift,1,Downshift Count,x ,0,1,0
-,,25,3,1,tempo_corte,1,Spark Cut,x ,0,1,0
-,,25,4,1,tempo_upshift,1,Upshift Time,x ,0,1,0
-,,25,5,1,tempo_downshift,1,Downshift Time,x ,0,1,0
-,,25,6,1,tempo_embreagem,1,Clutch Time,x ,0,1,0
-,,25,7,1,Embreagem,1,Clutch Time,x ,0,1,0
-,,26,0,2,Rotação,1,Engine RPM,x ,0,1,0
-,,26,2,1,TPS / 10,1,Throttle Pos,x ,0,1,0
-,,26,3,1,IAT / 10,1,Air Temp Inlet,x ,0,1,0
-,,26,4,2,Tensão da bateria,1,Battery Voltage,x * 0.01,0,0.01,0
-,,26,6,2,ECT,1,ECT,x * 0.1,0,0.1,0
-,,27,0,2,MAP,1,MAP,x * 0.001,0,1,0
-,,27,2,2,Pressão de combustível,1,Fuel Pres,x * 0.001,0,1,0
-,,27,4,2,Pressão de óleo,1,Oil Pres,x * 0.001,0,1,0
-,,27,6,2,Lambda,1,Lambda,x * 0.001,0,1,0
-,,28,0,1,Velocidade de roda dianteira esquerda,1,Wheel Speed FL,x ,0,1,0
-,,28,1,1,Velocidade de roda dianteira direita,1,Wheel Speed FR,x ,0,1,0
-,,28,2,1,Velocidade de roda traseira esquerda,1,Wheel Speed RL,x ,0,1,0
-,,28,3,1,Velocidade de roda traseira direita,1,Wheel Speed RR,x ,0,1,0
-,,28,4,2,Temperatura de óleo,1,Eng Oil Temp,x * 0.1,0,0.1,0
-,,28,6,2,Pressão de arrefecimento,0,,,,,
-,,29,0,1,Posição servo,1,Servo Pos,x ,0,1,0
-,,29,1,1,Ângulo on - 1000,1,Angle On,x ,0,1,0
-,,29,2,1,Ângulo off - 1000,1,Angle Off,x ,0,1,0
-,,29,3,1,drs_count,1,DRS Count,x ,0,1,0
-,,1,0,1,tempo_upshift,0,,,,,
-,,1,1,1,tempo_downshift,0,,,,,
-,,1,2,1,tempo_corte,0,,,,,
-,,1,3,1,angulo_off,0,,,,,
-,,1,4,1,angulo_on,0,,,,,
-,,1,5,1,tempo_embreagem,0,,,,,
-,,3,0,1,Frequência DAq Principal 1,0,,,,,
-,,3,1,1,Frequência DAq Principal 2,0,,,,,
-,,3,2,1,Frequência DAq Modular dianteira 1,0,,,,,
-,,3,3,1,Frequência DAq Modular dianteira 2,0,,,,,
-,,3,4,1,Frequência DAq Modular dianteira 3 e 4,0,,,,,
-,,3,5,1,Frequência DAq Modular traseira 1,0,,,,,
-,,3,6,1,Frequência DAq Modular traseira 2,0,,,,,
-,,3,7,1,Frequência DAq Modular traseira 3 e 4,0,,,,,
-,,30,0,1,Latitude grau,0,,x ,0,1,0
-,,30,1,1,Latitude minuto,0,,x ,0,1,0
-,,30,2,2,Latitude minuto decimal,0,,0.006 * (x * 100 + x),0,606,0
-,,30,4,1,Longitude grau,0,,x ,0,1,0
-,,30,5,1,Longitude minuto,0,,x ,0,1,0
-,,30,6,2,Longitude minuto decimal,0,,0.006 * (x * 100 + x),0,606,0
-,,31,0,1,Hora,0,,x ,0,1,0
-,,31,1,1,Minuto,0,,x ,0,1,0
-,,31,2,1,Segundo,0,,x ,0,1,0
-,,31,3,1,Dia,0,,x ,0,1,0
-,,31,4,1,Mês,0,,x ,0,1,0
-,,31,5,1,Ano,0,,x ,0,1,0
-,,31,6,2,Velocidade GPS,0,,x ,0,1,0
-,,254,0,1,Verify LoRa,0,,,,,
-,,254,0,1,Verify GPS,0,,,,,
-,,254,0,1,Verify Posição GPS,0,,,,,
-,,34,0,2,Corrente da ventoinha 1,0,,x ,0,1,0
-,,34,2,2,Corrente da DAq,0,,x ,0,1,0
-,,34,4,2,Corrente da bomba de combustível,0,,x ,0,1,0
-,,34,6,2,Corrente dos sensores principais,0,,x ,0,1,0
-,,35,0,2,Corrente da ventoinha 2,0,,x ,0,1,0
-,,35,2,2,Corrente da ECU,0,,x ,0,1,0
-,,35,4,2,Tensão GND VND,0,,x ,0,1,0
-,,36,0,1,verify_ic1,0,,,,,
-,,36,0,1,verify_ic2,0,,,,,
-,,36,0,1,verify_ic3,0,,,,,
-,,36,0,1,verify_ic4,0,,,,,
-,,36,1,1,Frequência da mensagem de corrente,0,,,,,
-,,36,2,2,Período do PWM,0,,,,,
-,,36,4,2,Capture Compare do PWM,0,,,,,
-,,36,6,2,Temperatura do STM,0,,,,,
-,,38,0,2,Acelerômetro X,0,,x * (2 / 32768),0,0.000061,0
-,,38,2,2,Acelerômetro Y,0,,x * (2 / 32768),0,0.000061,0
-,,38,4,2,Acelerômetro Z,0,,x * (2 / 32768),0,0.000061,0
-,,38,6,2,Giroscópio Z,0,,x * (250 / 32768),0,0.00763,0
-,,39,0,1,verify_mpu,0,,,,,
-,,39,1,1,Frequência da mensagem do MPU,0,,,,,
-,,50,0,2,Período do PWM,0,,,,,
-,,50,2,2,Capture Compare do PWM,0,,,,,
-,,50,4,2,Temperatura do STM,0,,,,,
+,PAGINA,COMPONENTE,CODIGO,POS,TAM,TITULO,EQ-A,EQ-B,EQ-C
+,0,HorizontalGauge,10,0,2,G Force Lat,0,0.0204,-31.35
+,0,HorizontalGauge,10,2,2,G Force Long,0,-0.0206,32.36
+,0,HorizontalGauge,10,4,2,G Force Vert,0,-0.0202,30.9
+,0,HorizontalGauge,10,6,2,Gyro Yaw Angle,0,0.1433,-296.48
+,0,HorizontalGauge,11,0,2,Steered Angle,0,-0.0746,132
+,0,HorizontalGauge,11,2,2,Brake Pres Front,0,0.0001,0
+,0,HorizontalGauge,11,4,2,Brake Pres Rear,0,0.0083,1.67
+,0,HorizontalGauge,11,6,2,Brake Position,0,1,0
+#,0,HorizontalGauge,14,0,1,Verify bomba,0,1,0
+#,0,HorizontalGauge,14,1,1,Verify ventoinha,0,1,0
+#,0,HorizontalGauge,15,0,2,Susp Pos FL,0,0.01831,0
+#,0,HorizontalGauge,15,2,2,Susp Pos FR,0,0.01831,0
+#,0,HorizontalGauge,15,4,2,Strain Gauge FL,0,1,0
+#,0,HorizontalGauge,15,6,2,Strain Gauge FR,0,1,0
+,0,HorizontalGauge,16,0,1,Ride Height FL,0,1,0
+,0,HorizontalGauge,16,1,1,Ride Height FR,0,1,0
+,0,HorizontalGauge,16,2,2,Pitot Front,0,1.24,-2600
+,0,HorizontalGauge,16,4,2,Brake Position 2,0,1,0
+#,0,HorizontalGauge,17,0,2,Tyre Temp Front 1,0,1,-343.15
+#,0,HorizontalGauge,17,2,2,Tyre Temp Front 2,0,1,-343.15
+#,0,HorizontalGauge,17,4,2,Tyre Temp Front 3,0,1,-343.15
+#,0,HorizontalGauge,18,0,2,Tyre Temp Front 4,0,1,-343.15
+#,0,HorizontalGauge,18,2,2,Tyre Temp Front 5,0,1,-343.15
+#,0,HorizontalGauge,18,4,2,Tyre Temp Front 6,0,1,-343.15
+#,0,HorizontalGauge,40,0,2,Brake Temp FL,0,1,6041
+#,0,HorizontalGauge,40,2,2,Brake Temp FR,0,1,6041
+#,0,HorizontalGauge,40,4,2,Brake Caliper Temp FL,0,1,6041
+#,0,HorizontalGauge,40,6,2,Brake Caliper Temp FR,0,1,6041
+#,0,HorizontalGauge,20,0,2,Susp Pos RL,0,0.01831,0
+#,0,HorizontalGauge,20,2,2,Susp Pos RR,0,0.01831,0
+#,0,HorizontalGauge,20,4,2,Strain Gauge RL,0,1,0
+#,0,HorizontalGauge,20,6,2,Strain Gauge RR,0,1,0
+#,0,HorizontalGauge,21,0,1,Ride Height RL,0,1,0
+#,0,HorizontalGauge,21,1,1,Ride Height RR,0,1,0
+#,0,HorizontalGauge,21,2,2,Pitot Rear,0,1.24,-2600
+#,0,HorizontalGauge,21,4,2,Battery Current,0,1,0
+#,0,HorizontalGauge,22,0,2,Tyre Temp Rear 1,0,0.02,-343.15
+#,0,HorizontalGauge,22,2,2,Tyre Temp Rear 2,0,0.02,-343.15
+#,0,HorizontalGauge,22,4,2,Tyre Temp Rear 3,0,0.02,-343.15
+#,0,HorizontalGauge,23,0,2,Tyre Temp Rear 4,0,1,0
+#,0,HorizontalGauge,23,2,2,Tyre Temp Rear 5,0,1,0
+#,0,HorizontalGauge,23,4,2,Tyre Temp Rear 6,0,1,0
+#,0,HorizontalGauge,45,0,2,Brake Temp RL,0,1,0
+#,0,HorizontalGauge,45,2,2,Brake Temp RR,0,1,0
+#,0,HorizontalGauge,45,4,2,Brake Caliper Temp RL,0,159,6041
+#,0,HorizontalGauge,45,6,2,Brake Caliper Temp RR,0,159,6041
+#,1,HorizontalGauge,25,0,1,Gear,0,1,0
+#,1,HorizontalGauge,25,1,1,Upshift Count,0,1,0
+#,1,HorizontalGauge,25,2,1,Downshift Count,0,1,0
+#,1,HorizontalGauge,25,3,1,Spark Cut,0,1,0
+#,1,HorizontalGauge,25,4,1,Upshift Time,0,1,0
+#,1,HorizontalGauge,25,5,1,Downshift Time,0,1,0
+#,1,HorizontalGauge,25,6,1,Clutch Time,0,1,0
+#,1,HorizontalGauge,25,7,1,Clutch Time,0,1,0
+#,1,HorizontalGauge,26,0,2,Engine RPM,0,1,0
+#,1,HorizontalGauge,26,2,1,Throttle Pos,0,1,0
+#,1,HorizontalGauge,26,3,1,Air Temp Inlet,0,1,0
+#,1,HorizontalGauge,26,4,2,Battery Voltage,0,0.01,0
+,1,HorizontalGauge,26,6,2,ECT,0,0.1,0
+,1,HorizontalGauge,27,0,2,MAP,0,1,0
+,1,HorizontalGauge,27,2,2,Fuel Pres,0,1,0
+,1,HorizontalGauge,27,4,2,Oil Pres,0,1,0
+,1,HorizontalGauge,27,6,2,Lambda,0,1,0
+#,1,HorizontalGauge,28,0,1,Wheel Speed FL,0,1,0
+#,1,HorizontalGauge,28,1,1,Wheel Speed FR,0,1,0
+#,1,HorizontalGauge,28,2,1,Wheel Speed RL,0,1,0
+#,1,HorizontalGauge,28,3,1,Wheel Speed RR,0,1,0
+,1,HorizontalGauge,28,4,2,Eng Oil Temp,0,0.1,0
+,1,HorizontalGauge,29,6,2,Servo Pos,0,1,0
+#,1,HorizontalGauge,29,0,1,Angle On,0,1,0
+#,1,HorizontalGauge,29,1,1,Angle Off,0,1,0
+#,1,HorizontalGauge,29,2,1,DRS Count,0,1,0
