@@ -33,6 +33,7 @@ class SerialThread():
             if (s):
                 if self.isReceptor:
                     self.bridge.serialStringsDict[self.ser.port] = s.decode("ISO-8859-1")
+                    # self.bridge.componentsQueue.put(lambda: self.bridge.updateComponents(s))
                     self.bridge.updateComponents(s)
                     # self.bridge.serialStringsDict[self.ser.port] = s.hex()
                     self.bridge.setConsoleText.emit(self.bridge.serialStringsDict[self.ser.port], str(self.ser.port))

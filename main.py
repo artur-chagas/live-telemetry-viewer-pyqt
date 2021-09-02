@@ -36,6 +36,7 @@
 import sys
 import signal
 import math
+import queue
 #endregion
 
 #region qt imports
@@ -54,6 +55,7 @@ import SDtoXML as SDtoXML
 #region other library imports
 import serial
 import serial.tools.list_ports
+from pandas import read_excel
 #endregion
 
 def highLow(high:int, low:int) -> int:
@@ -67,7 +69,8 @@ class Bridge(QObject):
         self.serialStringsDict = {}
         self.threadsDict = {}
         self.componentsDict = {}
-        self.currentValue = 0
+        self.LTVDict = {}
+        self.componentsQueue = queue.Queue()
 
     callSuccessDialog = pyqtSignal(str) 
     callExceptionDialog = pyqtSignal(str)
@@ -86,39 +89,46 @@ class Bridge(QObject):
         print(code,position,sprite.property("labelText"))
         self.componentsDict[(code,position)] = sprite
 
+    def createLTVDict(self, path:str):
+        LTVData = read_excel('LTVData.ods', sheet_name='motec').set_index('CODIGO')
+        for i, x in enumerate(LTVData.values):
+            if self.LTVDict.get(LTVData.index[i]) is None:
+                self.LTVDict[LTVData.index[i]] = [(x[0], x[1], x[2], x[3], x[4])]
+            else:
+                self.LTVDict[LTVData.index[i]].append((x[0], x[1], x[2], x[3], x[4]))
+
     @pyqtSlot(str)
     def updateComponents(self, msg:bytearray):
         #USP 20 8 1 4 1 5 1 6 1 7
         #5553501408010401080110011F
         #0x55 0x53 0x50 0x14 0x08 0x01 0x04 0x01 0x08 0x01 0x10 0x01 0x1F
-        #apenas mensagens pares por enquanto
         ints = list(msg)
-        # if ints[3] % 2 == 0:
-        readableMsg = []
-        for i in range(0, int(ints[4]/2)):
-            high = ints[5+2*i]
-            low = ints[6+2*i]
-            readableMsg.append(highLow(high,low))
-        for i in range(0, len(readableMsg)):
-            if self.componentsDict.get((ints[3], i*2)) != None:
-                self.componentsDict[(ints[3], i*2)].setProperty("currentValue", readableMsg[i])
-                print("sel:" + str(ints))
-            
+        cod = ints[3]
+        instruction = self.LTVDict.get(cod)
+        print(ints)
+        if instruction is not None:
+            pos = 0
+            for t in instruction:
+                if t[0] == 1:
+                    # equação
+                    if t[3] != 0:
+                        val = msg[pos+5]*t[3]
+                        if t[4] != 0:
+                            val += t[4]
+                    if self.componentsDict.get((cod, pos)) is not None:
+                        print(cod,pos,val)
+                        self.componentsDict.get((cod, pos)).setProperty("currentValue", format(val, ".2f"))
+                    pos += 1
+                # elif t[0] == 2:
+                #     if t[3] != 0:
+                #         val = highLow(msg[pos+5],msg[pos+6])*t[3]
+                #         if t[4] != 0:
+                #             val += t[4]
+                #     if self.componentsDict.get((cod, pos)) is not None:
+                #         print(cod,pos,val)
+                #         self.componentsDict.get((cod, pos)).setProperty("currentValue", format(val, ".2f"))
+                    # pos += 2
         
-        print(list(msg))
-            # for m in msg[0:3]:
-            #     readableMsg.append(ord(m))
-            # print(msg)
-            # msgSize = ord(msg[4])
-            # readableMsg = []
-
-            # for i in range(0, int(msgSize/2)):
-            #     high = ord(msg[5+2*i])
-            #     low = ord(msg[6+2*i])
-            #     readableMsg.append(highLow(high,low))
-
-            # self.setComponentValue.emit(ord(msg[3]), readableMsg)
-            # print(readableMsg)
 
     @pyqtSlot(str)
     def clearSerialString(self, port:str):
@@ -182,15 +192,8 @@ class Bridge(QObject):
         thread = formulaThread.LogConversionThread(self, XMLparams)
         thread.start()
 
-        # SDtoXML.convertLogThreaded(XMLparams)
-    @pyqtSlot(float, QObject)
-    def updateChart(self, iteration, series):
-        series.append(iteration, self.currentValue)
-
 class App():
     def __init__(self):
-        # environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
-        # QGuiApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
         QApplication.setAttribute(Qt.AA_Use96Dpi)
         self.app = QApplication(sys.argv + ['--style', 'material'])
         # self.app.setAttribute(Qt.)
@@ -209,12 +212,14 @@ class App():
         self.engine.rootContext().setContextProperty("bridge", self.bridge)
         self.engine.load("assets/main.qml")
 
-        listDicts = csvInterpreter.readCSV("components.csv")
-        for d in listDicts:
+        dictComponents = csvInterpreter.readCSV("components.csv")
+        for d in dictComponents:
             self.bridge.createComponent(d)
 
+        self.bridge.createLTVDict("LTVData.ods")
         # self.bridge.updateComponents(bytearray.fromhex('5553501408010401080110011F'))
-
+        
+        
         self.engine.quit.connect(self.app.quit)
         self.app.exec()
 

@@ -7,16 +7,16 @@
 ,0,HorizontalGauge,11,2,2,Brake Pres Front,0,0.0001,0
 ,0,HorizontalGauge,11,4,2,Brake Pres Rear,0,0.0083,1.67
 ,0,HorizontalGauge,11,6,2,Brake Position,0,1,0
-#,0,HorizontalGauge,14,0,1,Verify bomba,0,1,0
-#,0,HorizontalGauge,14,1,1,Verify ventoinha,0,1,0
+,0,HorizontalGauge,14,0,1,Verify bomba,0,1,0
+,0,HorizontalGauge,14,1,1,Verify ventoinha,0,1,0
 #,0,HorizontalGauge,15,0,2,Susp Pos FL,0,0.01831,0
 #,0,HorizontalGauge,15,2,2,Susp Pos FR,0,0.01831,0
 #,0,HorizontalGauge,15,4,2,Strain Gauge FL,0,1,0
 #,0,HorizontalGauge,15,6,2,Strain Gauge FR,0,1,0
-,0,HorizontalGauge,16,0,1,Ride Height FL,0,1,0
-,0,HorizontalGauge,16,1,1,Ride Height FR,0,1,0
-,0,HorizontalGauge,16,2,2,Pitot Front,0,1.24,-2600
-,0,HorizontalGauge,16,4,2,Brake Position 2,0,1,0
+#,0,HorizontalGauge,16,0,1,Ride Height FL,0,1,0
+#,0,HorizontalGauge,16,1,1,Ride Height FR,0,1,0
+#,0,HorizontalGauge,16,2,2,Pitot Front,0,1.24,-2600
+#,0,HorizontalGauge,16,4,2,Brake Position 2,0,1,0
 #,0,HorizontalGauge,17,0,2,Tyre Temp Front 1,0,1,-343.15
 #,0,HorizontalGauge,17,2,2,Tyre Temp Front 2,0,1,-343.15
 #,0,HorizontalGauge,17,4,2,Tyre Temp Front 3,0,1,-343.15
@@ -44,9 +44,9 @@
 #,0,HorizontalGauge,45,0,2,Brake Temp RL,0,1,0
 #,0,HorizontalGauge,45,2,2,Brake Temp RR,0,1,0
 #,0,HorizontalGauge,45,4,2,Brake Caliper Temp RL,0,159,6041
-#,0,HorizontalGauge,45,6,2,Brake Caliper Temp RR,0,159,6041
-#,1,HorizontalGauge,25,0,1,Gear,0,1,0
-#,1,HorizontalGauge,25,1,1,Upshift Count,0,1,0
+,0,HorizontalGauge,45,6,2,Brake Caliper Temp RR,0,159,6041
+,1,HorizontalGauge,25,0,1,Gear,0,1,0
+,1,HorizontalGauge,25,1,1,Upshift Count,0,1,0
 #,1,HorizontalGauge,25,2,1,Downshift Count,0,1,0
 #,1,HorizontalGauge,25,3,1,Spark Cut,0,1,0
 #,1,HorizontalGauge,25,4,1,Upshift Time,0,1,0
@@ -57,17 +57,17 @@
 #,1,HorizontalGauge,26,2,1,Throttle Pos,0,1,0
 #,1,HorizontalGauge,26,3,1,Air Temp Inlet,0,1,0
 #,1,HorizontalGauge,26,4,2,Battery Voltage,0,0.01,0
-,1,HorizontalGauge,26,6,2,ECT,0,0.1,0
-,1,HorizontalGauge,27,0,2,MAP,0,1,0
-,1,HorizontalGauge,27,2,2,Fuel Pres,0,1,0
-,1,HorizontalGauge,27,4,2,Oil Pres,0,1,0
+#,1,HorizontalGauge,26,6,2,ECT,0,0.1,0
+#,1,HorizontalGauge,27,0,2,MAP,0,1,0
+#,1,HorizontalGauge,27,2,2,Fuel Pres,0,1,0
+#,1,HorizontalGauge,27,4,2,Oil Pres,0,1,0
 ,1,HorizontalGauge,27,6,2,Lambda,0,1,0
-#,1,HorizontalGauge,28,0,1,Wheel Speed FL,0,1,0
-#,1,HorizontalGauge,28,1,1,Wheel Speed FR,0,1,0
-#,1,HorizontalGauge,28,2,1,Wheel Speed RL,0,1,0
-#,1,HorizontalGauge,28,3,1,Wheel Speed RR,0,1,0
+,1,HorizontalGauge,28,0,1,Wheel Speed FL,0,1,0
+,1,HorizontalGauge,28,1,1,Wheel Speed FR,0,1,0
+,1,HorizontalGauge,28,2,1,Wheel Speed RL,0,1,0
+,1,HorizontalGauge,28,3,1,Wheel Speed RR,0,1,0
 ,1,HorizontalGauge,28,4,2,Eng Oil Temp,0,0.1,0
 ,1,HorizontalGauge,29,6,2,Servo Pos,0,1,0
-#,1,HorizontalGauge,29,0,1,Angle On,0,1,0
-#,1,HorizontalGauge,29,1,1,Angle Off,0,1,0
-#,1,HorizontalGauge,29,2,1,DRS Count,0,1,0
+,1,HorizontalGauge,29,0,1,Angle On,0,1,0
+,1,HorizontalGauge,29,1,1,Angle Off,0,1,0
+,1,HorizontalGauge,29,2,1,DRS Count,0,1,0
